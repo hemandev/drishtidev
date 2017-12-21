@@ -304,7 +304,7 @@ $(window).on('load', function () {
     })
 
     $(window).on('wheel', _.throttle(function (event) {
-
+        console.log(event.originalEvent.deltaY)
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
         if (event.originalEvent.deltaY < -200) {
             console.log("up" + event.originalEvent.deltaY)
