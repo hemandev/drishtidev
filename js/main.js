@@ -1,9 +1,19 @@
 $(window).on('load', function () {
 
-    $height = $(window).height()/2 - 120
-   // $('.event-header').css({marginTop: $height})
+    $height = $(window).height() / 2 - 120
+    // $('.event-header').css({marginTop: $height})
 
     $('.event-one-container').hide()
+
+    var elem = $('.event-tag')
+
+
+
+
+    /*circleType = new CircleType(elem)
+    circleType.radius(100)*/
+
+    new CircleType(document.getElementById('tag-id')).radius(250)
 
     $('.another-cont').fadeOut('slow')
 
@@ -11,12 +21,53 @@ $(window).on('load', function () {
     $('#event-header').lettering()
 
 
+    $('.mail-btn').click(function () {
+
+        $('.drawer-right').velocity({translateX: ['0%', '100%']}, {
+            duration: 400, easing: 'swing', begin: function () {
+
+                $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 100, "linear")
+
+
+            },
+            complete: function () {
+
+                $('.close-fab-drawer').velocity({scale: 1}, 100, "linear")
+
+            }
+        })
+
+
+    })
+
+    $('.close-btn-drawer').click(function () {
+
+        $('.drawer-right').velocity({translateX: ['100%', '0%']}, {
+            duration: 400, easing: 'swing', begin: function () {
+
+
+                $('.close-fab-drawer').velocity({scale: 0}, 100, "linear")
+            },
+            complete: function () {
+
+                $('.mail-fab, .ham-fab , .close-fab').velocity({scale: 1}, 100, "linear")
+
+
+            }
+        })
+
+
+    })
+
+
     $('.event-button').click(function () {
 
-        $('.event-button').fadeOut()
 
-        $('.circle'+$count).velocity({scale: 100, opacity:0, display:'none'}, {
-             easing: 'linear', begin: function () {
+        $('.event-button').fadeOut()
+        $('.event-tag').velocity({opacity: 0}, 200, "linear")
+
+        $('.circle' + $count).velocity({scale: 100, opacity: 0, display: 'none'}, {
+            easing: 'linear', begin: function () {
 
                 $('.fb-fab,.insta-fab').velocity({scale: 0}, 200, "linear")
                 $('.event-one-container').fadeIn("slow")
@@ -24,13 +75,16 @@ $(window).on('load', function () {
                 $('.fa-arrow-up').fadeOut("slow")
 
 
-
             }, complete: function () {
 
-                 $('.event-header').velocity({scale:1.5, color: 'white'}, 500, "linear")
+                $('.event-header').velocity({scale: 1.5}, 500, "linear")
 
 
-                $('.close-fab,.mail-fab').velocity({scale: 1}, 200, "linear")
+                if (window.matchMedia('(max-width: 768px)').matches)
+
+                    $('.close-fab').velocity({scale: 1.3}, 1, "linear")
+                else
+                    $('.close-fab,.mail-fab').velocity({scale: scalVal}, 200, "linear")
 
 
             }, duration: 200
@@ -40,33 +94,46 @@ $(window).on('load', function () {
 
     $('.close-btn').click(function () {
 
-         $('.circle'+$count).velocity({scale: 6.3, opacity: 1, display: 'block'}, {duration:300, easing: 'linear', complete:function () {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+
+            scaleValue = 1.4
+            time = 199
+
+        }
+        else {
+            scaleValue = 1
+            time = 0
+        }
+
+        $('.circle' + $count).velocity({scale: 6.3 / scaleValue, opacity: 1, display: 'block'}, {
+            duration: 300, easing: 'linear', complete: function () {
 
 
-             $('.event-one-container').fadeOut("slow")
-             $('.event-header').velocity({scale:1}, 500, "linear")
-             $('.event-header').removeClass('text-white').addClass('text-dark')
-             $('.event-button').fadeIn()
-             $('.fa-arrow-up').fadeIn("slow")
+                $('.event-one-container').fadeOut("slow")
+                $('.event-header').velocity({scale: 1}, 500, "linear")
+                $('.event-header').removeClass('text-white').addClass('text-dark')
+                $('.event-button').fadeIn()
+                $('.event-tag').velocity({opacity: 1}, 200, "linear")
 
-             $('.close-fab,.mail-fab').velocity({scale: 0}, {
-                     duration: 200, easing: "linear", complete: function () {
+                $('.fa-arrow-up').fadeIn("slow")
 
-                         $('.fb-fab,.insta-fab').velocity({scale: 1}, 200, "linear")
-                     }
-                 }
+                $('.close-fab,.mail-fab').velocity({scale: 0}, {
+                        duration: 200 - time, easing: "linear", complete: function () {
+
+                            $('.fb-fab,.insta-fab').velocity({scale: 1}, 200, "linear")
+                        }
+                    }
+                )
 
 
-             )
-
-
-         }})
+            }
+        })
 
     })
 
 
-    var eventText = ['Drishti <br> 18','Drishti <br> Night', 'Workshops <br> CET', 'Rise <br> Again', 'CET <br> Life', 'Cryptex <br> CET', 'Amazing <br> VR  Race']
-
+    var eventText = ['Drishti <br> 18', 'Drishti <br> Night', 'Workshops <br> CET', 'Rise <br> Again', 'CET <br> Life', 'Cryptex <br> CET', 'Amazing <br> VR  Race']
+    var tagText = ['', 'Computer Science', 'Electronics & Communications', 'Mechanical', 'Electrical', 'Civil']
 
 
     for (i = 8; i <= 19; i++)
@@ -95,6 +162,8 @@ $(window).on('load', function () {
         '.circle19': 42.3
     }
 
+    $scalValue = 1.4
+
 
     $scrolloffset = 0
     $count = 1;
@@ -112,14 +181,18 @@ $(window).on('load', function () {
 
             $count++
 
-            $('.circle-content').velocity({opacity: 0, display: 'none'},{duration:500,easing: 'linear', complete: function () {
+            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
+                duration: 500, easing: 'linear', complete: function () {
 
-                console.log("consolevalue"+eventText[$count-1])
-                $('.event-header').html(eventText[$count-1])
+                    console.log("consolevalue" + eventText[$count - 1])
+                    $('.event-header').html(eventText[$count - 1])
+                    $('.event-tag').html(tagText[$count - 1])
+                    new CircleType(document.getElementById('tag-id')).radius(250)
 
 
-            }})
-                .velocity({opacity: 1, display: 'block'},{duration:500,easing: 'linear'})
+                }
+            })
+                .velocity({opacity: 1, display: 'block'}, {duration: 500, easing: 'linear'})
 
 
             hideCount = $count + 6
@@ -155,7 +228,12 @@ $(window).on('load', function () {
                 else {
 
                     scale[key] = scale[key] - 2
-                    $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
+                    if (window.matchMedia('(max-width: 768px)').matches) {
+                        console.log("inside media query")
+                        $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+                    }
+                    else
+                        $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
                     // scale[key] = $val
                 }
 
@@ -175,14 +253,18 @@ $(window).on('load', function () {
         else {
             $count--
 
-            $('.circle-content').velocity({opacity: 0, display: 'none'},{duration:500,easing: 'linear', complete: function () {
+            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
+                duration: 500, easing: 'linear', complete: function () {
 
-                console.log("consolevalue"+eventText[$count-1])
-                $('.event-header').html(eventText[$count-1])
+                    console.log("consolevalue" + eventText[$count - 1])
+                    $('.event-header').html(eventText[$count - 1])
+                    $('.event-tag').html(tagText[$count - 1])
+                    new CircleType(document.getElementById('tag-id')).radius(250)
 
 
-            }})
-                .velocity({opacity: 1, display: 'block'},{duration:500,easing: 'linear'})
+                }
+            })
+                .velocity({opacity: 1, display: 'block'}, {duration: 500, easing: 'linear'})
 
 
             hideCount = $count + 6
@@ -208,7 +290,11 @@ $(window).on('load', function () {
                 if (Math.floor(scale[key]) === 0) {
                     // console.log("insie math")
                     scale[key] = 6.2
-                    $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
+                    if (window.matchMedia('(max-width: 768px)').matches)
+
+                        $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+                    else
+                        $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
                 }
                 else if (Math.floor(scale[key]) < 0) {
                     scale[key] = scale[key] + 2
@@ -218,7 +304,11 @@ $(window).on('load', function () {
                 else {
 
                     scale[key] = scale[key] + 2
-                    $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
+                    if (window.matchMedia('(max-width: 768px)').matches)
+
+                        $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+                    else
+                        $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
                     // scale[key] = $val
                 }
 
@@ -235,7 +325,7 @@ $(window).on('load', function () {
     $('.heading2').lettering()
 
 
-    $(document).keydown(function (e) {
+    $(document).keydown(_.debounce(function (e) {
         // $('.rounded-circle').addClass('anim')
         //$('.rounded-circle').add()
 
@@ -287,26 +377,28 @@ $(window).on('load', function () {
 
         // e.preventDefault()
 
-    })
+    }, 350))
 
 
-    $('#next').click(function () {
+    $('#bt').on('click', _.debounce(function () {
 
 
         scaleDown()
 
-    })
+    }, 400))
 
-    $('#prev').click(function () {
+    $('#bt2').on('click', _.debounce(function () {
 
         scaleUp()
 
-    })
+    }, 400))
 
-    $(window).on('wheel', _.throttle(function (event) {
+    $('body').on('wheel', _.debounce(function (event) {
+
+        console.log("scrolleeeeeed" + event.originalEvent.deltaY)
 
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
-        if (event.originalEvent.deltaY < -200) {
+        if (event.originalEvent.deltaY < 0) {
             console.log("up" + event.originalEvent.deltaY)
 
             scaleUp()
@@ -314,13 +406,33 @@ $(window).on('load', function () {
 
             // wheeled up
         }
-        else if (event.originalEvent.deltaY > 200) {
+        else if (event.originalEvent.deltaY > 0) {
             console.log("down" + event.originalEvent.deltaY)
 
             scaleDown()
 
         }
-    }, 600))
+    }, 150))
+
+
+
+    var elem = document.getElementById("elem")
+
+    hammer = new Hammer(elem)
+    hammer.on("swipeup  swipedown", function (event) {
+
+        console.log("swipe detected")
+
+        if(event.type == "swipeup")
+            scaleDown()
+        else
+            scaleUp()
+
+
+
+    })
+
+
 
 
 })
