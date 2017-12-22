@@ -1192,3 +1192,11 @@ body {
 .anim7 {
   transition: ease-out .4s 70ms;
   transform: scale(18.3); }
+
+#img_frame{
+	top:0px;
+	left:0px;
+	height:auto;
+	min-width:100%;
+	position:fixed;
+}
