@@ -1309,3 +1309,45 @@ body {
     margin: auto;
     border-radius: 50%;
     transform: scale(30.21429); } }
+
+
+.anim {
+  transition: ease-out .4s;
+  transform: scale(0); }
+
+.anim1 {
+  transition: ease-out .4s 10ms;
+  transform: scale(6.3); }
+
+.anim2 {
+  transition: ease-out .4s 20ms;
+  transform: scale(8.3); }
+
+.anim3 {
+  transition: ease-out .4s 30ms;
+  transform: scale(10.3); }
+
+.anim4 {
+  transition: ease-out .4s 40ms;
+  transform: scale(12.3); }
+
+.anim5 {
+  transition: ease-out .4s 50ms;
+  transform: scale(14.3); }
+
+.anim6 {
+  transition: ease-out .4s 60ms;
+  transform: scale(16.3); }
+
+.anim7 {
+  transition: ease-out .4s 70ms;
+  transform: scale(18.3); }
+
+#img_frame{
+	top:0px;
+	left:0px;
+	height:auto;
+	min-width:100%;
+	position:fixed;
+}
+
