@@ -328,11 +328,11 @@ $(window).on('load', function () {
                     // console.log("insie math")
                     console.log("inside ifffffffff")
                     scale[key] = 0
-                    $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
+                    $(key).velocity({'scale': scale[key], opacity: 0},{ 'easing': 'linear', duration: 400})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
                     scale[key] = scale[key] - 2
-                    $(key).velocity({'scale': 0, 'easing': 'linear'}, 400)
+                    $(key).velocity({'scale': 0},{ 'easing': 'linear', duration: 400})
 
                 }
                 else {
@@ -340,9 +340,10 @@ $(window).on('load', function () {
                     scale[key] = scale[key] - 2
 
 
-                        $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+                        $(key).velocity({'scale': scale[key] / $scalValue},{ 'easing': 'linear', duration: 400})
                     // scale[key] = $val
                 }
+
 
 
             }
@@ -411,19 +412,19 @@ $(window).on('load', function () {
                     // console.log("insie math")
                     scale[key] = $anotherOffset
 
-                    $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+                    $(key).velocity({'scale': scale[key], opacity: 1}, {easing: 'linear', duration: 300})
 
                 }
                 else if (Math.floor(scale[key]) < 0) {
                     scale[key] = scale[key] + 2
-                    $(key).velocity({'scale': 0, 'easing': 'linear'}, 400)
+                   // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
 
                 }
                 else {
 
                     scale[key] = scale[key] + 2
 
-                        $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+                        $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
 
                 }
 
@@ -442,7 +443,7 @@ $(window).on('load', function () {
 
     var elem = document.getElementById("elem")
     hammer = new Hammer(elem)
-    hammer.on("swipeup panup pandown  swipedown", function (event) {
+    hammer.on("swipeup panup pandown  swipedown", _.debounce(function (event) {
 
         console.log("swipe detected")
 
@@ -453,7 +454,7 @@ $(window).on('load', function () {
 
 
 
-    })
+    }, 200)
 
 
 
