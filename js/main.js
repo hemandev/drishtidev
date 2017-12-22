@@ -84,7 +84,7 @@ $(window).on('load', function () {
 
                     $('.close-fab').velocity({scale: 1.3}, 1, "linear")
                 else
-                    $('.close-fab,.mail-fab').velocity({scale: scalVal}, 200, "linear")
+                    $('.close-fab,.mail-fab').velocity({scale: 1}, 200, "linear")
 
 
             }, duration: 200
@@ -325,6 +325,23 @@ $(window).on('load', function () {
     $('.heading2').lettering()
 
 
+    var elem = document.getElementById("elem")
+    hammer = new Hammer(elem)
+    hammer.on("swipeup  swipedown", function (event) {
+
+        console.log("swipe detected")
+
+        if(event.type == "swipeup")
+            scaleDown()
+        else
+            scaleUp()
+
+
+
+    })
+
+
+
     $(document).keydown(_.debounce(function (e) {
         // $('.rounded-circle').addClass('anim')
         //$('.rounded-circle').add()
@@ -418,25 +435,12 @@ $(window).on('load', function () {
 
 
 
-var elem = document.getElementById("elem")
 
-hammer = new Hammer(elem)
-hammer.on("swipeup  swipedown", function (event) {
-
-    console.log("swipe detected")
-
-    if(event.type == "swipeup")
-        scaleDown()
-    else
-        scaleUp()
-
-
-
-})
 
 	
 
 	/*-----------------------------------------------------------------------------*/
+/*
 
 function pad(n, width, z) {
     z = z || '0';
@@ -482,3 +486,4 @@ $('#menu_button').on('click',function(){console.log('clicked');$("#img_frame").s
 
 
 
+*/
