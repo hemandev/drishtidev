@@ -989,7 +989,7 @@ body {
   transition: ease-out .4s 70ms;
   transform: scale(18.3); }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 480px) {
   .img {
     position: fixed;
     left: 0;

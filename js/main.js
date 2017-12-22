@@ -94,9 +94,16 @@ $(window).on('load', function () {
 
     $('.close-btn').click(function () {
 
-        if (window.matchMedia('(max-width: 768px)').matches) {
+        if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
             scaleValue = 1.4
+            time = 199
+
+        }
+
+        else if (window.matchMedia('(max-width: 480px)').matches) {
+
+            scaleValue = 1.6
             time = 199
 
         }
@@ -162,15 +169,114 @@ $(window).on('load', function () {
         '.circle19': 42.3
     }
 
-    $scalValue = 1.4
+    scaleOffset2 = 4.4
+    scaleOffset3 = 3.8
 
+
+    scale1 = scale
+
+    scale2 = { '.circle1': 4.4,
+        '.circle2': 6.4,
+        '.circle3': 8.3,
+        '.circle4': 10.4,
+        '.circle5': 12.4,
+        '.circle6': 14.4,
+        '.circle7': 16.4,
+        '.circle8': 18.4,
+        '.circle9': 20.4,
+        '.circle10': 22.4,
+        '.circle11': 24.4,
+        '.circle12': 26.4,
+        '.circle13': 28.4,
+        '.circle14': 30.4,
+        '.circle15': 32.4,
+        '.circle16': 34.4,
+        '.circle17': 36.4,
+        '.circle18': 38.4,
+        '.circle19': 40.4
+    }
+
+    scale3 = {
+        '.circle1': 3.8,
+        '.circle2': 5.8,
+        '.circle3': 7.8,
+        '.circle4': 9.8,
+        '.circle5': 11.8,
+        '.circle6': 13.8,
+        '.circle7': 15.8,
+        '.circle8': 17.8,
+        '.circle9': 19.8,
+        '.circle10': 21.8,
+        '.circle11': 23.8,
+        '.circle12': 25.8,
+        '.circle13': 27.8,
+        '.circle14': 29.8,
+        '.circle15': 31.8,
+        '.circle16': 33.8,
+        '.circle17': 35.8,
+        '.circle18': 37.8,
+        '.circle19': 39.8
+    }
+
+
+
+   /* for(i=0;i<scale.length;i++) {
+        key = i+1
+        key = '.circle'+key
+        scale2[key] = scaleOffset2
+        scaleOffset2 += 2
+    }
+
+    scale3 = {}
+        for(i=0;i<scale.length;i++) {
+            key = i+1
+            key = '.circle'+key
+            scale3[key] = scaleOffset3
+            scaleOffset3 += 2
+        }*/
+
+
+
+    $scalValue1 = 1.4
+    $scalValue2 = 1.6
 
     $scrolloffset = 0
     $count = 1;
 
     $('#prev').hide()
 
+    $scalValue = 1
+    $flag = 1000
+    scale = scale1
+    $offset = 6
+    $anotherOffset = 6.2
+
+    if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
+
+        $scaleValue = $scalValue1
+        $flag = 2000
+        scale = scale2
+        $offset = 4
+        $anotherOffset = 4.4
+
+    }
+
+    else if (window.matchMedia('(max-width: 480px)').matches) {
+
+
+        $scaleValue = $scalValue2
+        $flag = 3000
+        scale = scale3
+        $offset = 3
+        $anotherOffset = 3.8
+        console.log("inside media query 480px" + $scalValue2)
+    }
+
+
+
     function scaleDown() {
+
+
 
 
         if ($count >= 13) {
@@ -208,15 +314,19 @@ $(window).on('load', function () {
             if ($count == 13)
                 $('#next').fadeOut('slow')
 
-            // console.log("down")
+             console.log("down")
             for (key in scale) {
 
                 console.log("key: " + key)
                 console.log("scale:" + Math.floor(scale[key]))
 
                 val = Math.floor(scale[key])
-                if (Math.floor(scale[key]) === 6) {
+
+                console.log("scale "+ val + "offset "+ $offset)
+
+                if (Math.floor(scale[key]) === $offset ) {
                     // console.log("insie math")
+                    console.log("inside ifffffffff")
                     scale[key] = 0
                     $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
                 }
@@ -228,12 +338,9 @@ $(window).on('load', function () {
                 else {
 
                     scale[key] = scale[key] - 2
-                    if (window.matchMedia('(max-width: 768px)').matches) {
-                        console.log("inside media query")
+
+
                         $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
-                    }
-                    else
-                        $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
                     // scale[key] = $val
                 }
 
@@ -244,6 +351,19 @@ $(window).on('load', function () {
     }
 
     function scaleUp() {
+
+        var $scalValue = 1
+
+
+        if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches)
+
+            $scaleValue = $scalValue1
+
+        else if (window.matchMedia('(max-width: 480px)').matches)
+
+            $scaleValue = $scalValue2
+
+
 
 
         if ($count <= 1) {
@@ -289,12 +409,10 @@ $(window).on('load', function () {
                 val = Math.floor(scale[key])
                 if (Math.floor(scale[key]) === 0) {
                     // console.log("insie math")
-                    scale[key] = 6.2
-                    if (window.matchMedia('(max-width: 768px)').matches)
+                    scale[key] = $anotherOffset
 
-                        $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
-                    else
-                        $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
+                    $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
+
                 }
                 else if (Math.floor(scale[key]) < 0) {
                     scale[key] = scale[key] + 2
@@ -304,12 +422,9 @@ $(window).on('load', function () {
                 else {
 
                     scale[key] = scale[key] + 2
-                    if (window.matchMedia('(max-width: 768px)').matches)
 
                         $(key).velocity({'scale': scale[key] / $scalValue, 'easing': 'linear'}, 400)
-                    else
-                        $(key).velocity({'scale': scale[key], 'easing': 'linear'}, 400)
-                    // scale[key] = $val
+
                 }
 
 
@@ -325,20 +440,20 @@ $(window).on('load', function () {
     $('.heading2').lettering()
 
 
-   /* var elem = document.getElementById("elem")
+    var elem = document.getElementById("elem")
     hammer = new Hammer(elem)
-    hammer.on("swipeup  swipedown", function (event) {
+    hammer.on("swipeup panup pandown  swipedown", function (event) {
 
         console.log("swipe detected")
 
-        if(event.type == "swipeup")
+        if(event.type == "swipeup" || event.type == "panup")
             scaleDown()
-        else
+        else if(event.type == "swipedown" || event.type == "pandown")
             scaleUp()
 
 
 
-    })*/
+    })
 
 
 
