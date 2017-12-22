@@ -325,7 +325,7 @@ $(window).on('load', function () {
     $('.heading2').lettering()
 
 
-    var elem = document.getElementById("elem")
+   /* var elem = document.getElementById("elem")
     hammer = new Hammer(elem)
     hammer.on("swipeup  swipedown", function (event) {
 
@@ -338,7 +338,7 @@ $(window).on('load', function () {
 
 
 
-    })
+    })*/
 
 
 
@@ -437,7 +437,7 @@ $(window).on('load', function () {
 
 
 
-	
+
 
 	/*-----------------------------------------------------------------------------*/
 /*
