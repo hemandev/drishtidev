@@ -454,7 +454,7 @@ $(window).on('load', function () {
 
 
 
-    }, 200)
+    }, 200))
 
 
 
