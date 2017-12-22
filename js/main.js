@@ -306,7 +306,7 @@ $(window).on('load', function () {
     $(window).on('wheel', _.throttle(function (event) {
         console.log(event.originalEvent.deltaY)
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
-        if (event.originalEvent.deltaY < -200) {
+        if (event.originalEvent.deltaY < -100) {
             console.log("up" + event.originalEvent.deltaY)
 
             scaleUp()
@@ -314,13 +314,58 @@ $(window).on('load', function () {
 
             // wheeled up
         }
-        else if (event.originalEvent.deltaY > 200) {
+        else if (event.originalEvent.deltaY > 100) {
             console.log("down" + event.originalEvent.deltaY)
 
             scaleDown()
 
         }
     }, 600))
+	
+
+	/*-----------------------------------------------------------------------------*/
+	
+	function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
+{
+	temp_path = arg_path + '/'+ arg_prefix + pad(arg_index,2).toString()+'.'+arg_type;
+	return temp_path;
+}
+
+
+
+function next_frame()
+{
+	console.log('inside next_frame')
+	if(index_val == Math.floor(no_of_frames /2)){
+		//to handle the necessary changes
+		//changes occur at the middle of the animation
+		$('.big-container').hide();
+	}
+	
+	if(index_val == no_of_frames){
+		index_val = 0;
+		return;
+	}
+	
+	else{
+		index_val++;
+		$("#img_frame").attr("src",generate_filename(path,prefix,index_val,extension));
+	}
+	setTimeout(next_frame,50)
+}
+
+path = 'sequences/menu'
+prefix = 'menu_'
+extension = 'png'
+index_val = 0
+no_of_frames = 11
+var throttled = _.throttle(next_frame,2000,{trailing:false});
+$('#menu_button').on('click',function(){console.log('clicked');$("#img_frame").show();next_frame();});
 
 
 })
