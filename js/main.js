@@ -443,18 +443,24 @@ $(window).on('load', function () {
 
     var elem = document.getElementById("elem")
     hammer = new Hammer(elem)
-    hammer.on("swipeup panup pandown  swipedown", _.debounce(function (event) {
+    hammer.get('swipe').set({
+        direction: Hammer.DIRECTION_ALL,
+        threshold: 5,
+        velocity:0.1
+    });
+
+    hammer.on("swipeup swipedown", function (event) {
 
         console.log("swipe detected")
 
-        if(event.type == "swipeup" || event.type == "panup")
+        if(event.type === "swipeup")
             scaleDown()
-        else if(event.type == "swipedown" || event.type == "pandown")
+        else if(event.type === "swipedown")
             scaleUp()
 
 
 
-    }, 200))
+    } )
 
 
 
