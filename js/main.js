@@ -325,6 +325,11 @@ $(window).on('load', function () {
 
 	/*-----------------------------------------------------------------------------*/
 	
+
+
+})
+$().ready(
+	
 	function pad(n, width, z) {
   z = z || '0';
   n = n + '';
@@ -366,6 +371,4 @@ index_val = 0
 no_of_frames = 11
 var throttled = _.throttle(next_frame,2000,{trailing:false});
 $('#menu_button').on('click',function(){console.log('clicked');$("#img_frame").show();next_frame();});
-
-
-})
+);
