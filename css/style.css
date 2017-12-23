@@ -196,7 +196,7 @@
 
 .ham-text-container {
   position: absolute;
-  width: 250px;
+  width: 500px;
   text-align: center;
   height: 350px;
   top: 0;
@@ -278,7 +278,7 @@
     outline: 0; }
 
 .ham-container {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-color: white;
@@ -1121,8 +1121,6 @@ body {
     font-size: 15px;
     height: 80px;
     top: -30%; }
-  .ham-text-container {
-    width: 250px; }
   .circle1 {
     background-color: white;
     position: fixed;
@@ -1407,8 +1405,6 @@ body {
     width: 250px;
     height: 250px;
     background-size: 250px 250px; }
-  .ham-text-container {
-    width: 250px; }
   #bt2 {
     display: none; }
   .ham-fab {

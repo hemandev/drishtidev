@@ -70,24 +70,15 @@ $(window).on('load', function () {
 $imgFlag = 0
 
 $hamFlag  = 0
-
-$readFlag = 0
-
-
     $('.ham-btn').click(function () {
 
         $mediaFlag = '25px'
-        if($hamFlag === 0) {
+        if($hamFlag == 0) {
             $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 0})
             $hamFlag = 1
         }
-        else if ($hamFlag === 1 && $readFlag === 1 ) {
-            $('.mail-fab,.close-fab').velocity({scale: 1})
-            $hamFlag = 0
-        }
-
-        else  {
-            $('.insta-fab, .fb-fab').velocity({scale: 1})
+        else {
+            $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 1})
             $hamFlag = 0
         }
 
@@ -168,7 +159,6 @@ $readFlag = 0
 
     $('.event-button').click(function () {
 
-        $readFlag = 1
 
         $('.event-button').fadeOut()
         $('.event-tag').velocity({opacity: 0}, 200, "linear")
@@ -200,8 +190,6 @@ $readFlag = 0
 
 
     $('.close-btn').click(function () {
-
-        $readFlag = 0
 
         if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
