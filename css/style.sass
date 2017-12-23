@@ -2,6 +2,10 @@ $color: red
 $font-size: 12em
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,100i,400,900')
+@font-face
+  font-family: myFirstFont
+  src: url('../parabola.ttf')
+
 
 $blue1: #349FD7
 $blue2: #4dace8
@@ -22,10 +26,14 @@ $violet1: #D74171
 $violet2: #C041A5
 $violet3: #A83593
 
-h1
+.h1
   font-family: "Pacifico", cursive
+  //color: rgba(255,255,255,.8)!important
+
 .big-container
-  position: fixed
+  position: absolute
+  width: 100%
+  height: 100%
   z-index: 10000
 
 .another-cont
@@ -38,10 +46,24 @@ h1
 
 $scale-factor: 1/6.3
 
+.circle-content
+  width: 100%
+  height: 100%
+  z-index: 1000000000000
 
 
 .event-header
   font-size: 80px
+  position: absolute
+  width: 500px
+  height: 200px
+  z-index: 120000
+  text-align: center
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
 
 .drawer-right
   position: fixed
@@ -57,31 +79,38 @@ $scale-factor: 1/6.3
 
 
 .event-tag
-  margin-top: 150px
-  margin-bottom: 30px
-  border-radius: 10px
+
   font-size: 30px
   font-family: Raleway, sans-serif
-  font-weight: 100
-
-.circle-content
-  position: fixed
-  bottom: 0
+  font-weight: 400
+  position: absolute
+  width: 300px
+  height: 100px
+  z-index: 10000
+  text-align: center
+  top: -50%
   left: 0
-  top: 0
   right: 0
-  z-index: 100000000
+  bottom: 0
+  margin: auto
+
+
 
 
 //  margin-top: 220px
 
 .event-button
-  position: fixed
+  position: absolute
   width: 120px
   height: 50px
-  top: 70%
-  left: 45%
   z-index: 10000
+  text-align: center
+  top: 50%
+  border-radius: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
 
 
 
@@ -127,12 +156,78 @@ $scale-factor: 1/6.3
   left: 25px
   top: 25px
   margin: auto
-  z-index: 1000000
+  z-index: 100000000000000000000000000000000000000000000000000000000000000
   transition: ease-out, 300ms
   transform: scale(1)
   &:hover
     transition: ease-in 300ms
     transform: scale(1.1)
+
+
+$offset: 100
+
+.ham-text-container
+  position: absolute
+  display: block
+  width: 100%
+  text-align: center
+  height: 100%
+  top: 30%
+  right: 0
+  left: 0
+
+.ham-text-container h1
+  font-size: 50px!important
+  font-family: Raleway, sans-serif !important
+  font-weight: 400 !important
+  opacity: .7 !important
+  color: white !important
+
+
+  
+#img-bg
+  position: absolute
+  width: 550px
+  height: 550px
+  right: 0
+  bottom: 0
+  top: 80px
+  left: 50px
+  resize: both
+  margin: auto
+  background-image: url("../images/logowhitetransp.png")
+  background-size: 550px 550px
+  opacity: .1
+  background-repeat: no-repeat
+
+
+
+
+//#canvas-basic
+  position: absolute
+  display: block
+  width: 100%
+  height: 100%
+  top: 20%
+  right: 0
+  opacity: .05
+  left: 30%
+  background-image: url("../images/logoblacktransp.png")
+  background-size: auto
+  text-align: center
+  background-repeat: no-repeat
+
+#canvas-basic
+  position: absolute
+  display: block
+  width: 100%
+  height: 100%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+
 
 .close-btn
   background: none
@@ -163,6 +258,23 @@ $scale-factor: 1/6.3
   cursor: pointer
   &:focus
     outline: 0
+
+.ham-btn
+  background: none
+  z-index: 1000000000
+  border: none
+  margin: auto
+  text-decoration: none
+  cursor: pointer
+  &:focus
+    outline: 0
+
+.ham-container
+  position: fixed
+  height: 100%
+  width: 100%
+  background-color: white
+  z-index: 10000000000000000
 
 #bt
   background: none
@@ -250,6 +362,7 @@ body
   overflow: hidden
   background-color: $violet3
 
+
 .container-fluid
   position: relative
   width: 3000px
@@ -283,7 +396,7 @@ body
   top: $offset-top
   bottom: $offset-bottom
   right: 45px
-  z-index: 1000000000
+  z-index: 100000000000000
   border-radius: 50%
   width: 48px
   height: 48px
@@ -312,14 +425,9 @@ body
   +fab(0, 450px, 0)
 
 
-.circle1-dupe
-  +circle-element($blue1, 6.2, 990)
-  opacity: 0
 
 .circle1
   +circle-element(white, 6.2, 1000)
-
-
 
 .circle2
   +circle-element($blue1, 8.3, 900)
@@ -421,7 +529,14 @@ body
     right: 0
     margin: auto
     top: 10px
+    z-index: 1000000000000
     transform: scale(.8)
+
+  #img-bg
+    left: 0
+    width: 400px
+    height: 400px
+    background-size: 400px 400px
 
   #bt2
     display: none
@@ -441,19 +556,21 @@ body
 
   .event-header
     font-size: 50px
+    width: 400px
+    height: 150px
 
   .event-button
-   position: fixed
-   width: 120px
-   height: 30px
-   top: 65%
-   left: 37%
+    top: 30%
+    transform: scale(.8)
+
 
 
   .event-tag
-    font-size: 20px
-    font-weight: 400
-    margin-top: 200px
+    font-size: 15px
+    height: 80px
+    top: -30%
+
+
 
 
 
@@ -522,12 +639,19 @@ body
   $scal-val: 1.6
 
   .img
-    position: fixed
+    position: absolute
     left: 0
     right: 0
     margin: auto
     top: 0px
     transform: scale(.8)
+
+  #img-bg
+    left: 0
+    right: 0
+    width: 250px
+    height: 250px
+    background-size: 250px 250px
 
   #bt2
     display: none
@@ -547,23 +671,18 @@ body
 
   .event-header
     font-size: 40px
-    margin-top: 80px
+    width: 300px
+    height: 100px
+
 
   .event-button
-    position: fixed
-    width: 120px
-    height: 30px
-    top: 60%
-    left: 37%
-
+    height: 40px
+    top: 30%
+    transform: scale(.8)
 
   .event-tag
     font-size: 15px
-    font-weight: 400
-    margin-top: 150px
-
-
-
+    top: -20%
 
   .circle1
     +circle-element(white, 6.2/$scal-val, 1000)

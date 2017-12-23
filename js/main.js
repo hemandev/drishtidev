@@ -1,17 +1,104 @@
 $(window).on('load', function () {
 
-    $height = $(window).height() / 2 - 120
+    var granimInstance = new Granim({
+        element: '#canvas-basic',
+        name: 'basic-gradient',
+        direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
+        opacity: [1, 1],
+        isPausedWhenNotInView: false,
+        states : {
+            "default-state": {
+                gradients: [
+                    ['#AA076B', '#61045F'],
+                    ['#02AAB0', '#00CDAC'],
+                    ['#DA22FF', '#9733EE']
+                ]
+            }
+        }
+    });
+
+
+
+
+    $(window).on('resize', function () {
+/*
+        $height = $(window).height() / 2 - 250
+        $width =  $(window).width() / 2 - 250
+        $('#img-bg').css({top: $height+'px', left: $width+'px'})*/
+
+    })
+
+
+
+
     // $('.event-header').css({marginTop: $height})
 
     $('.event-one-container').hide()
 
     var elem = $('.event-tag')
 
+    $('.ham-container').hide()
+
+  /*  var granimInstance = new Granim({
+        element: '#canvas-basic',
+        direction: 'top-bottom',
+        opacity: [1, 1],
+        isPausedWhenNotInView: true,
+        image : {
+            source: '../images/logoblacktransp.png',
+            blendingMode: 'multiply'
+        },
+        states : {
+            "default-state": {
+                gradients: [
+                    ['#29323c', '#485563'],
+                    ['#FF6B6B', '#556270'],
+                    ['#80d3fe', '#7ea0c4'],
+                    ['#f0ab51', '#eceba3']
+                ],
+                transitionSpeed: 7000
+            }
+        }
+    });*/
+
+
 
 
 
     /*circleType = new CircleType(elem)
     circleType.radius(100)*/
+$imgFlag = 0
+
+
+    $('.ham-btn').click(function () {
+
+        $mediaFlag = '25px'
+        if(window.matchMedia('(max-width: 768px)').matches)
+            $mediaFlag = 0
+
+
+            console.log("inside click!!!!!")
+
+        if($imgFlag === 0) {
+
+            $('.ham-container').fadeToggle()
+            $('.img').velocity({right: 0, left: 0}, 100, "swing")
+            $('#menu_button').removeClass('fa-bars').addClass('fa-times')
+            $imgFlag = 1
+
+        }
+        else if($imgFlag === 1) {
+
+            $('.ham-container').fadeToggle()
+            $('.img').css({left: $mediaFlag, right: ''})
+            $('#menu_button').removeClass('fa-times').addClass('fa-bars')
+
+            $imgFlag = 0
+
+        }
+
+
+    })
 
     new CircleType(document.getElementById('tag-id')).radius(250)
 
