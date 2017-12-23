@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,100i,400,900");
-@font-face {
-  font-family: myFirstFont;
-  src: url("../parabola.ttf"); }
-
-.h1 {
+h1 {
   font-family: "Pacifico", cursive; }
 
   
@@ -46,39 +42,22 @@
   
   
 .big-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
   z-index: 10000; }
 
 .another-cont {
-  width: 100%;
-  height: 100%;
+  width: 10000px;
+  height: 10000px;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   z-index: 1000000000;
   background-color: #1d1f21; }
 
-.circle-content {
-  width: 100%;
-  height: 100%;
-  z-index: 1000000000000; }
-
 .event-header {
-  font-size: 80px;
-  position: absolute;
-  width: 500px;
-  height: 200px;
-  z-index: 120000;
-  text-align: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; }
+  font-size: 80px; }
 
 .drawer-right {
-  position: absolute;
+  position: fixed;
   height: 100%;
   top: 0;
   right: 0;
@@ -89,32 +68,28 @@
   z-index: 10000000000; }
 
 .event-tag {
+  margin-top: 150px;
+  margin-bottom: 30px;
+  border-radius: 10px;
   font-size: 30px;
   font-family: Raleway, sans-serif;
-  font-weight: 400;
-  position: absolute;
-  width: 300px;
-  height: 100px;
-  z-index: 10000;
-  text-align: center;
-  top: -50%;
-  left: 0;
-  right: 0;
+  font-weight: 100; }
+
+.circle-content {
+  position: fixed;
   bottom: 0;
-  margin: auto; }
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100000000; }
 
 .event-button {
-  position: absolute;
+  position: fixed;
   width: 120px;
   height: 50px;
-  z-index: 10000;
-  text-align: center;
-  top: 50%;
-  border-radius: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; }
+  top: 70%;
+  left: 45%;
+  z-index: 10000; }
 
 .sk-cube-grid {
   width: 140px;
@@ -202,7 +177,7 @@
   height: 100%;
   max-height: 100%;
   margin: 0;
-  position: absolute;
+  position: fixed;
   padding: 0;
   z-index: 100000;
   opacity: .5;
@@ -213,8 +188,7 @@
   height: 100%;
   max-height: 100%;
   margin: 0;
-  position: absolute;
-  overflow: hidden;
+  position: fixed;
   padding: 0;
   z-index: 100000;
   background-image: url("../concert.jpg");
@@ -222,59 +196,16 @@
   background-repeat: no-repeat; }
 
 .img {
-  position: absolute;
+  position: fixed;
   left: 25px;
   top: 25px;
   margin: auto;
-  z-index: 100000000000000000000000000000000000000000000000000000000000000;
+  z-index: 1000000;
   transition: ease-out, 300ms;
   transform: scale(1); }
   .img:hover {
     transition: ease-in 300ms;
     transform: scale(1.1); }
-
-.ham-text-container {
-  position: absolute;
-  width: 250px;
-  text-align: center;
-  height: 350px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto; }
-
-.ham-text-container h1 {
-  font-size: 50px !important;
-  font-family: Raleway, sans-serif !important;
-  font-weight: 400 !important;
-  opacity: .7 !important;
-  color: white !important; }
-
-#img-bg {
-  position: absolute;
-  width: 550px;
-  height: 550px;
-  right: 0;
-  bottom: 0;
-  top: 80px;
-  left: 50px;
-  resize: both;
-  margin: auto;
-  background-image: url("../images/logowhitetransp.png");
-  background-size: 550px 550px;
-  opacity: .1;
-  background-repeat: no-repeat; }
-
-#canvas-basic {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
 
 .close-btn {
   background: none;
@@ -306,26 +237,9 @@
   .mail-btn:focus {
     outline: 0; }
 
-.ham-btn {
-  background: none;
-  z-index: 1000000000;
-  border: none;
-  margin: auto;
-  text-decoration: none;
-  cursor: pointer; }
-  .ham-btn:focus {
-    outline: 0; }
-
-.ham-container {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  z-index: 10000000000000000; }
-
 #bt {
   background: none;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 0;
   left: 0;
@@ -340,7 +254,7 @@
 
 #bt2 {
   background: none;
-  position: absolute;
+  position: fixed;
   top: 30px;
   right: 0;
   left: 0;
@@ -692,11 +606,11 @@ body {
   z-index: 200; }
 
 .ham-fab {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 45px;
-  z-index: 100000000000000;
+  z-index: 1000000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -707,11 +621,11 @@ body {
   transition: linear, 500ms; }
 
 .fb-fab {
-  position: absolute;
+  position: fixed;
   top: 150px;
   bottom: 0;
   right: 45px;
-  z-index: 100000000000000;
+  z-index: 1000000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -722,11 +636,11 @@ body {
   transition: linear, 500ms; }
 
 .insta-fab {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 150px;
   right: 45px;
-  z-index: 100000000000000;
+  z-index: 1000000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -737,11 +651,11 @@ body {
   transition: linear, 500ms; }
 
 .mail-fab {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 150px;
   right: 45px;
-  z-index: 100000000000000;
+  z-index: 1000000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -752,11 +666,11 @@ body {
   transition: linear, 500ms; }
 
 .close-fab {
-  position: absolute;
+  position: fixed;
   top: 150px;
   bottom: 0;
   right: 45px;
-  z-index: 100000000000000;
+  z-index: 1000000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -767,11 +681,11 @@ body {
   transition: linear, 500ms; }
 
 .close-fab-drawer {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 450px;
   right: 45px;
-  z-index: 100000000000000;
+  z-index: 1000000000;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -780,6 +694,22 @@ body {
   cursor: pointer;
   transform: scale(0);
   transition: linear, 500ms; }
+
+.circle1-dupe {
+  background-color: #349FD7;
+  position: fixed;
+  z-index: 990;
+  transition: ease-out .4s;
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: scale(6.2);
+  opacity: 0; }
 
 .circle1 {
   background-color: white;
@@ -1100,29 +1030,20 @@ body {
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
   .img {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     margin: auto;
     top: 10px;
-    z-index: 1000000000000;
     transform: scale(0.8); }
-    .img:hover {
-      transform: scale(0.8); }
-  #img-bg {
-    left: 0;
-    width: 400px;
-    top: 0;
-    height: 400px;
-    background-size: 400px 400px; }
   #bt2 {
     display: none; }
   .ham-fab {
-    position: absolute;
+    position: fixed;
     top: unset;
     bottom: 25px;
     right: 45px;
-    z-index: 100000000000000;
+    z-index: 1000000000;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -1133,11 +1054,11 @@ body {
     transition: linear, 500ms;
     right: 20px; }
   .close-fab {
-    position: absolute;
+    position: fixed;
     top: unset;
     bottom: 105px;
     right: 45px;
-    z-index: 100000000000000;
+    z-index: 1000000000;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -1150,18 +1071,17 @@ body {
   .fb-fab, .insta-fab, .mail-fab {
     display: none; }
   .event-header {
-    font-size: 50px;
-    width: 400px;
-    height: 150px; }
+    font-size: 50px; }
   .event-button {
-    top: 30%;
-    transform: scale(0.8); }
+    position: fixed;
+    width: 120px;
+    height: 30px;
+    top: 65%;
+    left: 37%; }
   .event-tag {
-    font-size: 15px;
-    height: 80px;
-    top: -30%; }
-  .ham-text-container {
-    width: 250px; }
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 200px; }
   .circle1 {
     background-color: white;
     position: fixed;
@@ -1431,31 +1351,20 @@ body {
 
 @media screen and (max-width: 480px) {
   .img {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     margin: auto;
     top: 0px;
     transform: scale(0.8); }
-    .img:hover {
-      transform: scale(0.8); }
-  #img-bg {
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 250px;
-    height: 250px;
-    background-size: 250px 250px; }
-  .ham-text-container {
-    width: 250px; }
   #bt2 {
     display: none; }
   .ham-fab {
-    position: absolute;
+    position: fixed;
     top: unset;
     bottom: 25px;
     right: 45px;
-    z-index: 100000000000000;
+    z-index: 1000000000;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -1466,11 +1375,11 @@ body {
     transition: linear, 500ms;
     right: 20px; }
   .close-fab {
-    position: absolute;
+    position: fixed;
     top: unset;
     bottom: 105px;
     right: 45px;
-    z-index: 100000000000000;
+    z-index: 1000000000;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -1484,15 +1393,17 @@ body {
     display: none; }
   .event-header {
     font-size: 40px;
-    width: 300px;
-    height: 100px; }
+    margin-top: 80px; }
   .event-button {
-    height: 40px;
-    top: 30%;
-    transform: scale(0.8); }
+    position: fixed;
+    width: 120px;
+    height: 30px;
+    top: 60%;
+    left: 37%; }
   .event-tag {
     font-size: 15px;
-    top: -20%; }
+    font-weight: 400;
+    margin-top: 150px; }
   .circle1 {
     background-color: white;
     position: fixed;
