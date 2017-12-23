@@ -1,5 +1,63 @@
-$(window).on('load', function () {
 
+$(window).on('load', function () {
+	
+/*==============================================================
+written by nabeel
+===============================================================*/
+var slides = [],
+    tl = new TimelineMax({paused: true}),
+    container = document.querySelector('.animationContainer'),
+    numLoaded = 0,
+    FPS = 24;
+for( var i = 1; i <= 35; i++ ) {
+  slides.push(generate_filename('sequences/solutions-01','solutions-01_',i,'png'));
+}
+
+for(var i=0;i < slides.length;i++){
+  var img = new Image();
+  img.src = slides[i];
+  img.id = `img${i}`;
+  //img.onload = function() {
+    //checkLoadCount();
+	console.log(img)
+	console.log(i)
+	console.log(slides[i])
+    container.appendChild(img);
+  }
+	function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
+{
+	temp_path = arg_path + '/'+ arg_prefix + pad(arg_index,2).toString()+'.'+arg_type;
+	return temp_path;
+}
+
+function forward_animation() {
+  var images = $(container).children(), // images in the sequence
+    fps = 24,
+    duration = 1 / fps;
+  var sequence = new TimelineMax({paused:false})
+    .staggerTo(images, 0,{ position: 'fixed', visibility: 'visible' }, duration, 0)
+    .staggerTo(images, 0, { position: 'fixed', visibility: 'hidden', immediateRender: false }, duration, duration)
+    .set({}, {}, "+="+duration)
+	.reverse(0);
+  // tl.play();
+}
+
+function backward_animation()
+{
+	var images = $(container).children(), // images in the sequence
+    fps = 24,
+    duration = 1 / fps;
+  var sequence = new TimelineMax({paused:false})
+    .staggerTo(images, 0,{ position: 'fixed', visibility: 'visible' }, duration, 0)
+    .staggerTo(images, 0, { position: 'fixed', visibility: 'hidden', immediateRender: false }, duration, duration)
+    .set({}, {}, "+="+duration);
+}
     $height = $(window).height() / 2 - 120
     // $('.event-header').css({marginTop: $height})
 
@@ -7,8 +65,9 @@ $(window).on('load', function () {
 
     var elem = $('.event-tag')
 
-
-
+/*
+nabeel ends here
+============================================================*/
 
     /*circleType = new CircleType(elem)
     circleType.radius(100)*/
@@ -453,10 +512,14 @@ $(window).on('load', function () {
 
         console.log("swipe detected")
 
-        if(event.type === "swipeup")
+        if(event.type === "swipeup"){
+			backward_animation()
             scaleDown()
-        else if(event.type === "swipedown")
+		}
+        else if(event.type === "swipedown"){
+			forward_animation()
             scaleUp()
+		}
 
 
 
@@ -521,13 +584,13 @@ $(window).on('load', function () {
 
     $('#bt').on('click', _.debounce(function () {
 
-
+		backward_animation();
         scaleDown()
 
     }, 400))
 
     $('#bt2').on('click', _.debounce(function () {
-
+		forward_animation();
         scaleUp()
 
     }, 400))
@@ -538,7 +601,7 @@ $(window).on('load', function () {
 
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
         if (event.originalEvent.deltaY < 0) {
-
+			forward_animation();
             scaleUp()
 
 
@@ -546,6 +609,7 @@ $(window).on('load', function () {
         }
 
         else if (event.originalEvent.deltaY > 0) {
+			backward_animation()
             scaleDown()
 
         }
@@ -555,57 +619,5 @@ $(window).on('load', function () {
 
 })
 
-
-
-
-
-
-
 	/*-----------------------------------------------------------------------------*/
-/*
 
-function pad(n, width, z) {
-    z = z || '0';
-    n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
-function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
-{
-    temp_path = arg_path + '/'+ arg_prefix + pad(arg_index,2).toString()+'.'+arg_type;
-    return temp_path;
-}
-
-
-
-function next_frame()
-{
-    console.log('inside next_frame')
-    if(index_val == Math.floor(no_of_frames /2)){
-        //to handle the necessary changes
-        //changes occur at the middle of the animation
-        $('.big-container').hide();
-    }
-
-    if(index_val == no_of_frames){
-        index_val = 0;
-        return;
-    }
-
-    else{
-        index_val++;
-        $("#img_frame").attr("src",generate_filename(path,prefix,index_val,extension));
-    }
-    setTimeout(next_frame,50)
-}
-
-path = 'sequences/menu'
-prefix = 'menu_'
-extension = 'png'
-index_val = 0
-no_of_frames = 11
-var throttled = _.throttle(next_frame,2000,{trailing:false});
-$('#menu_button').on('click',function(){console.log('clicked');$("#img_frame").show();next_frame();});
-
-
-
-*/
