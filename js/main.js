@@ -69,10 +69,20 @@ $(window).on('load', function () {
     circleType.radius(100)*/
 $imgFlag = 0
 
-
+$hamFlag  = 0
     $('.ham-btn').click(function () {
 
         $mediaFlag = '25px'
+        if($hamFlag == 0) {
+            $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 0})
+            $hamFlag = 1
+        }
+        else {
+            $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 1})
+            $hamFlag = 0
+        }
+
+
         if(window.matchMedia('(max-width: 768px)').matches)
             $mediaFlag = 0
 

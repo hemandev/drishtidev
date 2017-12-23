@@ -195,13 +195,14 @@
 
 .ham-text-container {
   position: absolute;
-  display: block;
-  width: 100%;
+  width: 500px;
   text-align: center;
-  height: 100%;
-  top: 30%;
+  height: 350px;
+  top: 0;
   right: 0;
-  left: 0; }
+  bottom: 0;
+  left: 0;
+  margin: auto; }
 
 .ham-text-container h1 {
   font-size: 50px !important;
@@ -1066,6 +1067,8 @@ body {
     top: 10px;
     z-index: 1000000000000;
     transform: scale(0.8); }
+    .img:hover {
+      transform: scale(0.8); }
   #img-bg {
     left: 0;
     width: 400px;
@@ -1392,6 +1395,8 @@ body {
     margin: auto;
     top: 0px;
     transform: scale(0.8); }
+    .img:hover {
+      transform: scale(0.8); }
   #img-bg {
     left: 0;
     right: 0;
