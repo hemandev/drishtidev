@@ -6,7 +6,7 @@ $(window).on('load', function () {
         direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
         opacity: [1, 1],
         isPausedWhenNotInView: false,
-        states : {
+        states: {
             "default-state": {
                 gradients: [
                     ['#AA076B', '#61045F'],
@@ -18,17 +18,13 @@ $(window).on('load', function () {
     });
 
 
-
-
     $(window).on('resize', function () {
-/*
-        $height = $(window).height() / 2 - 250
-        $width =  $(window).width() / 2 - 250
-        $('#img-bg').css({top: $height+'px', left: $width+'px'})*/
+        /*
+                $height = $(window).height() / 2 - 250
+                $width =  $(window).width() / 2 - 250
+                $('#img-bg').css({top: $height+'px', left: $width+'px'})*/
 
     })
-
-
 
 
     // $('.event-header').css({marginTop: $height})
@@ -39,57 +35,62 @@ $(window).on('load', function () {
 
     $('.ham-container').hide()
 
-  /*  var granimInstance = new Granim({
-        element: '#canvas-basic',
-        direction: 'top-bottom',
-        opacity: [1, 1],
-        isPausedWhenNotInView: true,
-        image : {
-            source: '../images/logoblacktransp.png',
-            blendingMode: 'multiply'
-        },
-        states : {
-            "default-state": {
-                gradients: [
-                    ['#29323c', '#485563'],
-                    ['#FF6B6B', '#556270'],
-                    ['#80d3fe', '#7ea0c4'],
-                    ['#f0ab51', '#eceba3']
-                ],
-                transitionSpeed: 7000
-            }
-        }
-    });*/
-
-
-
+    /*  var granimInstance = new Granim({
+          element: '#canvas-basic',
+          direction: 'top-bottom',
+          opacity: [1, 1],
+          isPausedWhenNotInView: true,
+          image : {
+              source: '../images/logoblacktransp.png',
+              blendingMode: 'multiply'
+          },
+          states : {
+              "default-state": {
+                  gradients: [
+                      ['#29323c', '#485563'],
+                      ['#FF6B6B', '#556270'],
+                      ['#80d3fe', '#7ea0c4'],
+                      ['#f0ab51', '#eceba3']
+                  ],
+                  transitionSpeed: 7000
+              }
+          }
+      });*/
 
 
     /*circleType = new CircleType(elem)
     circleType.radius(100)*/
-$imgFlag = 0
+    $imgFlag = 0
 
-$hamFlag  = 0
+    $hamFlag = 0
+    $readFlag = 0
+
+
     $('.ham-btn').click(function () {
 
         $mediaFlag = '25px'
-        if($hamFlag == 0) {
+        if ($hamFlag === 0) {
             $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 0})
             $hamFlag = 1
         }
+        else if ($hamFlag === 1 && $readFlag === 1) {
+            $('.mail-fab,.close-fab').velocity({scale: 1})
+            $hamFlag = 0
+        }
+
         else {
-            $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 1})
+            $('.insta-fab, .fb-fab').velocity({scale: 1})
             $hamFlag = 0
         }
 
 
-        if(window.matchMedia('(max-width: 768px)').matches)
+        if (window.matchMedia('(max-width: 768px)').matches)
             $mediaFlag = 0
 
 
-            console.log("inside click!!!!!")
+        console.log("inside click!!!!!")
 
-        if($imgFlag === 0) {
+        if ($imgFlag === 0) {
 
             $('.ham-container').fadeToggle()
             $('.img').velocity({right: 0, left: 0}, 100, "swing")
@@ -97,7 +98,7 @@ $hamFlag  = 0
             $imgFlag = 1
 
         }
-        else if($imgFlag === 1) {
+        else if ($imgFlag === 1) {
 
             $('.ham-container').fadeToggle()
             $('.img').css({left: $mediaFlag, right: ''})
@@ -159,6 +160,8 @@ $hamFlag  = 0
 
     $('.event-button').click(function () {
 
+        $readFlag = 1
+
 
         $('.event-button').fadeOut()
         $('.event-tag').velocity({opacity: 0}, 200, "linear")
@@ -190,6 +193,8 @@ $hamFlag  = 0
 
 
     $('.close-btn').click(function () {
+
+        $readFlag = 0
 
         if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
@@ -272,7 +277,8 @@ $hamFlag  = 0
 
     scale1 = scale
 
-    scale2 = { '.circle1': 4.4,
+    scale2 = {
+        '.circle1': 4.4,
         '.circle2': 6.4,
         '.circle3': 8.3,
         '.circle4': 10.4,
@@ -316,22 +322,20 @@ $hamFlag  = 0
     }
 
 
+    /* for(i=0;i<scale.length;i++) {
+         key = i+1
+         key = '.circle'+key
+         scale2[key] = scaleOffset2
+         scaleOffset2 += 2
+     }
 
-   /* for(i=0;i<scale.length;i++) {
-        key = i+1
-        key = '.circle'+key
-        scale2[key] = scaleOffset2
-        scaleOffset2 += 2
-    }
-
-    scale3 = {}
-        for(i=0;i<scale.length;i++) {
-            key = i+1
-            key = '.circle'+key
-            scale3[key] = scaleOffset3
-            scaleOffset3 += 2
-        }*/
-
+     scale3 = {}
+         for(i=0;i<scale.length;i++) {
+             key = i+1
+             key = '.circle'+key
+             scale3[key] = scaleOffset3
+             scaleOffset3 += 2
+         }*/
 
 
     $scalValue1 = 1.4
@@ -370,10 +374,7 @@ $hamFlag  = 0
     }
 
 
-
     function scaleDown() {
-
-
 
 
         if ($count >= 13) {
@@ -384,7 +385,7 @@ $hamFlag  = 0
 
             $count++
 
-            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
+            $(' .event-tag, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 500, easing: 'linear', complete: function () {
 
                     console.log("consolevalue" + eventText[$count - 1])
@@ -411,7 +412,7 @@ $hamFlag  = 0
             if ($count == 13)
                 $('#next').fadeOut('slow')
 
-             console.log("down")
+            console.log("down")
             for (key in scale) {
 
                 console.log("key: " + key)
@@ -419,17 +420,17 @@ $hamFlag  = 0
 
                 val = Math.floor(scale[key])
 
-                console.log("scale "+ val + "offset "+ $offset)
+                console.log("scale " + val + "offset " + $offset)
 
-                if (Math.floor(scale[key]) === $offset ) {
+                if (Math.floor(scale[key]) === $offset) {
                     // console.log("insie math")
                     console.log("inside ifffffffff")
                     scale[key] = 0
-                    $(key).velocity({'scale': scale[key], opacity: 0},{ 'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 400})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
                     scale[key] = scale[key] - 2
-                    $(key).velocity({'scale': 0},{ 'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 400})
 
                 }
                 else {
@@ -437,10 +438,9 @@ $hamFlag  = 0
                     scale[key] = scale[key] - 2
 
 
-                        $(key).velocity({'scale': scale[key] / $scalValue},{ 'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400})
                     // scale[key] = $val
                 }
-
 
 
             }
@@ -462,8 +462,6 @@ $hamFlag  = 0
             $scaleValue = $scalValue2
 
 
-
-
         if ($count <= 1) {
             $count = 1
 
@@ -471,7 +469,7 @@ $hamFlag  = 0
         else {
             $count--
 
-            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
+            $('.event-tag, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 500, easing: 'linear', complete: function () {
 
                     console.log("consolevalue" + eventText[$count - 1])
@@ -514,14 +512,14 @@ $hamFlag  = 0
                 }
                 else if (Math.floor(scale[key]) < 0) {
                     scale[key] = scale[key] + 2
-                   // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
+                    // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
 
                 }
                 else {
 
                     scale[key] = scale[key] + 2
 
-                        $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
+                    $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
 
                 }
 
@@ -543,22 +541,20 @@ $hamFlag  = 0
     hammer.get('swipe').set({
         direction: Hammer.DIRECTION_ALL,
         threshold: 5,
-        velocity:0.1
+        velocity: 0.1
     });
 
     hammer.on("swipeup swipedown", function (event) {
 
         console.log("swipe detected")
 
-        if(event.type === "swipeup")
+        if (event.type === "swipeup")
             scaleDown()
-        else if(event.type === "swipedown")
+        else if (event.type === "swipedown")
             scaleUp()
 
 
-
-    } )
-
+    })
 
 
     $(document).keydown(_.debounce(function (e) {
@@ -649,16 +645,10 @@ $hamFlag  = 0
     }, 150))
 
 
-
 })
 
 
-
-
-
-
-
-	/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
 /*
 
 function pad(n, width, z) {

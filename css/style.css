@@ -13,10 +13,10 @@
   z-index: 10000; }
 
 .another-cont {
-  width: 10000px;
-  height: 10000px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   z-index: 1000000000;
   background-color: #1d1f21; }
 
@@ -39,7 +39,7 @@
   margin: auto; }
 
 .drawer-right {
-  position: fixed;
+  position: absolute;
   height: 100%;
   top: 0;
   right: 0;
@@ -163,7 +163,7 @@
   height: 100%;
   max-height: 100%;
   margin: 0;
-  position: fixed;
+  position: absolute;
   padding: 0;
   z-index: 100000;
   opacity: .5;
@@ -183,7 +183,7 @@
   background-repeat: no-repeat; }
 
 .img {
-  position: fixed;
+  position: absolute;
   left: 25px;
   top: 25px;
   margin: auto;
@@ -196,7 +196,7 @@
 
 .ham-text-container {
   position: absolute;
-  width: 500px;
+  width: 250px;
   text-align: center;
   height: 350px;
   top: 0;
@@ -278,7 +278,7 @@
     outline: 0; }
 
 .ham-container {
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 100%;
   background-color: white;
@@ -286,7 +286,7 @@
 
 #bt {
   background: none;
-  position: fixed;
+  position: absolute;
   bottom: 30px;
   right: 0;
   left: 0;
@@ -301,7 +301,7 @@
 
 #bt2 {
   background: none;
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 0;
   left: 0;
@@ -653,7 +653,7 @@ body {
   z-index: 200; }
 
 .ham-fab {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   right: 45px;
@@ -668,7 +668,7 @@ body {
   transition: linear, 500ms; }
 
 .fb-fab {
-  position: fixed;
+  position: absolute;
   top: 150px;
   bottom: 0;
   right: 45px;
@@ -683,7 +683,7 @@ body {
   transition: linear, 500ms; }
 
 .insta-fab {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 150px;
   right: 45px;
@@ -698,7 +698,7 @@ body {
   transition: linear, 500ms; }
 
 .mail-fab {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 150px;
   right: 45px;
@@ -713,7 +713,7 @@ body {
   transition: linear, 500ms; }
 
 .close-fab {
-  position: fixed;
+  position: absolute;
   top: 150px;
   bottom: 0;
   right: 45px;
@@ -728,7 +728,7 @@ body {
   transition: linear, 500ms; }
 
 .close-fab-drawer {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 450px;
   right: 45px;
@@ -1061,7 +1061,7 @@ body {
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
   .img {
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     margin: auto;
@@ -1079,7 +1079,7 @@ body {
   #bt2 {
     display: none; }
   .ham-fab {
-    position: fixed;
+    position: absolute;
     top: unset;
     bottom: 25px;
     right: 45px;
@@ -1094,7 +1094,7 @@ body {
     transition: linear, 500ms;
     right: 20px; }
   .close-fab {
-    position: fixed;
+    position: absolute;
     top: unset;
     bottom: 105px;
     right: 45px;
@@ -1121,6 +1121,8 @@ body {
     font-size: 15px;
     height: 80px;
     top: -30%; }
+  .ham-text-container {
+    width: 250px; }
   .circle1 {
     background-color: white;
     position: fixed;
@@ -1405,10 +1407,12 @@ body {
     width: 250px;
     height: 250px;
     background-size: 250px 250px; }
+  .ham-text-container {
+    width: 250px; }
   #bt2 {
     display: none; }
   .ham-fab {
-    position: fixed;
+    position: absolute;
     top: unset;
     bottom: 25px;
     right: 45px;
@@ -1423,7 +1427,7 @@ body {
     transition: linear, 500ms;
     right: 20px; }
   .close-fab {
-    position: fixed;
+    position: absolute;
     top: unset;
     bottom: 105px;
     right: 45px;
