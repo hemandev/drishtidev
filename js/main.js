@@ -1,5 +1,73 @@
 $(window).on('load', function () {
 
+    
+    /*==============================================================
+written by nabeel
+===============================================================*/
+var slides = [],
+    tl = new TimelineMax({paused: true}),
+    container = document.querySelector('.animationContainer'),
+    numLoaded = 0,
+    FPS = 24;
+for( var i = 1; i <= 35; i++ ) {
+  slides.push(generate_filename('sequences/solutions-01','solutions-01_',i,'png'));
+}
+
+for(var i=0;i < slides.length;i++){
+  var img = new Image();
+  img.src = slides[i];
+  img.id = `img${i}`;
+  //img.onload = function() {
+    //checkLoadCount();
+	console.log(img)
+	console.log(i)
+	console.log(slides[i])
+    container.appendChild(img);
+  }
+	function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
+{
+	temp_path = arg_path + '/'+ arg_prefix + pad(arg_index,2).toString()+'.'+arg_type;
+	return temp_path;
+}
+
+function forward_animation() {
+  var images = $(container).children(), // images in the sequence
+    fps = 24,
+    duration = 1 / fps;
+  var sequence = new TimelineMax({paused:false})
+    .staggerTo(images, 0,{ position: 'fixed', visibility: 'visible' }, duration, 0)
+    .staggerTo(images, 0, { position: 'fixed', visibility: 'hidden', immediateRender: false }, duration, duration)
+    .set({}, {}, "+="+duration)
+	.reverse(0);
+  // tl.play();
+}
+
+function backward_animation()
+{
+	var images = $(container).children(), // images in the sequence
+    fps = 24,
+    duration = 1 / fps;
+  var sequence = new TimelineMax({paused:false})
+    .staggerTo(images, 0,{ position: 'fixed', visibility: 'visible' }, duration, 0)
+    .staggerTo(images, 0, { position: 'fixed', visibility: 'hidden', immediateRender: false }, duration, duration)
+    .set({}, {}, "+="+duration);
+}
+    $height = $(window).height() / 2 - 120
+    // $('.event-header').css({marginTop: $height})
+
+    $('.event-one-container').hide()
+
+    var elem = $('.event-tag')
+
+/*
+nabeel ends here
+============================================================*/
     var granimInstance = new Granim({
         element: '#canvas-basic',
         name: 'basic-gradient',
@@ -548,10 +616,14 @@ $(window).on('load', function () {
 
         console.log("swipe detected")
 
-        if (event.type === "swipeup")
+        if (event.type === "swipeup"){
+            backward_animation()
             scaleDown()
-        else if (event.type === "swipedown")
+        }
+        else if (event.type === "swipedown"){
+            forward_animation()
             scaleUp()
+        }
 
 
     })
@@ -614,13 +686,14 @@ $(window).on('load', function () {
 
     $('#bt').on('click', _.debounce(function () {
 
-
+        backward_animation()
         scaleDown()
 
     }, 400))
 
     $('#bt2').on('click', _.debounce(function () {
-
+        
+        forward_animation()
         scaleUp()
 
     }, 400))
@@ -631,7 +704,8 @@ $(window).on('load', function () {
 
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
         if (event.originalEvent.deltaY < 0) {
-
+            
+            forward_animation()
             scaleUp()
 
 
@@ -639,6 +713,7 @@ $(window).on('load', function () {
         }
 
         else if (event.originalEvent.deltaY > 0) {
+            backward_animation()
             scaleDown()
 
         }

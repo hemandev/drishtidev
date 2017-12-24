@@ -3,6 +3,34 @@
   font-family: myFirstFont;
   src: url("../parabola.ttf"); }
 
+ .animationContainer{
+  position: fixed;
+  display: flex;
+  /*
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  */
+  min-width: 100%;
+  height: auto;
+  text-rendering: auto;
+  z-index:2000000001;
+  /*
+  box-sizing: border-box;
+  */
+}
+
+.animationContainer img{
+  position: fixed;
+  display: inline-block;
+  visibility: hidden;
+  border: 0;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+}
+
 .h1 {
   font-family: "Pacifico", cursive; }
 
