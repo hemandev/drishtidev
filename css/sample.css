@@ -3,7 +3,7 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color:black;
+  background-image: url('../wallpaper.jpg');
   
 }
 
@@ -41,7 +41,6 @@ html, body{
 	left: 0;
 	min-width:100%;
 	min-height:100%;
-	background-color:red;
 	display:none;
 }
 
