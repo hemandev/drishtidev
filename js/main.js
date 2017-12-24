@@ -1,115 +1,76 @@
+
 $(window).on('load', function () {
+	
+/*==============================================================
+written by nabeel
+===============================================================*/
+var slides = [],
+    tl = new TimelineMax({paused: true}),
+    container = document.querySelector('.animationContainer'),
+    numLoaded = 0,
+    FPS = 24;
+for( var i = 1; i <= 35; i++ ) {
+  slides.push(generate_filename('sequences/solutions-01','solutions-01_',i,'png'));
+}
 
-    var granimInstance = new Granim({
-        element: '#canvas-basic',
-        name: 'basic-gradient',
-        direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
-        opacity: [1, 1],
-        isPausedWhenNotInView: false,
-        states: {
-            "default-state": {
-                gradients: [
-                    ['#AA076B', '#61045F'],
-                    ['#02AAB0', '#00CDAC'],
-                    ['#DA22FF', '#9733EE']
-                ]
-            }
-        }
-    });
+for(var i=0;i < slides.length;i++){
+  var img = new Image();
+  img.src = slides[i];
+  img.id = `img${i}`;
+  //img.onload = function() {
+    //checkLoadCount();
+	console.log(img)
+	console.log(i)
+	console.log(slides[i])
+    container.appendChild(img);
+  }
+	function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
 
+function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
+{
+	temp_path = arg_path + '/'+ arg_prefix + pad(arg_index,2).toString()+'.'+arg_type;
+	return temp_path;
+}
 
-    $(window).on('resize', function () {
-        /*
-                $height = $(window).height() / 2 - 250
-                $width =  $(window).width() / 2 - 250
-                $('#img-bg').css({top: $height+'px', left: $width+'px'})*/
+function forward_animation() {
+  var images = $(container).children(), // images in the sequence
+    fps = 24,
+    duration = 1 / fps;
+  var sequence = new TimelineMax({paused:false})
+    .staggerTo(images, 0,{ position: 'fixed', visibility: 'visible' }, duration, 0)
+    .staggerTo(images, 0, { position: 'fixed', visibility: 'hidden', immediateRender: false }, duration, duration)
+    .set({}, {}, "+="+duration)
+	.reverse(0);
+  // tl.play();
+}
 
-    })
-
-
+function backward_animation()
+{
+	var images = $(container).children(), // images in the sequence
+    fps = 24,
+    duration = 1 / fps;
+  var sequence = new TimelineMax({paused:false})
+    .staggerTo(images, 0,{ position: 'fixed', visibility: 'visible' }, duration, 0)
+    .staggerTo(images, 0, { position: 'fixed', visibility: 'hidden', immediateRender: false }, duration, duration)
+    .set({}, {}, "+="+duration);
+}
+    $height = $(window).height() / 2 - 120
     // $('.event-header').css({marginTop: $height})
 
     $('.event-one-container').hide()
 
     var elem = $('.event-tag')
 
-    $('.ham-container').hide()
-
-    /*  var granimInstance = new Granim({
-          element: '#canvas-basic',
-          direction: 'top-bottom',
-          opacity: [1, 1],
-          isPausedWhenNotInView: true,
-          image : {
-              source: '../images/logoblacktransp.png',
-              blendingMode: 'multiply'
-          },
-          states : {
-              "default-state": {
-                  gradients: [
-                      ['#29323c', '#485563'],
-                      ['#FF6B6B', '#556270'],
-                      ['#80d3fe', '#7ea0c4'],
-                      ['#f0ab51', '#eceba3']
-                  ],
-                  transitionSpeed: 7000
-              }
-          }
-      });*/
-
+/*
+nabeel ends here
+============================================================*/
 
     /*circleType = new CircleType(elem)
     circleType.radius(100)*/
-    $imgFlag = 0
-
-    $hamFlag = 0
-    $readFlag = 0
-
-
-    $('.ham-btn').click(function () {
-
-        $mediaFlag = '25px'
-        if ($hamFlag === 0) {
-            $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 0})
-            $hamFlag = 1
-        }
-        else if ($hamFlag === 1 && $readFlag === 1) {
-            $('.mail-fab,.close-fab').velocity({scale: 1})
-            $hamFlag = 0
-        }
-
-        else {
-            $('.insta-fab, .fb-fab').velocity({scale: 1})
-            $hamFlag = 0
-        }
-
-
-        if (window.matchMedia('(max-width: 768px)').matches)
-            $mediaFlag = 0
-
-
-        console.log("inside click!!!!!")
-
-        if ($imgFlag === 0) {
-
-            $('.ham-container').fadeToggle()
-            $('.img').velocity({right: 0, left: 0}, 100, "swing")
-            $('#menu_button').removeClass('fa-bars').addClass('fa-times')
-            $imgFlag = 1
-
-        }
-        else if ($imgFlag === 1) {
-
-            $('.ham-container').fadeToggle()
-            $('.img').css({left: $mediaFlag, right: ''})
-            $('#menu_button').removeClass('fa-times').addClass('fa-bars')
-
-            $imgFlag = 0
-
-        }
-
-
-    })
 
     new CircleType(document.getElementById('tag-id')).radius(250)
 
@@ -160,8 +121,6 @@ $(window).on('load', function () {
 
     $('.event-button').click(function () {
 
-        $readFlag = 1
-
 
         $('.event-button').fadeOut()
         $('.event-tag').velocity({opacity: 0}, 200, "linear")
@@ -193,8 +152,6 @@ $(window).on('load', function () {
 
 
     $('.close-btn').click(function () {
-
-        $readFlag = 0
 
         if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
@@ -277,8 +234,7 @@ $(window).on('load', function () {
 
     scale1 = scale
 
-    scale2 = {
-        '.circle1': 4.4,
+    scale2 = { '.circle1': 4.4,
         '.circle2': 6.4,
         '.circle3': 8.3,
         '.circle4': 10.4,
@@ -322,20 +278,22 @@ $(window).on('load', function () {
     }
 
 
-    /* for(i=0;i<scale.length;i++) {
-         key = i+1
-         key = '.circle'+key
-         scale2[key] = scaleOffset2
-         scaleOffset2 += 2
-     }
 
-     scale3 = {}
-         for(i=0;i<scale.length;i++) {
-             key = i+1
-             key = '.circle'+key
-             scale3[key] = scaleOffset3
-             scaleOffset3 += 2
-         }*/
+   /* for(i=0;i<scale.length;i++) {
+        key = i+1
+        key = '.circle'+key
+        scale2[key] = scaleOffset2
+        scaleOffset2 += 2
+    }
+
+    scale3 = {}
+        for(i=0;i<scale.length;i++) {
+            key = i+1
+            key = '.circle'+key
+            scale3[key] = scaleOffset3
+            scaleOffset3 += 2
+        }*/
+
 
 
     $scalValue1 = 1.4
@@ -374,7 +332,10 @@ $(window).on('load', function () {
     }
 
 
+
     function scaleDown() {
+
+
 
 
         if ($count >= 13) {
@@ -385,7 +346,7 @@ $(window).on('load', function () {
 
             $count++
 
-            $(' .event-tag, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
+            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
                 duration: 500, easing: 'linear', complete: function () {
 
                     console.log("consolevalue" + eventText[$count - 1])
@@ -412,7 +373,7 @@ $(window).on('load', function () {
             if ($count == 13)
                 $('#next').fadeOut('slow')
 
-            console.log("down")
+             console.log("down")
             for (key in scale) {
 
                 console.log("key: " + key)
@@ -420,17 +381,17 @@ $(window).on('load', function () {
 
                 val = Math.floor(scale[key])
 
-                console.log("scale " + val + "offset " + $offset)
+                console.log("scale "+ val + "offset "+ $offset)
 
-                if (Math.floor(scale[key]) === $offset) {
+                if (Math.floor(scale[key]) === $offset ) {
                     // console.log("insie math")
                     console.log("inside ifffffffff")
                     scale[key] = 0
-                    $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': scale[key], opacity: 0},{ 'easing': 'linear', duration: 400})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
                     scale[key] = scale[key] - 2
-                    $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': 0},{ 'easing': 'linear', duration: 400})
 
                 }
                 else {
@@ -438,9 +399,10 @@ $(window).on('load', function () {
                     scale[key] = scale[key] - 2
 
 
-                    $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400})
+                        $(key).velocity({'scale': scale[key] / $scalValue},{ 'easing': 'linear', duration: 400})
                     // scale[key] = $val
                 }
+
 
 
             }
@@ -462,6 +424,8 @@ $(window).on('load', function () {
             $scaleValue = $scalValue2
 
 
+
+
         if ($count <= 1) {
             $count = 1
 
@@ -469,7 +433,7 @@ $(window).on('load', function () {
         else {
             $count--
 
-            $('.event-tag, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
+            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
                 duration: 500, easing: 'linear', complete: function () {
 
                     console.log("consolevalue" + eventText[$count - 1])
@@ -512,14 +476,14 @@ $(window).on('load', function () {
                 }
                 else if (Math.floor(scale[key]) < 0) {
                     scale[key] = scale[key] + 2
-                    // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
+                   // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
 
                 }
                 else {
 
                     scale[key] = scale[key] + 2
 
-                    $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
+                        $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
 
                 }
 
@@ -541,20 +505,26 @@ $(window).on('load', function () {
     hammer.get('swipe').set({
         direction: Hammer.DIRECTION_ALL,
         threshold: 5,
-        velocity: 0.1
+        velocity:0.1
     });
 
     hammer.on("swipeup swipedown", function (event) {
 
         console.log("swipe detected")
 
-        if (event.type === "swipeup")
+        if(event.type === "swipeup"){
+			backward_animation()
             scaleDown()
-        else if (event.type === "swipedown")
+		}
+        else if(event.type === "swipedown"){
+			forward_animation()
             scaleUp()
+		}
 
 
-    })
+
+    } )
+
 
 
     $(document).keydown(_.debounce(function (e) {
@@ -614,13 +584,13 @@ $(window).on('load', function () {
 
     $('#bt').on('click', _.debounce(function () {
 
-
+		backward_animation();
         scaleDown()
 
     }, 400))
 
     $('#bt2').on('click', _.debounce(function () {
-
+		forward_animation();
         scaleUp()
 
     }, 400))
@@ -631,7 +601,7 @@ $(window).on('load', function () {
 
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
         if (event.originalEvent.deltaY < 0) {
-
+			forward_animation();
             scaleUp()
 
 
@@ -639,60 +609,15 @@ $(window).on('load', function () {
         }
 
         else if (event.originalEvent.deltaY > 0) {
+			backward_animation()
             scaleDown()
 
         }
     }, 150))
 
 
+
 })
 
+	/*-----------------------------------------------------------------------------*/
 
-/*-----------------------------------------------------------------------------*/
-/*
-
-function pad(n, width, z) {
-    z = z || '0';
-    n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
-function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
-{
-    temp_path = arg_path + '/'+ arg_prefix + pad(arg_index,2).toString()+'.'+arg_type;
-    return temp_path;
-}
-
-
-
-function next_frame()
-{
-    console.log('inside next_frame')
-    if(index_val == Math.floor(no_of_frames /2)){
-        //to handle the necessary changes
-        //changes occur at the middle of the animation
-        $('.big-container').hide();
-    }
-
-    if(index_val == no_of_frames){
-        index_val = 0;
-        return;
-    }
-
-    else{
-        index_val++;
-        $("#img_frame").attr("src",generate_filename(path,prefix,index_val,extension));
-    }
-    setTimeout(next_frame,50)
-}
-
-path = 'sequences/menu'
-prefix = 'menu_'
-extension = 'png'
-index_val = 0
-no_of_frames = 11
-var throttled = _.throttle(next_frame,2000,{trailing:false});
-$('#menu_button').on('click',function(){console.log('clicked');$("#img_frame").show();next_frame();});
-
-
-
-*/
