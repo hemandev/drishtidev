@@ -18,7 +18,7 @@
   overflow: hidden;
   position: absolute;
   z-index: 1000000000;
-  background-color: #1F1F1F; }
+  background-color: #000000; }
 
 .loading-logo {
   width: 337px;
@@ -1086,6 +1086,9 @@ body {
     top: -30%; }
   .ham-text-container {
     width: 250px; }
+  .loading-text {
+    bottom: 80px;
+    height: 100px; }
   .circle1 {
     background-color: white;
     position: fixed;
@@ -1372,6 +1375,9 @@ body {
     background-size: 250px 250px; }
   .ham-text-container {
     width: 250px; }
+  .loading-text {
+    bottom: 50px;
+    height: 80px; }
   #bt2 {
     display: none; }
   .ham-fab {
