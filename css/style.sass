@@ -18,7 +18,7 @@ $yellow2: #FFD002
 $yellow3: #FFBF07
 $orange1: #FF9B39
 $orange2: #FF9229
-$orange3: #1f1f1f
+$orange3: #F5702F
 $orange4: #F57341
 $red1: #F15651
 $red2: #E34E48
@@ -93,9 +93,9 @@ $scale-factor: 1/6.3
 .event-header
   font-size: 80px
   position: absolute
-  width: 500px
+  width: 300px
   height: 200px
-  z-index: 120000
+  z-index: 5000
   text-align: center
   top: 0
   left: 0
@@ -108,9 +108,9 @@ $scale-factor: 1/6.3
   height: 100%
   top: 0
   right: 0
-  width: 300px
+  width: 50%
   background-color: black
-  opacity: .9
+  opacity: 1
   transform: translateX(100%)
   z-index: 10000000000
 
@@ -170,7 +170,7 @@ $scale-factor: 1/6.3
   margin: 0
   position: absolute
   padding: 0
-  z-index: 100000
+  z-index: 3000
   opacity: .5
   background-color: #000000
 
@@ -187,6 +187,21 @@ $scale-factor: 1/6.3
   background-image: url('../concert.jpg')
   background-size: cover
   background-repeat: no-repeat
+
+.drawer-container
+  width: 100%
+  height: 100%
+  max-height: 100%
+  margin: 0
+  position: absolute
+  overflow: hidden
+  padding: 0
+  z-index: 8000
+
+.event-text
+  text-align: center
+  color: white !important
+  opacity: 1 !important
 
 .img
   position: absolute
@@ -220,6 +235,13 @@ $offset: 100
   font-weight: 400 !important
   opacity: .7 !important
   color: white !important
+  &:hover
+    text-decoration: underline !important
+    text-decoration-color: white !important
+
+.ham-text-container a
+  color: white !important
+
 
 
 
@@ -460,7 +482,11 @@ body
   +fab(150px, 0, 0)
 
 .close-fab-drawer
-  +fab(0, 450px, 0)
+  +fab(unset, 50px, 0)
+
+
+
+
 
 
 
@@ -592,8 +618,12 @@ body
     +fab(unset, 105px, 0)
     right: 20px
 
+  .mail-fab
+    +fab(unset, 180px, 0)
+    right: 20px
 
-  .fb-fab, .insta-fab, .mail-fab
+
+  .fb-fab, .insta-fab
     display: none
 
   .event-header
@@ -604,6 +634,16 @@ body
   .event-button
     top: 30%
     transform: scale(.8)
+
+  .event-desc
+    font-size: 15px !important
+    margin-bottom: 50px
+
+  .event-heading
+    font-size: 15px !important
+    height: 30px !important
+    width: 140px !important
+    margin-bottom: 40px
 
 
 
@@ -619,6 +659,16 @@ body
   .loading-text
     bottom: 80px
     height: 100px
+
+  .drawer-right
+    position: absolute
+    height: 50%
+    bottom: 0
+    right: 0
+    width: 100%
+    background-color: black
+    opacity: 1
+    transform: translateY(200%)
 
 
   $scal-val: 1.4
@@ -724,14 +774,31 @@ body
     +fab(unset, 105px, 0)
     right: 20px
 
+  .mail-fab
+    +fab(unset, 180px, 0)
+    right: 20px
 
-  .fb-fab, .insta-fab, .mail-fab
+
+  .fb-fab, .insta-fab
     display: none
 
   .event-header
     font-size: 40px
     width: 300px
     height: 100px
+
+  .close-btn-drawer
+    bottom: 0
+    top: unset
+
+  .event-desc
+    font-size: 12px !important
+
+  .event-heading
+    font-size: 12px !important
+    height: 25px !important
+    width: 120px !important
+    margin-bottom: 3px !important
 
 
   .event-button
@@ -742,6 +809,16 @@ body
   .event-tag
     font-size: 15px
     top: -20%
+
+  .drawer-right
+    position: absolute
+    height: 50%
+    bottom: 0
+    right: 0
+    width: 100%
+    background-color: black
+    opacity: 1
+    transform: translateY(200%)
 
   .circle1
     +circle-element(white, 6.2/$scal-val, 1000)
