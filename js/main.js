@@ -1,10 +1,11 @@
 $(window).on('load', function () {
 
-    
+    +++
+
     /*==============================================================
 written by nabeel
 ===============================================================*/
-var slides = [],
+/*var slides = [],
     tl = new TimelineMax({paused: true}),
     container = document.querySelector('.animationContainer'),
     numLoaded = 0,
@@ -63,7 +64,7 @@ function backward_animation()
 
     $('.event-one-container').hide()
 
-    var elem = $('.event-tag')
+    var elem = $('.event-tag')*/
 
 /*
 nabeel ends here
@@ -86,13 +87,6 @@ nabeel ends here
     });
 
 
-    $(window).on('resize', function () {
-        /*
-                $height = $(window).height() / 2 - 250
-                $width =  $(window).width() / 2 - 250
-                $('#img-bg').css({top: $height+'px', left: $width+'px'})*/
-
-    })
 
 
     // $('.event-header').css({marginTop: $height})
@@ -705,7 +699,7 @@ nabeel ends here
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
         if (event.originalEvent.deltaY < 0) {
             
-            forward_animation()
+            //forward_animation()
             scaleUp()
 
 
@@ -713,7 +707,7 @@ nabeel ends here
         }
 
         else if (event.originalEvent.deltaY > 0) {
-            backward_animation()
+            //backward_animation()
             scaleDown()
 
         }
