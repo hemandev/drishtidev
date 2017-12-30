@@ -720,11 +720,11 @@ written by nabeel
         console.log("swipe detected")
 
         if (event.type === "swipeup") {
-            backward_animation()
+            //backward_animation()
             scaleDown()
         }
         else if (event.type === "swipedown") {
-            forward_animation()
+            //forward_animation()
             scaleUp()
         }
 
@@ -789,14 +789,14 @@ written by nabeel
 
     $('#bt').on('click', _.debounce(function () {
 
-        backward_animation()
+        //backward_animation()
         scaleDown()
 
     }, 400))
 
     $('#bt2').on('click', _.debounce(function () {
 
-        forward_animation()
+        //forward_animation()
         scaleUp()
 
     }, 400))
