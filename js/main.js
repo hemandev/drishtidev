@@ -447,24 +447,24 @@ written by nabeel
 
     scale3 = {
         '.circle1': 3.8,
-        '.circle2': 5.8,
-        '.circle3': 7.8,
-        '.circle4': 9.8,
-        '.circle5': 11.8,
-        '.circle6': 13.8,
-        '.circle7': 15.8,
-        '.circle8': 17.8,
-        '.circle9': 19.8,
-        '.circle10': 21.8,
-        '.circle11': 23.8,
-        '.circle12': 25.8,
-        '.circle13': 27.8,
-        '.circle14': 29.8,
-        '.circle15': 31.8,
-        '.circle16': 33.8,
-        '.circle17': 35.8,
-        '.circle18': 37.8,
-        '.circle19': 39.8
+        '.circle2': 5.1,
+        '.circle3': 6.4,
+        '.circle4': 7.6,
+        '.circle5': 8.9,
+        '.circle6': 10.1,
+        '.circle7': 11.4,
+        '.circle8': 12.6,
+        '.circle9': 13.9,
+        '.circle10': 15.1,
+        '.circle11': 16.4,
+        '.circle12': 17.6,
+        '.circle13': 18.9,
+        '.circle14': 20.1,
+        '.circle15': 21.4,
+        '.circle16': 22.6,
+        '.circle17': 23.9,
+        '.circle18': 25.1,
+        '.circle19': 26.4
     }
 
 
@@ -497,6 +497,7 @@ written by nabeel
     scale = scale1
     $offset = 6
     $anotherOffset = 6.2
+    $diffOffset = 2
 
     if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
@@ -516,6 +517,7 @@ written by nabeel
         scale = scale3
         $offset = 3
         $anotherOffset = 3.8
+        $diffOffset = 1.3
         console.log("inside media query 480px" + $scalValue2)
     }
 
@@ -589,13 +591,13 @@ written by nabeel
                     $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 400})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
-                    scale[key] = scale[key] - 2
+                    scale[key] = scale[key] - $diffOffset
                     $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 400})
 
                 }
                 else {
 
-                    scale[key] = scale[key] - 2
+                    scale[key] = scale[key] - $diffOffset
 
 
                     $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400})
@@ -682,13 +684,13 @@ written by nabeel
 
                 }
                 else if (Math.floor(scale[key]) < 0) {
-                    scale[key] = scale[key] + 2
+                    scale[key] = scale[key] + $diffOffset
                     // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
 
                 }
                 else {
 
-                    scale[key] = scale[key] + 2
+                    scale[key] = scale[key] + $diffOffset
 
                     $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
 
