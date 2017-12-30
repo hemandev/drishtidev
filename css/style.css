@@ -58,14 +58,38 @@
   height: 100%;
   z-index: 1000000000000; }
 
-.event-header {
-  font-size: 80px;
+.event-image {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  z-index: 5000;
   position: absolute;
+  margin: auto; }
+
+.event-sub {
+  font-size: 30px;
+  position: absolute;
+  font-family: "Raleway Thin", sans-serif;
   width: 300px;
-  height: 200px;
+  height: 50px;
   z-index: 5000;
   text-align: center;
-  top: 0;
+  top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.event-header {
+  font-size: 50px;
+  position: absolute;
+  font-family: "Raleway Medium", sans-serif;
+  width: 300px;
+  height: 100px;
+  z-index: 5000;
+  text-align: center;
+  top: 100px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -81,21 +105,6 @@
   opacity: 1;
   transform: translateX(100%);
   z-index: 10000000000; }
-
-.event-tag {
-  font-size: 30px;
-  font-family: Raleway, sans-serif;
-  font-weight: 400;
-  position: absolute;
-  width: 300px;
-  height: 100px;
-  z-index: 10000;
-  text-align: center;
-  top: -50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; }
 
 .event-button {
   position: absolute;
@@ -168,9 +177,10 @@
   z-index: 100000000000000000000000000000000000000000000000000000000000000;
   transition: ease-out, 300ms;
   transform: scale(1); }
-  .img:hover {
-    transition: ease-in 300ms;
-    transform: scale(1.1); }
+
+.img:hover {
+  transition: ease-in 300ms;
+  transform: scale(1.1); }
 
 .ham-text-container {
   position: absolute;
@@ -189,9 +199,10 @@
   font-weight: 400 !important;
   opacity: .7 !important;
   color: white !important; }
-  .ham-text-container h1:hover {
-    text-decoration: underline !important;
-    text-decoration-color: white !important; }
+
+.ham-text-container h1:hover {
+  text-decoration: underline !important;
+  text-decoration-color: white !important; }
 
 .ham-text-container a {
   color: white !important; }
@@ -228,8 +239,9 @@
   margin: auto;
   text-decoration: none;
   cursor: pointer; }
-  .close-btn:focus {
-    outline: 0; }
+
+.close-btn:focus {
+  outline: 0; }
 
 .close-btn-drawer {
   background: none;
@@ -238,8 +250,9 @@
   margin: auto;
   text-decoration: none;
   cursor: pointer; }
-  .close-btn-drawer:focus {
-    outline: 0; }
+
+.close-btn-drawer:focus {
+  outline: 0; }
 
 .mail-btn {
   background: none;
@@ -248,8 +261,9 @@
   margin: auto;
   text-decoration: none;
   cursor: pointer; }
-  .mail-btn:focus {
-    outline: 0; }
+
+.mail-btn:focus {
+  outline: 0; }
 
 .ham-btn {
   background: none;
@@ -258,8 +272,9 @@
   margin: auto;
   text-decoration: none;
   cursor: pointer; }
-  .ham-btn:focus {
-    outline: 0; }
+
+.ham-btn:focus {
+  outline: 0; }
 
 .ham-container {
   position: absolute;
@@ -280,8 +295,9 @@
   border: none;
   margin: auto;
   text-decoration: none; }
-  #bt:focus {
-    outline: 0; }
+
+#bt:focus {
+  outline: 0; }
 
 #bt2 {
   background: none;
@@ -295,8 +311,9 @@
   border: none;
   margin: auto;
   text-decoration: none; }
-  #bt2:focus {
-    outline: 0; }
+
+#bt2:focus {
+  outline: 0; }
 
 .fa .fa-arrow-down {
   color: #ffffff; }
@@ -333,10 +350,11 @@ h1 span {
   -ms-transform: rotate(7.5deg);
   -o-transform: rotate(7.5deg);
   transition: ease-out, .4s; }
-  .event-head .char1:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char1:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char2 {
   transform: rotate(15deg);
@@ -345,10 +363,11 @@ h1 span {
   -ms-transform: rotate(15deg);
   -o-transform: rotate(15deg);
   transition: ease-out, .4s; }
-  .event-head .char2:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char2:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char3 {
   transform: rotate(22.5deg);
@@ -357,10 +376,11 @@ h1 span {
   -ms-transform: rotate(22.5deg);
   -o-transform: rotate(22.5deg);
   transition: ease-out, .4s; }
-  .event-head .char3:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char3:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char4 {
   transform: rotate(30deg);
@@ -369,10 +389,11 @@ h1 span {
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transition: ease-out, .4s; }
-  .event-head .char4:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char4:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char5 {
   transform: rotate(37.5deg);
@@ -381,10 +402,11 @@ h1 span {
   -ms-transform: rotate(37.5deg);
   -o-transform: rotate(37.5deg);
   transition: ease-out, .4s; }
-  .event-head .char5:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char5:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char6 {
   transform: rotate(45deg);
@@ -393,10 +415,11 @@ h1 span {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transition: ease-out, .4s; }
-  .event-head .char6:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char6:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char7 {
   transform: rotate(52.5deg);
@@ -405,10 +428,11 @@ h1 span {
   -ms-transform: rotate(52.5deg);
   -o-transform: rotate(52.5deg);
   transition: ease-out, .4s; }
-  .event-head .char7:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char7:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char8 {
   transform: rotate(60deg);
@@ -417,10 +441,11 @@ h1 span {
   -ms-transform: rotate(60deg);
   -o-transform: rotate(60deg);
   transition: ease-out, .4s; }
-  .event-head .char8:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char8:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char9 {
   transform: rotate(67.5deg);
@@ -429,10 +454,11 @@ h1 span {
   -ms-transform: rotate(67.5deg);
   -o-transform: rotate(67.5deg);
   transition: ease-out, .4s; }
-  .event-head .char9:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char9:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char10 {
   transform: rotate(75deg);
@@ -441,10 +467,11 @@ h1 span {
   -ms-transform: rotate(75deg);
   -o-transform: rotate(75deg);
   transition: ease-out, .4s; }
-  .event-head .char10:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char10:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char11 {
   transform: rotate(82.5deg);
@@ -453,10 +480,11 @@ h1 span {
   -ms-transform: rotate(82.5deg);
   -o-transform: rotate(82.5deg);
   transition: ease-out, .4s; }
-  .event-head .char11:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char11:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char12 {
   transform: rotate(90deg);
@@ -465,10 +493,11 @@ h1 span {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transition: ease-out, .4s; }
-  .event-head .char12:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char12:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char13 {
   transform: rotate(97.5deg);
@@ -477,10 +506,11 @@ h1 span {
   -ms-transform: rotate(97.5deg);
   -o-transform: rotate(97.5deg);
   transition: ease-out, .4s; }
-  .event-head .char13:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char13:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char14 {
   transform: rotate(105deg);
@@ -489,10 +519,11 @@ h1 span {
   -ms-transform: rotate(105deg);
   -o-transform: rotate(105deg);
   transition: ease-out, .4s; }
-  .event-head .char14:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char14:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char15 {
   transform: rotate(112.5deg);
@@ -501,10 +532,11 @@ h1 span {
   -ms-transform: rotate(112.5deg);
   -o-transform: rotate(112.5deg);
   transition: ease-out, .4s; }
-  .event-head .char15:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char15:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char16 {
   transform: rotate(120deg);
@@ -513,10 +545,11 @@ h1 span {
   -ms-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   transition: ease-out, .4s; }
-  .event-head .char16:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char16:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char17 {
   transform: rotate(127.5deg);
@@ -525,10 +558,11 @@ h1 span {
   -ms-transform: rotate(127.5deg);
   -o-transform: rotate(127.5deg);
   transition: ease-out, .4s; }
-  .event-head .char17:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char17:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char18 {
   transform: rotate(135deg);
@@ -537,10 +571,11 @@ h1 span {
   -ms-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transition: ease-out, .4s; }
-  .event-head .char18:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char18:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char19 {
   transform: rotate(142.5deg);
@@ -549,10 +584,11 @@ h1 span {
   -ms-transform: rotate(142.5deg);
   -o-transform: rotate(142.5deg);
   transition: ease-out, .4s; }
-  .event-head .char19:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char19:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char20 {
   transform: rotate(150deg);
@@ -561,10 +597,11 @@ h1 span {
   -ms-transform: rotate(150deg);
   -o-transform: rotate(150deg);
   transition: ease-out, .4s; }
-  .event-head .char20:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char20:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char21 {
   transform: rotate(157.5deg);
@@ -573,10 +610,11 @@ h1 span {
   -ms-transform: rotate(157.5deg);
   -o-transform: rotate(157.5deg);
   transition: ease-out, .4s; }
-  .event-head .char21:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char21:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char22 {
   transform: rotate(165deg);
@@ -585,10 +623,11 @@ h1 span {
   -ms-transform: rotate(165deg);
   -o-transform: rotate(165deg);
   transition: ease-out, .4s; }
-  .event-head .char22:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char22:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char23 {
   transform: rotate(172.5deg);
@@ -597,10 +636,11 @@ h1 span {
   -ms-transform: rotate(172.5deg);
   -o-transform: rotate(172.5deg);
   transition: ease-out, .4s; }
-  .event-head .char23:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char23:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head .char24 {
   transform: rotate(180deg);
@@ -609,10 +649,11 @@ h1 span {
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transition: ease-out, .4s; }
-  .event-head .char24:hover {
-    transition: ease-out, .4s;
-    color: red;
-    font-size: 46px; }
+
+.event-head .char24:hover {
+  transition: ease-out, .4s;
+  color: red;
+  font-size: 46px; }
 
 .event-head {
   font: 56px Monaco, MonoSpace;
@@ -1052,8 +1093,8 @@ body {
     top: 10px;
     z-index: 1000000000000;
     transform: scale(0.8); }
-    .img:hover {
-      transform: scale(0.8); }
+  .img:hover {
+    transform: scale(0.8); }
   #img-bg {
     left: 0;
     width: 400px;
@@ -1124,6 +1165,8 @@ body {
     height: 30px !important;
     width: 140px !important;
     margin-bottom: 40px; }
+  .event-sub {
+    top: 120px; }
   .event-tag {
     font-size: 15px;
     height: 80px;
@@ -1417,8 +1460,8 @@ body {
     margin: auto;
     top: 0px;
     transform: scale(0.8); }
-    .img:hover {
-      transform: scale(0.8); }
+  .img:hover {
+    transform: scale(0.8); }
   #img-bg {
     left: 0;
     right: 0;
@@ -1483,17 +1526,23 @@ body {
   .event-header {
     font-size: 40px;
     width: 300px;
-    height: 100px; }
+    height: 50px;
+    top: 50px; }
   .close-btn-drawer {
     bottom: 0;
     top: unset; }
   .event-desc {
     font-size: 12px !important; }
+  .event-sub {
+    font-size: 20px;
+    top: 150px; }
   .event-heading {
     font-size: 12px !important;
     height: 25px !important;
     width: 120px !important;
     margin-bottom: 3px !important; }
+  .event-image {
+    bottom: 150px; }
   .event-button {
     height: 40px;
     top: 30%;

@@ -1,6 +1,21 @@
 $(window).on('load', function () {
 
 
+
+
+    $width_image = 150
+    $height_image = 150
+
+    if (window.matchMedia('(max-width: 764px)').matches){
+
+        $('.event-image').attr({height: 100, width: 100})
+
+        $width_image = 100
+        $height_image = 100
+
+    }
+
+
     /*==============================================================
 written by nabeel
 ===============================================================*/
@@ -124,6 +139,15 @@ written by nabeel
     $hamFlag = 0
     $readFlag = 0
 
+    mainText = [{header: "DRISHTI 18'", image: 'images/logoblacktransp.png', sub: 'January 16 - 18', color: 'black'},
+        {header: "Competitions", image: 'images/cup.png', sub: '', color: 'white'},
+        {header: "Workshops", image: 'images/workshops.png', sub: '', color: 'black'},
+        {header: "Informals", image: 'images/informals.png', sub: '', color: 'white'},
+        {header: "Projects", image: 'images/idea.png', sub: '', color: 'black'},
+        {header: "Sponsors", image: 'images/hand-shake.png', sub: '', color: 'white'},
+        {header: "Contact", image: 'images/email.png', sub: '', color: 'black'},
+    ]
+
 
     $('.ham-btn').click(function () {
 
@@ -170,7 +194,7 @@ written by nabeel
 
     })
 
-    new CircleType(document.getElementById('tag-id')).radius(250)
+    //new CircleType(document.getElementById('tag-id')).radius(250)
 
     $('.another-cont').fadeOut('slow')
 
@@ -236,7 +260,6 @@ written by nabeel
     $('.close-btn-drawer').click(function () {
 
         if (window.matchMedia('(max-width: 764px)').matches) {
-
 
 
             $('.drawer-right').velocity({translateY: '200%'}, {
@@ -364,8 +387,8 @@ written by nabeel
     })
 
 
-    var eventText = ['Drishti <br> 18', 'Drishti <br> Night', 'Workshops <br> CET', 'Rise <br> Again', 'CET <br> Life', 'Cryptex <br> CET', 'Amazing <br> VR  Race']
-    var tagText = ['', 'Computer Science', 'Electronics & Communications', 'Mechanical', 'Electrical', 'Civil']
+    var eventText = ['DRISHTI  18', 'Drishti  Night', 'Workshops  CET', 'Rise  Again', 'CET  Life', 'Cryptex  CET', 'Amazing  VR  Race']
+    //var tagText = ['', 'Computer Science', 'Electronics & Communications', 'Mechanical', 'Electrical', 'Civil']
 
 
     for (i = 8; i <= 19; i++)
@@ -500,27 +523,41 @@ written by nabeel
     function scaleDown() {
 
 
-        if ($count >= 13) {
-            $count = 13
+        if ($count >= 7) {
+            $count = 7
 
         }
         else {
 
             $count++
 
-            $(' .event-tag, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
-                duration: 500, easing: 'linear', complete: function () {
+            $(' .circle-content').velocity({opacity: 0, display: 'none'}, {
+                duration: 300, easing: 'linear', begin: function () {
 
-                    console.log("consolevalue" + eventText[$count - 1])
-                    $('.event-header').html(eventText[$count - 1])
-                    $('.event-tag').html(tagText[$count - 1])
-                    new CircleType(document.getElementById('tag-id')).radius(250)
+                    $('.event-image, .event-sub, .event-header, .event-button').fadeOut("slow")
+
+                    $('.event-image').attr({src: mainText[$count -1].image, width: $width_image, height: $height_image})
+
+                    if(mainText[$count -1].color === 'white') {
+                        $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light')
+                        $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light')
+                    }
+                    else {
+                        $('.event-sub, .event-header').removeClass('text-light').addClass('text-dark')
+                        $('.event-button').removeClass('btn-outline-light').addClass('btn-outline-dark')
+                    }
+
+                    $('.event-header').html(mainText[$count - 1].header)
+                    $('.event-sub').html(mainText[$count - 1].sub)
+
+                    //  $('.event-tag').html(tagText[$count - 1])
 
 
                 }
             })
-                .velocity({opacity: 1, display: 'block'}, {duration: 500, easing: 'linear'})
+                .velocity({opacity: 1, display: 'block'}, {duration: 300, easing: 'linear'})
 
+            $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
 
             hideCount = $count + 6
             for (i = hideCount; i <= 19; i++)
@@ -592,18 +629,29 @@ written by nabeel
         else {
             $count--
 
-            $('.event-tag, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
-                duration: 500, easing: 'linear', complete: function () {
+            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
+                duration: 300, easing: 'linear', begin: function () {
+                    $('.event-image, .event-sub, .event-header, .event-button').fadeOut("slow")
 
-                    console.log("consolevalue" + eventText[$count - 1])
-                    $('.event-header').html(eventText[$count - 1])
-                    $('.event-tag').html(tagText[$count - 1])
-                    new CircleType(document.getElementById('tag-id')).radius(250)
+                    $('.event-image').attr({src: mainText[$count -1].image, width: $width_image, height: $height_image})
+                    if(mainText[$count -1].color === 'white') {
+                        $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light')
+                        $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light')
+                    }
+                    else {
+                        $('.event-sub, .event-header').removeClass('text-light').addClass('text-dark')
+                        $('.event-button').removeClass('btn-outline-light').addClass('btn-outline-dark')
+                    }
+
+                    $('.event-header').html(mainText[$count - 1].header)
+                    $('.event-sub').html(mainText[$count - 1].sub)
+
 
 
                 }
             })
-                .velocity({opacity: 1, display: 'block'}, {duration: 500, easing: 'linear'})
+                .velocity({opacity: 1, display: 'block'}, {duration: 300, easing: 'linear'})
+            $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
 
 
             hideCount = $count + 6

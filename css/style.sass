@@ -89,15 +89,40 @@ $scale-factor: 1/6.3
   height: 100%
   z-index: 1000000000000
 
-
-.event-header
-  font-size: 80px
+.event-image
+  top: 0
+  left: 0
+  right: 0
+  bottom: 200px
+  z-index: 5000
   position: absolute
+  margin: auto
+
+.event-sub
+  font-size: 30px
+  position: absolute
+  font-family: "Raleway Thin", sans-serif
   width: 300px
-  height: 200px
+  height: 50px
   z-index: 5000
   text-align: center
-  top: 0
+  top: 200px
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+
+
+
+.event-header
+  font-size: 50px
+  position: absolute
+  font-family: "Raleway Medium", sans-serif
+  width: 300px
+  height: 100px
+  z-index: 5000
+  text-align: center
+  top: 100px
   left: 0
   right: 0
   bottom: 0
@@ -116,7 +141,7 @@ $scale-factor: 1/6.3
 
 
 
-.event-tag
+//.event-tag
 
   font-size: 30px
   font-family: Raleway, sans-serif
@@ -645,6 +670,9 @@ body
     width: 140px !important
     margin-bottom: 40px
 
+  .event-sub
+    top: 120px
+
 
 
   .event-tag
@@ -785,7 +813,8 @@ body
   .event-header
     font-size: 40px
     width: 300px
-    height: 100px
+    height: 50px
+    top: 50px
 
   .close-btn-drawer
     bottom: 0
@@ -794,11 +823,18 @@ body
   .event-desc
     font-size: 12px !important
 
+  .event-sub
+    font-size: 20px
+    top: 150px
+
   .event-heading
     font-size: 12px !important
     height: 25px !important
     width: 120px !important
     margin-bottom: 3px !important
+
+  .event-image
+    bottom: 150px
 
 
   .event-button
