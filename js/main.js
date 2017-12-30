@@ -2,7 +2,6 @@ $(window).on('load', function () {
 
 
 
-
     $width_image = 150
     $height_image = 150
 
