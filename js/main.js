@@ -136,24 +136,33 @@ written by nabeel
 
     $('.ham-btn').click(function () {
 
+
+
         $mediaFlag = '25px'
-        if ($hamFlag === 0) {
-            $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 0})
-            $hamFlag = 1
-        }
-        else if ($hamFlag === 1 && $readFlag === 1) {
-            $('.mail-fab,.close-fab').velocity({scale: 1})
-            $hamFlag = 0
-        }
-
-        else {
-            $('.insta-fab, .fb-fab').velocity({scale: 1})
-            $hamFlag = 0
-        }
-
 
         if (window.matchMedia('(max-width: 768px)').matches)
             $mediaFlag = 0
+
+
+        if ($hamFlag === 0) {
+            $('.insta-fab, .fb-fab').velocity({scale: 0})
+            $('.insta-fab2, .fb-fab2').velocity({scale: 1.1})
+
+            $hamFlag = 1
+        }
+
+       /* else if ($hamFlag === 1 && $readFlag === 1) {
+            $('.mail-fab,.close-fab').velocity({scale: 1})
+            $hamFlag = 0
+        }*/
+
+        else {
+            $('.insta-fab, .fb-fab').velocity({scale: 1})
+            $('.insta-fab2, .fb-fab2').velocity({scale: 0})
+            $hamFlag = 0
+        }
+
+
 
 
         console.log("inside click!!!!!")
@@ -296,9 +305,9 @@ written by nabeel
             window.location = 'informals.html'
         else if($count === 5)
             window.location = 'projects.html'
-        else if($count === 2)
+        else if($count === 6)
             window.location = 'sponsors.html'
-        else if($count === 2)
+        else if($count === 7)
             window.location = 'contact.html'
 
 

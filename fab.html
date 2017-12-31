@@ -93,6 +93,16 @@
             color: white !important;
         }
 
+        .insta-fab {
+            display: none;
+        }
+
+        .fb-fab {
+            display: none;
+        }
+
+
+
         #img-bg {
             position: absolute;
             width: 550px;
@@ -144,7 +154,7 @@
              position: absolute;
              top: unset;
              bottom: 25px;
-             right: 45px;
+             right: 20px;
              z-index: 100000000000000;
              border-radius: 50%;
              width: 48px;
@@ -154,7 +164,7 @@
              cursor: pointer;
              transform: scale(1.1);
              transition: linear, 500ms;
-             right: 20px;
+
          }
 
          .img {
@@ -167,7 +177,44 @@
          .img:hover {
              transform: scale(0.8); }
 
+         .fa {
+             color: black; !important
+         }
+
+         .fb-fab {
+             display: block;
+             position: absolute;
+             bottom: 25px;
+             right: 0;
+             left: 0;
+             z-index: 100000000000000;
+             border-radius: 50%;
+             width: 48px;
+             height: 48px;
+             margin: auto;
+             background-color: white;
+             cursor: pointer;
+             transform: scale(0);
+             transition: linear, 500ms; }
+
+         .insta-fab {
+             display: block;
+             position: absolute;
+             bottom: 25px;
+             left: 20px;
+             z-index: 100000000000000;
+             border-radius: 50%;
+             width: 48px;
+             height: 48px;
+             margin: auto;
+             background-color: white;
+             cursor: pointer;
+             transform: scale(0);
+             transition: linear, 500ms; }
+
      }
+
+
 
 
     </style>
@@ -200,6 +247,24 @@
 
 </div>
 
+<div class="fb-fab text-center">
+
+    <a href="http://www.facebook.com/drishticet" target="_blank"> <i class="fa fa-facebook fa-lg"
+                                                                     aria-hidden="true"></i>
+    </a>
+
+
+</div>
+
+<div class="insta-fab text-center">
+
+    <a href="http://www.instagram.com/drishticet" target="_blank"> <i class="fa fa-instagram fa-lg"
+                                                                      aria-hidden="true"></i>
+    </a>
+
+
+</div>
+
 
 <div class="ham-fab text-center">
 
@@ -226,18 +291,20 @@
 
         $('.ham-btn').click(function () {
 
+
+
             $mediaFlag = '25px'
             if ($hamFlag === 0) {
-                $('.mail-fab, .insta-fab, .fb-fab, .close-fab').velocity({scale: 0})
+                $('.insta-fab, .fb-fab').velocity({scale: 1.1})
                 $hamFlag = 1
             }
-            else if ($hamFlag === 1 && $readFlag === 1) {
+           /* else if ($hamFlag === 1 && $readFlag === 1) {
                 $('.mail-fab,.close-fab').velocity({scale: 1})
                 $hamFlag = 0
-            }
+            }*/
 
             else {
-                $('.insta-fab, .fb-fab').velocity({scale: 1})
+                $('.insta-fab, .fb-fab').velocity({scale: 0})
                 $hamFlag = 0
             }
 
