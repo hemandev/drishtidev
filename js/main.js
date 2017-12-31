@@ -84,21 +84,6 @@ written by nabeel
     /*
     nabeel ends here
     ============================================================*/
-    var granimInstance = new Granim({
-        element: '#canvas-basic',
-        name: 'basic-gradient',
-        direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
-        opacity: [1, 1],
-        isPausedWhenNotInView: false,
-        states: {
-            "default-state": {
-                gradients: [
-                    ['#000000','#000000'],
-
-                ]
-            }
-        }
-    });
 
 
     // $('.event-header').css({marginTop: $height})
@@ -198,8 +183,6 @@ written by nabeel
 
 
 
-
-    $('#event-header').lettering()
 
 
     function mailBtnClick() {
@@ -304,10 +287,17 @@ written by nabeel
     $('.event-button').click(function () {
 
 
-        $('.event-page-container').load('events.html')
+
+        window.location = '/untitled2/drishtievent/events.html'
+
+
+
+
+        /* $('.event-page-container').load('events.html')
         $('.front-page-container').fadeOut()
         $('.event-page-container').fadeIn()
-        $('.close-fab').velocity({scale: 1})
+        $('.close-fab').velocity({scale: 1})*/
+
 
 
 /*
@@ -585,9 +575,9 @@ written by nabeel
             $('.circle' + foo).show()
 
 
-            if ($count == 2)
+            if ($count === 2)
                 $('#prev').fadeIn('slow')
-            if ($count == 13)
+            if ($count === 7)
                 $('#next').fadeOut('slow')
 
             console.log("down")
@@ -680,9 +670,9 @@ written by nabeel
             $('.circle' + foo).show()
 
 
-            if ($count == 1)
+            if ($count === 1)
                 $('#prev').fadeOut('slow')
-            if ($count == 12)
+            if ($count === 6)
                 $('#next').fadeIn('slow')
 
             // console.log("down")
@@ -719,10 +709,6 @@ written by nabeel
         }
 
     }
-
-
-    $('.heading').lettering()
-    $('.heading2').lettering()
 
 
     var elem = document.getElementById("elem")

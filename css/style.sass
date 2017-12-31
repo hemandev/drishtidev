@@ -3,10 +3,6 @@
 $color: red
 $font-size: 12em
 
-@font-face
-  font-family: myFirstFont
-  src: url('../parabola.ttf')
-
 
 $blue1: #349FD7
 $blue2: #4dace8
@@ -27,10 +23,30 @@ $violet1: #D74171
 $violet2: #C041A5
 $violet3: #A83593
 
+$blue1: rgb(48,48,48)
+$blue2: rgb(40,40,40)
+$blue3: rgb(32,32,32)
+$green1: rgb(24,24,24)
+$green2: rgb(16,16,16)
+$green3: rgb(8,8,8)
+$yellow1: rgb(7,7,7)
+$yellow2: rgb(6,6,6)
+$yellow3: rgb(5,5,5)
+$orange1: rgb(4,4,4)
+$orange2: rgb(3,3,3)
+$orange3: rgb(2,2,2)
+$orange4: rgb(1,1,1)
+$red1: #F15651
+$red2: #E34E48
+$violet1: #D74171
+$violet2: #C041A5
+$violet3: #A83593
+
+
+
 
 .fa
   color: black !important
-
 
 .all-page-container
   position: absolute
@@ -56,7 +72,7 @@ $violet3: #A83593
 
 .h1
   font-family: "Pacifico", cursive
-  //color: rgba(255,255,255,.8)!important
+//color: rgba(255,255,255,.8)!important
 
 .big-container
   position: absolute
@@ -98,7 +114,6 @@ $black: #1F1F1F
   100%
     background-position-y: 0
 
-
 .loading-logo
   width: 250px
   height: 250px
@@ -127,8 +142,6 @@ $black: #1F1F1F
     transform: scale(.9)
     opacity: .1
 
-
-
 .loading-text
   width: 337px
   height: 289px
@@ -156,13 +169,10 @@ $black: #1F1F1F
     animation: fill-1 2.5s infinite
 
 @keyframes fill-1
- 50%
-  width: 260px
- 100%
-  width: 0
-
-
-
+  50%
+    width: 260px
+  100%
+    width: 0
 
 $scale-factor: 1/6.3
 
@@ -195,8 +205,6 @@ $scale-factor: 1/6.3
   bottom: 0
   margin: auto
 
-
-
 .event-header
   font-size: 50px
   position: absolute
@@ -222,8 +230,6 @@ $scale-factor: 1/6.3
   opacity: 1
   transform: translateX(100%)
   z-index: 10000000000
-
-
 
 //.event-tag
 
@@ -259,8 +265,6 @@ $scale-factor: 1/6.3
   bottom: 0
   margin: auto
 
-
-
 #prev
   cursor: pointer
 
@@ -283,7 +287,6 @@ $scale-factor: 1/6.3
   opacity: .5
   background-color: #000000
 
-
 .event-one-container
   width: 100%
   height: 100%
@@ -293,7 +296,6 @@ $scale-factor: 1/6.3
   overflow: hidden
   padding: 0
   z-index: 100000
-  background-image: url('../concert.jpg')
   background-size: cover
   background-repeat: no-repeat
 
@@ -324,7 +326,6 @@ $scale-factor: 1/6.3
     transition: ease-in 300ms
     transform: scale(1.1)
 
-
 $offset: 100
 
 .ham-text-container
@@ -339,7 +340,7 @@ $offset: 100
   margin: auto
 
 .ham-text-container h1
-  font-size: 50px!important
+  font-size: 50px !important
   font-family: Raleway, sans-serif !important
   font-weight: 400 !important
   opacity: .7 !important
@@ -350,9 +351,6 @@ $offset: 100
 
 .ham-text-container a
   color: white !important
-
-
-
 
 #img-bg
   position: absolute
@@ -369,37 +367,16 @@ $offset: 100
   opacity: .1
   background-repeat: no-repeat
 
-
-
-
-
-
-
-//#canvas-basic
-  position: absolute
-  display: block
-  width: 100%
-  height: 100%
-  top: 20%
-  right: 0
-  opacity: .05
-  left: 30%
-  background-image: url("../images/logoblacktransp.png")
-  background-size: auto
-  text-align: center
-  background-repeat: no-repeat
-
 #canvas-basic
   position: absolute
   display: block
   width: 100%
   height: 100%
+  background-color: black
   top: 0
   right: 0
   bottom: 0
   left: 0
-
-
 
 .close-btn
   background: none
@@ -523,17 +500,16 @@ h1 span
         color: red
         font-size: 46px
 
-
 +rotated-text(event-head, 24)
 
 .event-head
   font: 56px Monaco, MonoSpace
   transform: scale(.15) rotate(-55deg) translate(-250px, -110px)
   transform-origin: bottom center
+
 body
   overflow: hidden
   background-color: $violet3
-
 
 .container-fluid
   position: relative
@@ -588,19 +564,13 @@ body
   +fab(0, 150px)
 
 .mail-fab
-  +fab(0, 150px,0)
+  +fab(0, 150px, 0)
 
 .close-fab
   +fab(150px, 0, 0)
 
 .close-fab-drawer
   +fab(unset, 50px, 0)
-
-
-
-
-
-
 
 .circle1
   +circle-element(white, 6.2, 1000)
@@ -693,9 +663,6 @@ body
   transition: ease-out .4s 70ms
   transform: scale(18.3)
 
-
-
-
 @media screen and (max-width: 768px) and (min-width: 480px)
   $scal-val: 1.4
 
@@ -710,9 +677,6 @@ body
     &:hover
       transform: scale(.8)
 
-
-
-
   #img-bg
     left: 0
     width: 400px
@@ -723,11 +687,9 @@ body
   #bt2
     display: none
 
-
   .ham-fab
-    +fab(unset, 25px, 1.3)
+    +fab(unset, 25px, 1.1)
     right: 20px
-
 
   .close-fab
     +fab(unset, 105px, 0)
@@ -736,7 +698,6 @@ body
   .mail-fab
     +fab(unset, 180px, 0)
     right: 20px
-
 
   .fb-fab, .insta-fab
     display: none
@@ -763,13 +724,10 @@ body
   .event-sub
     top: 120px
 
-
-
   .event-tag
     font-size: 15px
     height: 80px
     top: -30%
-
 
   .ham-text-container
     width: 300px
@@ -789,9 +747,7 @@ body
     opacity: 1
     transform: translateY(200%)
 
-
   $scal-val: 1.4
-
 
   .circle1
     +circle-element(white, 6.2/$scal-val, 1000)
@@ -850,9 +806,6 @@ body
   .circle19
     +circle-element($violet3, 42.3/$scal-val, 640)
 
-
-
-
 @media screen and (max-width: 480px)
   $scal-val: 1.6
 
@@ -877,6 +830,10 @@ body
   .ham-text-container
     width: 300px
     height: 400px
+    top: 80px
+
+  .ham-text-container h1
+    font-size: 40px !important
 
   .loading-text
     bottom: 50px
@@ -886,9 +843,8 @@ body
     display: none
 
   .ham-fab
-    +fab(unset, 25px, 1.3)
+    +fab(unset, 25px, 1.1)
     right: 20px
-
 
   .close-fab
     +fab(unset, 105px, 0)
@@ -897,7 +853,6 @@ body
   .mail-fab
     +fab(unset, 180px, 0)
     right: 20px
-
 
   .fb-fab, .insta-fab
     display: none
@@ -927,7 +882,6 @@ body
 
   .event-image
     bottom: 150px
-
 
   .event-button
     height: 40px
