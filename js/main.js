@@ -1,6 +1,7 @@
 $(window).on('load', function () {
 
 
+    $('.another-cont').fadeOut('slow')
 
     $width_image = 150
     $height_image = 150
@@ -195,7 +196,7 @@ written by nabeel
 
     //new CircleType(document.getElementById('tag-id')).radius(250)
 
-    $('.another-cont').fadeOut('slow')
+
 
 
     $('#event-header').lettering()
@@ -302,6 +303,14 @@ written by nabeel
 
     $('.event-button').click(function () {
 
+
+        $('.event-page-container').load('events.html')
+        $('.front-page-container').fadeOut()
+        $('.event-page-container').fadeIn()
+        $('.close-fab').velocity({scale: 1})
+
+
+/*
         $readFlag = 1
 
 
@@ -333,13 +342,21 @@ written by nabeel
         })
 
         setTimeout(mailBtnClick, 1000)
-
+*/
     })
+
+
 
 
     $('.close-btn').click(function () {
 
-        $readFlag = 0
+
+        $('.close-fab').velocity({scale: 0})
+
+        $('.event-page-container').fadeOut("slow")
+        $('.front-page-container').fadeIn("slow")
+
+      /*  $readFlag = 0
 
         if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
@@ -381,7 +398,7 @@ written by nabeel
 
 
             }
-        })
+        })*/
 
     })
 
