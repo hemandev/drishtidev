@@ -286,9 +286,22 @@ written by nabeel
 
     $('.event-button').click(function () {
 
+        if($count === 1)
+            window.location = 'drishti.html'
+        else if($count === 2)
+            window.location = 'events.html'
+        else if($count === 3)
+            window.location = 'workshops.html'
+        else if($count === 4)
+            window.location = 'informals.html'
+        else if($count === 5)
+            window.location = 'projects.html'
+        else if($count === 2)
+            window.location = 'sponsors.html'
+        else if($count === 2)
+            window.location = 'contact.html'
 
 
-        window.location = '/untitled2/drishtievent/events.html'
 
 
 
