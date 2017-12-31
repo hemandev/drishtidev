@@ -126,11 +126,11 @@ written by nabeel
 
     mainText = [{header: "DRISHTI 18'", image: 'images/logoblacktransp.png', sub: 'January 16 - 18', color: 'black'},
         {header: "Competitions", image: 'images/cup.png', sub: '', color: 'white'},
-        {header: "Workshops", image: 'images/workshops.png', sub: '', color: 'black'},
+        {header: "Workshops", image: 'images/workshopswhite.png', sub: '', color: 'white'},
         {header: "Informals", image: 'images/informals.png', sub: '', color: 'white'},
-        {header: "Projects", image: 'images/idea.png', sub: '', color: 'black'},
+        {header: "Projects", image: 'images/ideawhite.png', sub: '', color: 'white'},
         {header: "Sponsors", image: 'images/hand-shake.png', sub: '', color: 'white'},
-        {header: "Contact", image: 'images/email.png', sub: '', color: 'black'},
+        {header: "Contact", image: 'images/emailwhite.png', sub: '', color: 'white'},
     ]
 
 
