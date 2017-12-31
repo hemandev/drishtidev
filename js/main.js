@@ -1,6 +1,7 @@
 $(window).on('load', function () {
 
 
+
     $('.another-cont').fadeOut('slow')
 
     $width_image = 150
@@ -92,9 +93,8 @@ written by nabeel
         states: {
             "default-state": {
                 gradients: [
-                    ['#AA076B', '#61045F'],
-                    ['#02AAB0', '#00CDAC'],
-                    ['#DA22FF', '#9733EE']
+                    ['#000000','#000000'],
+
                 ]
             }
         }
@@ -176,7 +176,7 @@ written by nabeel
         if ($imgFlag === 0) {
 
             $('.ham-container').fadeToggle()
-            $('.img').velocity({right: 0, left: 0}, 100, "swing")
+            $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing")
             $('#menu_button').removeClass('fa-bars').addClass('fa-times')
             $imgFlag = 1
 

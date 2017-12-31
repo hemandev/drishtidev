@@ -28,7 +28,8 @@ $violet2: #C041A5
 $violet3: #A83593
 
 
-
+.fa
+  color: black !important
 
 
 .all-page-container
@@ -39,7 +40,7 @@ $violet3: #A83593
   right: 0
   width: 100%
   height: 100%
-  z-index: 1000000000000000000
+  z-index: 100000000
   margin: auto
 
 .front-page-container
@@ -317,7 +318,7 @@ $scale-factor: 1/6.3
   top: 25px
   margin: auto
   z-index: 100000000000000000000000000000000000000000000000000000000000000
-  transition: ease-out, 300ms
+  transition: ease-in-out, 700ms
   transform: scale(1)
   &:hover
     transition: ease-in 300ms
@@ -363,10 +364,13 @@ $offset: 100
   left: 50px
   resize: both
   margin: auto
-  background-image: url("../images/logowhitetransp.png")
+  background-image: url("../images/logowhitecropped.png")
   background-size: 550px 550px
   opacity: .1
   background-repeat: no-repeat
+
+
+
 
 
 
@@ -442,7 +446,7 @@ $offset: 100
   height: 100%
   width: 100%
   background-color: white
-  z-index: 10000000000000000
+  z-index: 100000
 
 #bt
   background: none
@@ -706,6 +710,9 @@ body
     &:hover
       transform: scale(.8)
 
+
+
+
   #img-bg
     left: 0
     width: 400px
@@ -740,7 +747,7 @@ body
     height: 150px
 
   .event-button
-    top: 30%
+    top: 220px
     transform: scale(.8)
 
   .event-desc
@@ -765,7 +772,8 @@ body
 
 
   .ham-text-container
-    width: 250px
+    width: 300px
+    height: 400px
 
   .loading-text
     bottom: 80px
@@ -867,7 +875,8 @@ body
     background-size: 250px 250px
 
   .ham-text-container
-    width: 250px
+    width: 300px
+    height: 400px
 
   .loading-text
     bottom: 50px
@@ -922,7 +931,7 @@ body
 
   .event-button
     height: 40px
-    top: 30%
+    top: 220px
     transform: scale(.8)
 
   .event-tag
