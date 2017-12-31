@@ -1,13 +1,12 @@
 $(window).on('load', function () {
 
 
-
     $('.another-cont').fadeOut('slow')
 
     $width_image = 150
     $height_image = 150
 
-    if (window.matchMedia('(max-width: 764px)').matches){
+    if (window.matchMedia('(max-width: 764px)').matches) {
 
         $('.event-image').attr({height: 100, width: 100})
 
@@ -92,7 +91,6 @@ written by nabeel
 
     var elem = $('.event-tag')
 
-    $('.ham-container').hide()
 
     /*  var granimInstance = new Granim({
           element: '#canvas-basic',
@@ -138,6 +136,7 @@ written by nabeel
 
 
 
+
         $mediaFlag = '25px'
 
         if (window.matchMedia('(max-width: 768px)').matches)
@@ -145,41 +144,57 @@ written by nabeel
 
 
         if ($hamFlag === 0) {
-            $('.insta-fab, .fb-fab').velocity({scale: 0})
+            $('.insta-fab, .fb-fab').velocity({scale: 0}, 100, "swing")
             $('.insta-fab2, .fb-fab2').velocity({scale: 1.1})
 
             $hamFlag = 1
         }
 
-       /* else if ($hamFlag === 1 && $readFlag === 1) {
-            $('.mail-fab,.close-fab').velocity({scale: 1})
-            $hamFlag = 0
-        }*/
+        /* else if ($hamFlag === 1 && $readFlag === 1) {
+             $('.mail-fab,.close-fab').velocity({scale: 1})
+             $hamFlag = 0
+         }*/
 
         else {
-            $('.insta-fab, .fb-fab').velocity({scale: 1})
+            $('.insta-fab, .fb-fab').velocity({scale: 1}, 100, "swing")
             $('.insta-fab2, .fb-fab2').velocity({scale: 0})
             $hamFlag = 0
         }
-
-
 
 
         console.log("inside click!!!!!")
 
         if ($imgFlag === 0) {
 
-            $('.ham-container').fadeToggle()
-            $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing")
-            $('#menu_button').removeClass('fa-bars').addClass('fa-times')
+          //  $('.ham-container').css({display: 'block'})
+
+            $('.ham-container').velocity('fadeIn', {duration:200, easing:"linear", complete:function () {
+
+
+                $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing")
+                $('.ham-text-container').velocity({translateY: '0%'}, 200, "swing")
+
+
+                $('#menu_button').removeClass('fa-bars').addClass('fa-times')
+
+            }})
+
+
             $imgFlag = 1
 
         }
         else if ($imgFlag === 1) {
 
-            $('.ham-container').fadeToggle()
-            $('.img').css({left: $mediaFlag, right: ''})
-            $('#menu_button').removeClass('fa-times').addClass('fa-bars')
+            $('.ham-container').velocity('fadeOut', {duration:400, easing:"linear", begin:function () {
+
+
+                $('.ham-text-container').velocity({translateY: '200%'}, 200, "swing")
+                $('.img').css({left: $mediaFlag, right: ''})
+
+                $('#menu_button').removeClass('fa-times').addClass('fa-bars')
+
+            }})
+
 
             $imgFlag = 0
 
@@ -189,9 +204,6 @@ written by nabeel
     })
 
     //new CircleType(document.getElementById('tag-id')).radius(250)
-
-
-
 
 
     function mailBtnClick() {
@@ -205,13 +217,13 @@ written by nabeel
             $('.drawer-right').velocity({translateY: '100%'}, {
                 duration: 400, easing: 'swing', begin: function () {
 
-                    $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 100, "linear")
+                    $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 200, "linear")
 
 
                 },
                 complete: function () {
 
-                    $('.close-fab-drawer').velocity({scale: 1}, 100, "linear")
+                    $('.close-fab-drawer').velocity({scale: 1}, 200, "linear")
 
                 }
             })
@@ -295,69 +307,77 @@ written by nabeel
 
     $('.event-button').click(function () {
 
-        if($count === 1)
-            window.location = 'drishti.html'
-        else if($count === 2)
-            window.location = 'events.html'
-        else if($count === 3)
-            window.location = 'workshops.html'
-        else if($count === 4)
-            window.location = 'informals.html'
-        else if($count === 5)
-            window.location = 'projects.html'
-        else if($count === 6)
-            window.location = 'sponsors.html'
-        else if($count === 7)
-            window.location = 'contact.html'
+        $('.circle' + $count).velocity({scale: 100}, {
+            easing: 'linear', duration: 500, begin: function () {
 
 
-
-
-
-
-        /* $('.event-page-container').load('events.html')
-        $('.front-page-container').fadeOut()
-        $('.event-page-container').fadeIn()
-        $('.close-fab').velocity({scale: 1})*/
-
-
-
-/*
-        $readFlag = 1
-
-
-        $('.event-button').fadeOut()
-        $('.event-tag').velocity({opacity: 0}, 200, "linear")
-
-        $('.circle' + $count).velocity({scale: 100, opacity: 0, display: 'none'}, {
-            easing: 'linear', begin: function () {
-
-                $('.fb-fab,.insta-fab').velocity({scale: 0}, 200, "linear")
-                $('.event-one-container').fadeIn("slow")
-                $('.event-header').removeClass('text-dark').addClass('text-white')
-                $('.fa-arrow-up, .fa-arrow-down').fadeOut("slow")
+                $('.circle-content').velocity({opacity: 0, display: 'none'})
 
 
             }, complete: function () {
 
-                $('.event-header').velocity({scale: 1.1}, 100, "linear")
+
+                if ($count === 1)
+                    window.location = 'drishti.html'
+                else if ($count === 2)
+                    window.location = 'events.html'
+                else if ($count === 3)
+                    window.location = 'workshops.html'
+                else if ($count === 4)
+                    window.location = 'informals.html'
+                else if ($count === 5)
+                    window.location = 'projects.html'
+                else if ($count === 6)
+                    window.location = 'sponsors.html'
+                else if ($count === 7)
+                    window.location = 'contact.html'
 
 
-                if (window.matchMedia('(max-width: 768px)').matches)
-
-                    $('.close-fab').velocity({scale: 1.3}, 1, "linear")
-                else
-                    $('.close-fab,.mail-fab').velocity({scale: 1}, 200, "linear")
-
-
-            }, duration: 200
+            }
         })
 
-        setTimeout(mailBtnClick, 1000)
-*/
     })
 
 
+    /* $('.event-page-container').load('events.html')
+    $('.front-page-container').fadeOut()
+    $('.event-page-container').fadeIn()
+    $('.close-fab').velocity({scale: 1})*/
+
+
+    /*
+            $readFlag = 1
+
+
+            $('.event-button').fadeOut()
+            $('.event-tag').velocity({opacity: 0}, 200, "linear")
+
+            $('.circle' + $count).velocity({scale: 100, opacity: 0, display: 'none'}, {
+                easing: 'linear', begin: function () {
+
+                    $('.fb-fab,.insta-fab').velocity({scale: 0}, 200, "linear")
+                    $('.event-one-container').fadeIn("slow")
+                    $('.event-header').removeClass('text-dark').addClass('text-white')
+                    $('.fa-arrow-up, .fa-arrow-down').fadeOut("slow")
+
+
+                }, complete: function () {
+
+                    $('.event-header').velocity({scale: 1.1}, 100, "linear")
+
+
+                    if (window.matchMedia('(max-width: 768px)').matches)
+
+                        $('.close-fab').velocity({scale: 1.3}, 1, "linear")
+                    else
+                        $('.close-fab,.mail-fab').velocity({scale: 1}, 200, "linear")
+
+
+                }, duration: 200
+            })
+
+            setTimeout(mailBtnClick, 1000)
+    */
 
 
     $('.close-btn').click(function () {
@@ -368,49 +388,49 @@ written by nabeel
         $('.event-page-container').fadeOut("slow")
         $('.front-page-container').fadeIn("slow")
 
-      /*  $readFlag = 0
+        /*  $readFlag = 0
 
-        if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
+          if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
-            scaleValue = 1.4
-            time = 199
+              scaleValue = 1.4
+              time = 199
 
-        }
+          }
 
-        else if (window.matchMedia('(max-width: 480px)').matches) {
+          else if (window.matchMedia('(max-width: 480px)').matches) {
 
-            scaleValue = 1.6
-            time = 199
+              scaleValue = 1.6
+              time = 199
 
-        }
-        else {
-            scaleValue = 1
-            time = 0
-        }
+          }
+          else {
+              scaleValue = 1
+              time = 0
+          }
 
-        $('.circle' + $count).velocity({scale: 6.3 / scaleValue, opacity: 1, display: 'block'}, {
-            duration: 300, easing: 'linear', complete: function () {
-
-
-                $('.event-one-container').fadeOut("slow")
-                $('.event-header').velocity({scale: 1}, 500, "linear").css({'text-align': 'center'})
-                $('.event-header').removeClass('text-white').addClass('text-dark')
-                $('.event-button').fadeIn()
-                $('.event-tag').velocity({opacity: 1}, 200, "linear")
-
-                $('.fa-arrow-up, .fa-arrow-down').fadeIn("slow")
-
-                $('.close-fab,.mail-fab').velocity({scale: 0}, {
-                        duration: 200 - time, easing: "linear", complete: function () {
-
-                            $('.fb-fab,.insta-fab').velocity({scale: 1}, 200, "linear")
-                        }
-                    }
-                )
+          $('.circle' + $count).velocity({scale: 6.3 / scaleValue, opacity: 1, display: 'block'}, {
+              duration: 300, easing: 'linear', complete: function () {
 
 
-            }
-        })*/
+                  $('.event-one-container').fadeOut("slow")
+                  $('.event-header').velocity({scale: 1}, 500, "linear").css({'text-align': 'center'})
+                  $('.event-header').removeClass('text-white').addClass('text-dark')
+                  $('.event-button').fadeIn()
+                  $('.event-tag').velocity({opacity: 1}, 200, "linear")
+
+                  $('.fa-arrow-up, .fa-arrow-down').fadeIn("slow")
+
+                  $('.close-fab,.mail-fab').velocity({scale: 0}, {
+                          duration: 200 - time, easing: "linear", complete: function () {
+
+                              $('.fb-fab,.insta-fab').velocity({scale: 1}, 200, "linear")
+                          }
+                      }
+                  )
+
+
+              }
+          })*/
 
     })
 
@@ -561,14 +581,21 @@ written by nabeel
 
             $count++
 
-            $(' .circle-content').velocity({opacity: 0, display: 'none'}, {
+            $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 300, easing: 'linear', begin: function () {
 
-                    $('.event-image, .event-sub, .event-header, .event-button').fadeOut("slow")
+                    $('.event-image').attr({
+                        src: mainText[$count - 1].image,
+                        width: $width_image,
+                        height: $height_image
+                    })
 
-                    $('.event-image').attr({src: mainText[$count -1].image, width: $width_image, height: $height_image})
+                }, complete: function () {
 
-                    if(mainText[$count -1].color === 'white') {
+                    // $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, 400, "linear")
+
+
+                    if (mainText[$count - 1].color === 'white') {
                         $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light')
                         $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light')
                     }
@@ -587,7 +614,7 @@ written by nabeel
             })
                 .velocity({opacity: 1, display: 'block'}, {duration: 300, easing: 'linear'})
 
-            $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
+            //  $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 1, display: 'block'}, 400, "linear")
 
             hideCount = $count + 6
             for (i = hideCount; i <= 19; i++)
@@ -659,12 +686,20 @@ written by nabeel
         else {
             $count--
 
-            $('.circle-content').velocity({opacity: 0, display: 'none'}, {
+            $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 300, easing: 'linear', begin: function () {
-                    $('.event-image, .event-sub, .event-header, .event-button').fadeOut("slow")
 
-                    $('.event-image').attr({src: mainText[$count -1].image, width: $width_image, height: $height_image})
-                    if(mainText[$count -1].color === 'white') {
+                    $('.event-image').attr({
+                        src: mainText[$count - 1].image,
+                        width: $width_image,
+                        height: $height_image
+                    })
+
+                }, complete: function () {
+                    //    $('.event-image, .event-sub, .event-header, .event-button').fadeOut("slow")
+
+
+                    if (mainText[$count - 1].color === 'white') {
                         $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light')
                         $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light')
                     }
@@ -677,11 +712,10 @@ written by nabeel
                     $('.event-sub').html(mainText[$count - 1].sub)
 
 
-
                 }
             })
                 .velocity({opacity: 1, display: 'block'}, {duration: 300, easing: 'linear'})
-            $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
+            //   $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
 
 
             hideCount = $count + 6

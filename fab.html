@@ -11,7 +11,8 @@
 
         .img {
             position: absolute;
-            left: 25px;
+            left: 0;
+            right: 0;
             top: 25px;
             margin: auto;
             z-index: 100000000000000000000000000000000000000000000000000000000000000;
@@ -60,6 +61,7 @@
             width: 100%;
             background-color: white;
             z-index: 100000;
+            opacity: 0;
             display: none;
             overflow: hidden;
         }
@@ -73,6 +75,8 @@
             right: 0;
             bottom: 0;
             left: 0;
+            transform: translateY(200%);
+            transition: all ease-in-out .1s;
             margin: auto;
         }
 
@@ -295,7 +299,7 @@
 
             $mediaFlag = '25px'
             if ($hamFlag === 0) {
-                $('.insta-fab, .fb-fab').velocity({scale: 1.1})
+                $('.insta-fab, .fb-fab').velocity({scale: 1.1}, 100, "swing")
                 $hamFlag = 1
             }
            /* else if ($hamFlag === 1 && $readFlag === 1) {
@@ -304,7 +308,7 @@
             }*/
 
             else {
-                $('.insta-fab, .fb-fab').velocity({scale: 0})
+                $('.insta-fab, .fb-fab').velocity({scale: 0}, 100, "swing")
                 $hamFlag = 0
             }
 
@@ -317,17 +321,36 @@
 
             if ($imgFlag === 0) {
 
-                $('.ham-container').fadeToggle()
-                $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing")
-                $('#menu_button').removeClass('fa-bars').addClass('fa-times')
+               // $('.ham-container').css({display: 'block'})
+
+                $('.ham-container').velocity('fadeIn', {duration:200, easing:"linear", complete:function () {
+
+
+                    $('.ham-text-container').velocity({translateY: '0%'}, 200, "swing")
+
+
+                    $('#menu_button').removeClass('fa-bars').addClass('fa-times')
+
+                }})
+               // $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing")
+
                 $imgFlag = 1
 
             }
             else if ($imgFlag === 1) {
 
-                $('.ham-container').fadeToggle()
-                $('.img').css({left: $mediaFlag, right: ''})
-                $('#menu_button').removeClass('fa-times').addClass('fa-bars')
+                $('.ham-container').velocity('fadeOut', {duration:400, easing:"linear", begin:function () {
+
+
+                    //$('.ham-container').css({display: 'none'})
+
+                    $('.ham-text-container').velocity({translateY: '200%'}, 200, "swing")
+
+                    $('#menu_button').removeClass('fa-times').addClass('fa-bars')
+
+                }})
+              //  $('.img').css({left: $mediaFlag, right: ''})
+
 
                 $imgFlag = 0
 

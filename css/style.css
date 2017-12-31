@@ -230,7 +230,7 @@
   top: 25px;
   margin: auto;
   z-index: 100000000000000000000000000000000000000000000000000000000000000;
-  transition: ease-in-out, 700ms;
+  transition: ease-in-out, 100ms;
   transform: scale(1); }
 
 .img:hover {
@@ -246,6 +246,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  transform: translateY(200%);
   margin: auto; }
 
 .ham-text-container h1 {
@@ -336,6 +337,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  opacity: 0;
+  display: none;
   background-color: white;
   z-index: 100000; }
 
@@ -748,35 +751,14 @@ body {
   transform: scale(1);
   transition: linear, 500ms; }
 
-.fb-fab {
-  position: absolute;
-  top: 150px;
-  bottom: 0;
-  right: 45px;
-  z-index: 100000000000000;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  margin: auto;
-  background-color: white;
-  cursor: pointer;
-  transform: scale(1);
-  transition: linear, 500ms; }
+.fb-fab, .insta-fab {
+  display: none; }
 
-.insta-fab {
-  position: absolute;
-  top: 0;
-  bottom: 150px;
-  right: 45px;
-  z-index: 100000000000000;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  margin: auto;
-  background-color: white;
-  cursor: pointer;
-  transform: scale(1);
-  transition: linear, 500ms; }
+.fb-fab2 {
+  display: none; }
+
+.insta-fab2 {
+  display: none; }
 
 .mail-fab {
   position: absolute;
@@ -1582,8 +1564,35 @@ body {
     transform: scale(0);
     transition: linear, 500ms;
     right: 20px; }
-  .fb-fab, .insta-fab {
-    display: none; }
+  .fb-fab2 {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    z-index: 100000000000000;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    background-color: white;
+    cursor: pointer;
+    transform: scale(0);
+    transition: linear, 500ms; }
+  .insta-fab2 {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    z-index: 100000000000000;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    background-color: white;
+    cursor: pointer;
+    transform: scale(0);
+    transition: linear, 500ms; }
   .event-header {
     font-size: 40px;
     width: 300px;

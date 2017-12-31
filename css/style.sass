@@ -320,7 +320,7 @@ $scale-factor: 1/6.3
   top: 25px
   margin: auto
   z-index: 100000000000000000000000000000000000000000000000000000000000000
-  transition: ease-in-out, 700ms
+  transition: ease-in-out, 100ms
   transform: scale(1)
   &:hover
     transition: ease-in 300ms
@@ -337,6 +337,7 @@ $offset: 100
   right: 0
   bottom: 0
   left: 0
+  transform: translateY(200%)
   margin: auto
 
 .ham-text-container h1
@@ -422,6 +423,8 @@ $offset: 100
   position: absolute
   height: 100%
   width: 100%
+  opacity: 0
+  display: none
   background-color: white
   z-index: 100000
 
@@ -482,6 +485,7 @@ h1 span
 
 .fa-lg
   vertical-align: -80%
+
 
 =rotated-text($class-name, $no-of-letters)
   $angle-span: 180deg
@@ -557,14 +561,13 @@ body
 .ham-fab
   +fab(0, 0)
 
-.fb-fab
-  +fab(150px, 0)
+.fb-fab, .insta-fab
+  display: none
+
 
 .fb-fab2
   display: none
 
-.insta-fab
-  +fab(0, 150px)
 
 .insta-fab2
   display: none
