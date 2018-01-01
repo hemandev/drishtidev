@@ -1,7 +1,7 @@
 $(window).on('load', function () {
 
 
-    $('.another-cont').fadeOut('slow')
+    $('.another-cont').velocity('fadeOut', 300, "swing")
 
     $width_image = 150
     $height_image = 150

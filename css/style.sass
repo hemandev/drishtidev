@@ -561,8 +561,12 @@ body
 .ham-fab
   +fab(0, 0)
 
-.fb-fab, .insta-fab
-  display: none
+.fb-fab
+  +fab(150px, 0)
+
+.insta-fab
+  +fab(0, 150px)
+
 
 
 .fb-fab2
@@ -894,6 +898,9 @@ body
     cursor: pointer
     transform: scale(0)
     transition: linear, 500ms
+
+  .fb-fab, .insta-fab
+    display: none
 
 
   .event-header
