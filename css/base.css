@@ -537,7 +537,8 @@ a.demo--current {
 
 @media screen and (max-width: 55em) {
   body {
-    padding: 0 0 4em 0; }
+    padding: 0 0 4em 0;
+    overflow: hidden;}
   .content {
     flex-direction: column;
     height: auto;
@@ -566,9 +567,14 @@ a.demo--current {
 
 @media screen and (max-width: 480px)  {
 
+  .slide__title{
+    font-size: 140px !important;
+
+  }
+
   .slide__title span{
     display: block;
-    font-size: 140px !important;
+
   }
 
   .border-container{
