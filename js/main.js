@@ -122,7 +122,7 @@ written by nabeel
     $hamFlag = 0
     $readFlag = 0
 
-    mainText = [{header: "DRISHTI 18'", image: 'images/logoblacktransp.png', sub: 'January 16 - 18', color: 'black'},
+    mainText = [{header: "DRISHTI 18'", image: 'images/logoblacktransp.png', sub: 'January 19,20,21', color: 'black'},
         {header: "Competitions", image: 'images/cup.png', sub: '', color: 'white'},
         {header: "Workshops", image: 'images/workshopswhite.png', sub: '', color: 'white'},
         {header: "Informals", image: 'images/informals.png', sub: '', color: 'white'},
