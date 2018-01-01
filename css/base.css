@@ -463,7 +463,8 @@ a.demo--current {
 
 .slide__title {
   position: relative;
-  margin: 0;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
   cursor: default;
   text-align: center;
   line-height: 1;
@@ -537,8 +538,8 @@ a.demo--current {
 
 @media screen and (max-width: 55em) {
   body {
-    padding: 0 0 4em 0;
-    overflow: hidden;}
+    padding: 0 0 0 0;
+    overflow: hidden; !important;}
   .content {
     flex-direction: column;
     height: auto;
@@ -569,6 +570,8 @@ a.demo--current {
 
   .slide__title{
     font-size: 140px !important;
+    margin-top: 40px !important;
+    margin-bottom: 0px !important;
 
   }
 
@@ -578,7 +581,7 @@ a.demo--current {
   }
 
   .border-container{
-    width: 350px!important;
+    width: 300px!important;
   }
 
 }
