@@ -77,7 +77,7 @@
             this.DOM.svg.setAttribute('viewbox',`0 0 ${this.rect.width} ${this.rect.height}`);
             this.DOM.svg.innerHTML = `
             <defs>
-            <pattern fill="#000" id="pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+            <pattern fill="#8B000077" id="pattern" width="40" height="40" patternUnits="userSpaceOnUse">
             <polygon id="Path-2" points="0 40 40 0 20 0 0 20"></polygon>
             <polygon id="Path-2-Copy" points="40 40 40 20 20 40"></polygon>
             </pattern>

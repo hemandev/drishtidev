@@ -441,9 +441,10 @@ a.demo--current {
   padding: 2em; }
 
 .slidenav__item {
-  border: 0;
+  border-width: 1px;
+  border-color: darkred;
   background: none;
-  font-weight: bold;
+  text-transform: uppercase;
   color: var(--color-nav); }
 
 .slidenav__item:focus {
@@ -501,7 +502,10 @@ a.demo--current {
   text-decoration: none !important;
   color: black;
   opacity: .5 !important;
+  border-width: 1px;
+  border-color: darkred;
   background: white;
+  text-transform: uppercase !important;
   transition: color 0.3s, background 0.3s; }
 
 .slide__link:hover {
