@@ -3,171 +3,308 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Drishti Events</title>
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/menu_sideslide.css" />
-		<script src="js/jquery.js"></script>
+		<title>Workshops | Drishti</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/particles.min.js"></script>
+        <script src="js/velocity.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/c_base.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
-	<body class="demo-5 loading">
+	<body class="loading">
+
+    <div class="fab-container" style="width:100%;height: 100%;position: fixed">
+
+    </div>
+
+    <div id="bg-image"></div>
+
+
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M 5.5,2.5 C 5.372,2.5 5.244,2.549 5.146,2.646 L 2.646,5.146 C 2.451,5.341 2.451,5.659 2.646,5.854 L 8.793,12 2.646,18.15 C 2.451,18.34 2.451,18.66 2.646,18.85 L 5.146,21.35 C 5.341,21.55 5.659,21.55 5.854,21.35 L 12,15.21 18.15,21.35 C 18.24,21.45 18.37,21.5 18.5,21.5 18.63,21.5 18.76,21.45 18.85,21.35 L 21.35,18.85 C 21.55,18.66 21.55,18.34 21.35,18.15 L 15.21,12 21.35,5.854 C 21.55,5.658 21.55,5.342 21.35,5.146 L 18.85,2.646 C 18.66,2.451 18.34,2.451 18.15,2.646 L 12,8.793 5.854,2.646 C 5.756,2.549 5.628,2.5 5.5,2.5 Z"/>
+			</symbol>
+			<symbol id="icon-menu" viewBox="0 0 24 24">
+				<title>menu</title>
+				<path d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"/>
+			</symbol>
+			<!-- Magnifier by Gregor Cresnar https://www.flaticon.com/authors/gregor-cresnar -->
+			<symbol id="icon-magnifier" viewBox="0 0 490.8 490.8">
+				<title>magnifier</title>
+				<path d="M364.8,299.55c46.3-75.8,36.9-176.3-28.6-241.9c-76.8-76.8-201.8-76.8-278.6,0s-76.8,201.8,0,278.5c65.5,65.5,166,74.9,241.9,28.6L412,477.25c18,18,47.3,18,65.3,0s18-47.3,0-65.3L364.8,299.55z M295.5,295.55c-54.4,54.4-142.8,54.4-197.1,0c-54.4-54.4-54.4-142.8,0-197.1c54.4-54.4,142.8-54.4,197.1,0C349.8,152.75,349.8,241.15,295.5,295.55z M220,171.95h59.4v45.3H220v59.4h-45.3v-59.4h-59.3v-45.3h59.4v-59.4h45.3v59.4H220z"/>
+			</symbol>
+        </svg>
 		<main>
-			<div class="fab-container" style="width:100%;height: 100%;position: absolute">
-
+			<div class="content">
+				<header class="codrops-header">
+					<h1 class="codrops-header__title">WORKSHOPS</h1>
+				</header>
 			</div>
-		<div class="menu-wrap">
-				<nav class="menu">
-					<div class="icon-list">
-						<a href="#"><span>Workshops</span></a>
-						<a href="#"><span>Electrical</span></a>
-						<a href="#"><span>Civil</span></a>
-						<a href="#"><span>Computer Science</span></a>
-						<a href="#"><span>Electronics</span></a>
-						<a href="#"><span>Architecture</span></a>
-						<a href="#"><span>MCA</span></a>
-						<a href="#"><span>MBA</span></a>
-						<a href="#"><span>IEEE</span></a>
-						<a href="#"><span>ISTE</span></a>
-						<a href="#"><span>FOSS</span></a>
-						<a href="#"><span>IET</span></a>
-						<a href="#"><span>RoboCET</span></a>
-						<a href="#"><span>Quiz Club</span></a>
-						<a href="#"><span>PHOTOGRAPHY</span></a>
-						<a href="#"><span>SAE</span></a>
-						<a href="#"><span>EDC</span></a>
-						<a href="#"><span>IET</span></a>
-					</div>
-				</nav>
-				<button class="close-button" id="close-button">Close Menu</button>
-			</div>
-			<button class="menu-button" id="open-button">Open Menu</button>
-			<div class="slideshow">
 
-				<div class="slides">
-					<div class="slide slide--current">
-						<div class="slide__img" style="background-image: url(img/21.jpg)"></div>
-						<h2 class="slide__title">Workshops</h2>
-						<p class="slide__desc">Plunge boldly into the thick of life and seize it.</p>
-						<a class="slide__link" href="#">Explore destinations</a>
+            <br>
+
+             <br>
+
+            <br>
+			<div class="content">
+				<div class="grid">
+				<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP Texas IoT.jpeg" alt="img 06"/>
+							<h2 class="product__title">Texas Instruments IoT Workshop
+</h2>
+							<h3 class="product__subtitle"></h3>
+							<p class="product__description">Brace yourselves folks!!! Coz Texas Instruments is coming to Drishti’18!<br /><br />Intrigued by the wonders of the next big thing, Internet of Things!!?? We have got your back. One of the world’s biggest and most reputed electronics companies is all set to take a workshop on Embedded and IoT effective programming as part of their University Program.
+<br /><br />The workshop will teach you everything you need to know to implement and use IoT in real world application. An exclusive workshop of the highest quality, this is not to be missed.</p>
+
+							<p class="product__details">
+The workshop will teach you everything you need to know to implement and use IoT in real world application. An exclusive workshop of the highest quality, this is not to be missed.
+<br />This is a 2 day workshop under Texas Instruments University Program.
+<br />Day 1: Fundamentals of Operating Systems and Linux commands
+<br />Day 2: Basics of IoT and multiple hands on demonstrations of real world IoT systems<br />Date: 20th and 21st jan 2018<br />Venue : CETAA Hall<br />Registration Fee: Rs.700/- per head (without kit) , Rs.1100/- per head (with kit)
+</p><p class="product__contacts">Gibcen - 9497371474<br />
+Labeeba - 7356231766
+</p>
+							<div class="product__price">&#x20b9 700/- per head(without kit),<br />&#x20b9 1100/- per head(with kit)</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/22.jpg)"></div>
-						<h2 class="slide__title">Electrical</h2>
-						<p class="slide__desc">Never fear quarrels, but seek hazardous adventures.</p>
-						<a class="slide__link" href="#">Adventure yourself</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP ML.jpg" alt="img 03"/>
+							<h2 class="product__title">Machine Learning</h2>
+							<h3 class="product__subtitle">In association with FlyTxt </h3>
+							<p class="product__description">"...what we want is a machine that can learn from experience."_ - Alan Turing<br \>
+
+Interested in big data? Predictive analysis? Looking for a platform to grab the basics of Machine Learning? <br />
+Here is the place for you! Drishti '18 presents before you Machine Learning Workshop. The workshop provides basic foundation in Machine Learning and Data Analysis, giving an overview of many concepts, techniques, and algorithms in Machine Learning, followed by hands-on-session.  Do not miss this great opportunity to get a formal understanding of how, why, and when they work. Only limited seats available, so tarry not!
+</p>
+
+							<p class="product__details">Date: 20th Jan 2018<br />
+Venue: SCT Lab<br />
+Registration Fee: 500/- per head
+</p>
+							<p class="product__contacts">Jessal V A - 9447907468<br />
+Chris Humphry- 9061392948<br />
+Abhishek Nambiar- 9497806656</p>
+							<div class="product__price">&#x20b9 350/- per head</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/23.jpg)"></div>
-						<h2 class="slide__title">Civil</h2>
-						<p class="slide__desc">Until you step into the unknown, you don't know what you're made of.</p>
-						<a class="slide__link" href="#">Discover the unknown</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP Kali.jpg" alt="img 04"/>
+							<h2 class="product__title">Ethical Hacking with Kali Linux</h2>
+							<h3 class="product__subtitle"></h3>
+							<p class="product__description"> 'A silent guardian, a watchful protector' - Interested in becoming the Caped Crusader of the cyber world? In other words, want to know what it takes to be a white hat?<br />Here is your chance. FOSS CELL CET brings you a workshop on ethical hacking with Kali Linux. NANDU R, associate partner at CDCLLP will walk you through the basics of ethical hacking.
+</p>
+
+							<p class="product__details">Date: 21st Jan 2018
+<br />Time: 9:30 AM to 4:30 PM <br />
+Venue: SCT Lab<br />
+Registration fee: Rs 500 per head (Lunch will not be provided)
+</p>
+							<p class="product__contacts">Sarath Sreedhar - 9447163154<br />
+Ashiq P T - 8289894917</p>
+							<div class="product__price">&#x20b9 350</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">Computer<br /> Science</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP AR.jpg" alt="img 05"/>
+							<h2 class="product__title">AR and VR game
+</h2>
+							<h3 class="product__subtitle">In association with RoboKart
+</h3>
+							<p class="product__description">Did the breathtaking Iphone X's augmented reality blow your mind?Have Virtual Reality games like Star Trek and Eagle Flight fascinated  you??What if you could develop AR and VR apps for your own smartphones?
+<br />Drishti 18' presents before you AR and VR game development workshop.The workshop will be conducted by professionals from Robokart.
+The workshop will be conducted as a one day session. Participants will learn to develop games in platforms like 3D UNITY and VUFORIA.
+Softwares will be distributed during the session.<br />Takeaway kits will be provided for each team which includes Google cardboard VR headset.
+
+</p>
+
+							<p class="product__details">Groups of 3 to 5 are to be formed for registration. <br />
+Registrations can be done individually which will not involve takeaway kit.<br />
+One laptop per team is mandatory.<br />
+Participants will be provided with certificates from IIT BOMBAY Innovation Cell<br />
+
+Date: 21st Jan 2018<br />
+Venue: CETAA Hall<br />
+Registration Fee: 850/- per head<br />
+</p>
+							<p class="product__contacts">Sarang - 8289997827<br />
+Sreekumar - 8594040178
+</p>
+							<div class="product__price">&#x20b9 850</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">Electronics</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/1.png" alt="img 06"/>
+							<h2 class="product__title">Mind Control Bot
+</h2>
+							<h3 class="product__subtitle">In association with RoboKart
+</h3>
+							<p class="product__description">Tired of using remote control and messy wired connections to communicate with your robots?Are you tech enthusiast and wanna do something really cool and futuristic? Ever thought of how people in sci-fi movies control robots with their bare mind?
+<br />This Drishti get ready to tickle your brains at the Mind Controlled Bot workshop.
+The workshop will be conducted by professionals from Robokart.
+Topics covered would be Brain Waves and use of EEG sensor to control a robot. Students will learn to interface arduino with bluetooth module(HC05) along with the EEG sensor
+<br />Take away kit will be included for each team which includes the Arduino ,robotics kit and modules.</p>
+
+							<p class="product__details">Register as team of 5. Per head cost would be   850/- <br/>Registration can also be done individually(take away kit not included for individual registration).
+<br />One laptop per team is mandatory.
+<br />Certificates from IIT BOMBAY Innovation Cell be provided to the participants.<br />Date: 20th Jan 2018
+<br />Venue: CETAA Hall</p>
+							<p class="product__contacts">Sarang - 8289997827<br />
+Sreekumar - 8594040178
+</p>
+							<div class="product__price">&#x20b9 850</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">Architecture</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP OpenCV.jpg" alt="img 06"/>
+							<h2 class="product__title">Introduction to OpenCV
+</h2>
+							<h3 class="product__subtitle">When the robots take over the world, don't you want to be prepared ?
+</h3>
+							<p class="product__description">For people who are intrigued by Artificial Intelligence, Drishti’ 18 presents Introduction to OpenCV workshop. A beginner’s guide to OpenCV and Python basics, whether you're new to AI or experienced, you’ll learn a lot from this. All you require is a laptop running a recent version of Linux. 
+</p>
+
+							<p class="product__details">Registration fee : Rs. 350
+<br/>Date : 18th or 19th January, 2018
+<br />Venue : MCA LAB(CET)
+							<p class="product__contacts">Fawaz - 8714448060<br />
+Rafsal - 8301035831
+</p>
+							<div class="product__price">&#x20b9 350</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">MCA</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP ROS.jpg" alt="img 06"/>
+							<h2 class="product__title">ROS Workshop
+</h2>
+							<h3 class="product__subtitle">What's all this noise about VR and AI if you are gonna miss out on the very basics of the most in-demand simulation software?
+</h3>
+							<p class="product__description">Brace yourselves folks!! Drishti'18 presents ROS BASED BOT CONTROL WORKSHOP, for all enthusiasts out there to catch a glimpse of all wonders the ROS software encompasses. 
+<br />And hurry up!! Coz u definitely don't want to miss out on this.
+</p>
+
+							<p class="product__details">And oh yeah. An Ubuntu laptop with ROS installed and a basic understanding of Ubuntu and OOP concepts would be nice.<br />Registration fee : Rs. 750 /- per head
+<br/>Date : 20th and 21th January, 2018
+<br />Venue : Mech Seminar Hall(CET)
+							<p class="product__contacts">Ajay - 8547337659<br />
+Georgian - 9526682525
+</p>
+							<div class="product__price">&#x20b9 750/- per head</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">MBA</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+										<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							
+							<img class="product__img" src="images/DP Wordpress.jpg" alt="img 06"/>
+							<h2 class="product__title">WordPress Workshop
+</h2>
+							<h3 class="product__subtitle">_Want to develop a website but no coding knowledge?_ 
+
+</h3>
+							<p class="product__description">Drishti '18 presents the *WordPress workshop* which teaches you how.<br />*IET CET* presents The Wordpress Workshop to build and develop an E-Commercial website. It's a hands on Wordpress Website workshop to walk through setting up and building your website without any knowledge in coding. <br /><br />*What is WordPress?*
+<br /><br />Wordpress is an online open source website creation tool. This the easiest and most powerful blogging and website conduct management system in existence today. 
+
+</p>
+
+							<p class="product__details">Hands-on sessions will cover:<br />*General introduction to WordPress<br />*Setting your domain name to hosting<br />*Reviewing the dashboard<br />*Themes, plugins,widgets and menus<br />*Pages vs Post<br />*Premium Theme and where to find them<br />*Creating basic pages and post<br />*Building an E-commerce website<br />
+<br/>Date :21th January, 2018
+							<p class="product__contacts">Gokul Pradeep - 8714224470<br />
+Goutham Krishna - 8943187223
+</p>
+							<div class="product__price">&#x20b9 250/- per head</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">IEEE</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP QUADCOPTER.jpg" alt="img 06"/>
+							<h2 class="product__title">Quadcopter Workshop
+</h2>
+							<h3 class="product__subtitle"></h3>
+							<p class="product__description">The Quadcopter Workshop aims to bring forth to students the concept of a Quadcopter. It will guide them as to how to build a Quadcopter and its constituents. Areas involved are: electronics, mechanics, programming and communication.<br />A Quadcopter also called a Quadrotor Helicopter or Quadrotor is a multirotor helicopter lifter and propelled by 4 rotors.
+<br />The Workshop instructs the students on the designing of a Quadcopter and the assembly of a RC Drone including controlling of the Drone
+</p>
+
+							<p class="product__details">Date: 20th and 21st Jan 2018
+
+<br/>Venue : EEE Seminar Hall(CET)
+<br />Registration Fee: 900/- per head
+							<p class="product__contacts">Praveen - 9495701266<br />
+Ramakrishnan - 8592819078
+</p>
+							<div class="product__price">&#x20b9 900/- per head</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">ISTE</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					
+					
+					
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP Staad.jpg" alt="img 01"/>
+							<h2 class="product__title">STAAD WORKSHOP
+</h2>
+							<h3 class="product__subtitle">Learn and evolve</h3>
+							<p class="product__description">Equip yourself with expertise in the most popular Structural analysis and design software STAAD.Pro. In association with InterCAD, Drishti '18 brings the unique opportunity to mould the structural analyst in you</p>
+							
+							<p class="product__details">Date: 19th Jan 2018<br />
+Time: 9:30 AM to 4:30 PM<br /> 
+Venue: SCT Lab<br />
+Registration fee: Rs 450 per head </p>
+							<p class="product__contacts">Rahul Dileep - 8281635133<br />Bharath - 8547631302
+</p>
+							<div class="product__price">&#x20b9 450 </div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">FOSS</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="images/DP SKETCHUP.jpg" alt="img 02"/>
+							<h2 class="product__title">SKETCHUP WORKSHOP</h2>
+							<h3 class="product__subtitle">In association with interCAD </h3>
+							<p class="product__description">SketchUp, formerly Google Sketchup, is a 3D modeling computer programme for a wide range of drawing applications such as architecture, interior design, landscape architecture, civil and mechanical engineering, film and  video game design.</p>
+
+							<p class="product__details">Date:  20th January 2018
+<br />Registration fee: 450<br />
+Venue: CET( C-cube lab)
+</p>
+							<p class="product__contacts">Basil - 9496470968<br />
+Ramees - 9020146482
+</p>
+							<div class="product__price">&#x20b9 450/- per head</div>
+						</div>
 					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">IET</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">RoboCET</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">QUIZ CLUB</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">PHOTOGRAPHY</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">SAE</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">EDC</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
-					<div class="slide">
-						<div class="slide__img" style="background-image: url(img/24.jpg);"></div>
-						<h2 class="slide__title">IET</h2>
-						<p class="slide__desc">A day wasted on others is not wasted on one's self.</p>
-						<a class="slide__link" href="#">Let's go</a>
-					</div>
+
 				</div>
-				<nav class="slidenav">
-					<button class="slidenav__item slidenav__item--prev">Previous</button>
-					<span>/</span>
-					<button class="slidenav__item slidenav__item--next">Next</button>
-				</nav>
 			</div>
 		</main>
-		<script src="js/classie.js"></script>
-		<script src="js/event_main.js"></script>
-		<script src="js/demo.js"></script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/anime.min.js"></script>
-		<script src="js/demo5.js"></script>
-		<script>
-            $('.fab-container').load('fab.html')
-		</script>
+		<script src="js/w_main.js"></script>
+    <script>
+        $('.fab-container').load('fab.html')
+    </script>
 	</body>
 </html>
