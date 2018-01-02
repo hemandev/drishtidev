@@ -1,7 +1,7 @@
 
 
 particlesJS.load('bg-image', 'particlesjs-config.json', function() {
-    console.log('callback - particles.js config loaded');
+    // console.log('callback - particles.js config loaded');
 });
 
 {
@@ -50,7 +50,7 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
             this.DOM.cart = this.DOM.details.querySelector('.details__addtocart');
             this.DOM.close = this.DOM.details.querySelector('.details__close');
             //this.DOM.magnifier = this.DOM.details.querySelector('.details__magnifier');
-
+            this.ticketCode = '';
             this.initEvents();
         }
         initEvents() {
@@ -59,6 +59,13 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
 			this.DOM.sidebutton2.addEventListener('click',() => this.showButton2Element());
 			this.DOM.sidebutton3.addEventListener('click',() => this.showButton3Element());
             //this.DOM.magnifier.addEventListener('click', () => this.zoomIn());
+            this.DOM.cart.addEventListener('click', (e) => {
+                popupWithAutoFill( {
+                    eventcode: 'drishti-2018-324240',
+                    ticketname1: this.ticketCode,
+                    ticketvalue1: 1
+                });
+            });
         }
         fill(info) {
             this.DOM.img.src = info.img;
@@ -70,7 +77,8 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
 			this.DOM.description_original = info.description;
 			this.DOM.product_details = info.deta;
 			this.DOM.product_contacts = info.conta;
-			console.log(info.deta);
+            this.ticketCode = info.ticketCode;
+            // console.log(info);
         }
         getProductDetailsRect() {
             return {
@@ -325,9 +333,9 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
                 description: this.DOM.product.querySelector('.product__description').innerHTML,
                 price: this.DOM.product.querySelector('.product__price').innerHTML,
 				deta: this.DOM.product.querySelector('.product__details').innerHTML,
-				conta: this.DOM.product.querySelector('.product__contacts').innerHTML
+				conta: this.DOM.product.querySelector('.product__contacts').innerHTML,
+                ticketCode: this.DOM.product.querySelector('.workshop-codename').value,
             };
-
 			this.initEvents();
 		}
         initEvents() {
