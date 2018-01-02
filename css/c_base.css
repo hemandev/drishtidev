@@ -68,6 +68,38 @@ a {
 	outline: none;
 }
 
+.register-banner{
+	position: fixed;
+	z-index: 9000;
+	background-color: red;
+	transform: rotate(35deg) scale(.9);;
+	width: 500px;
+	height: 40px;
+
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	opacity: .9;
+	top: 10px;
+	right: -150px;
+}
+
+.register-text{
+	position: fixed;
+	z-index: 9000;
+	transform: rotate(35deg) scale(.8);
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	top: 35px;
+	background: none;
+	background-color: unset;
+	margin: 0;
+	font-size: 26px;
+	border: none;
+	padding: 0;
+	right: 5px;
+
+}
+
 
 
 a:hover,
