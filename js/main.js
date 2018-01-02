@@ -582,7 +582,7 @@ written by nabeel
             $count++
 
             $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
-                duration: 300, easing: 'linear', begin: function () {
+                duration: 100, easing: 'linear', begin: function () {
 
                     $('.event-image').attr({
                         src: mainText[$count - 1].image,
@@ -612,7 +612,7 @@ written by nabeel
 
                 }
             })
-                .velocity({opacity: 1, display: 'block'}, {duration: 300, easing: 'linear'})
+                .velocity({opacity: 1, display: 'block'}, {duration: 200, easing: 'linear'})
 
             //  $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 1, display: 'block'}, 400, "linear")
 
@@ -643,11 +643,11 @@ written by nabeel
                     // console.log("insie math")
                     console.log("inside ifffffffff")
                     scale[key] = 0
-                    $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 200})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
                     scale[key] = scale[key] - $diffOffset
-                    $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 200})
 
                 }
                 else {
@@ -655,7 +655,7 @@ written by nabeel
                     scale[key] = scale[key] - $diffOffset
 
 
-                    $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400})
+                    $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 200})
                     // scale[key] = $val
                 }
 
@@ -714,7 +714,7 @@ written by nabeel
 
                 }
             })
-                .velocity({opacity: 1, display: 'block'}, {duration: 300, easing: 'linear'})
+                .velocity({opacity: 1, display: 'block'}, {duration: 200, easing: 'linear'})
             //   $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
 
 
@@ -742,7 +742,7 @@ written by nabeel
                     // console.log("insie math")
                     scale[key] = $anotherOffset
 
-                    $(key).velocity({'scale': scale[key], opacity: 1}, {easing: 'linear', duration: 300})
+                    $(key).velocity({'scale': scale[key], opacity: 1}, {easing: 'linear', duration: 200})
 
                 }
                 else if (Math.floor(scale[key]) < 0) {
@@ -754,7 +754,7 @@ written by nabeel
 
                     scale[key] = scale[key] + $diffOffset
 
-                    $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 300})
+                    $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 200})
 
                 }
 

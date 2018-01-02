@@ -12,7 +12,7 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
             const detailsTmpl = `
             <div class="details__bg details__bg--up"></div>
             <div class="details__bg details__bg--down"></div>
-            <img class="details__img" src="" alt="img 01"/>
+            <img class="details__img" src="" alt=""/>
             <h2 class="details__title"></h2>
             <div class="details__deco"></div>
             <h3 class="details__subtitle"></h3>
@@ -333,8 +333,8 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
                 description: this.DOM.product.querySelector('.product__description').innerHTML,
                 price: this.DOM.product.querySelector('.product__price').innerHTML,
 				deta: this.DOM.product.querySelector('.product__details').innerHTML,
-				conta: this.DOM.product.querySelector('.product__contacts').innerHTML,
-                ticketCode: this.DOM.product.querySelector('.workshop-codename').value,
+				conta: this.DOM.product.querySelector('.product__contacts').innerHTML
+                //ticketCode: this.DOM.product.querySelector('.workshop-codename').value,
             };
 			this.initEvents();
 		}
@@ -358,8 +358,6 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
     DOM.gridItems = Array.from(DOM.grid.querySelectorAll('.grid__item'));
     let items = [];
     DOM.gridItems.forEach(item => items.push(new Item(item)));
-
     DOM.details = new Details();
-
     imagesLoaded(document.body, () => document.body.classList.remove('loading'));
 };
