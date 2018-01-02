@@ -1,4 +1,5 @@
 
+
 particlesJS.load('bg-image', 'particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
 });
@@ -30,6 +31,7 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
             this.DOM.details.className = 'details';
             this.DOM.details.innerHTML = detailsTmpl;
             DOM.content.appendChild(this.DOM.details);
+            this.DOM.details.style.display = 'none';
             this.init();
         }
         init() {
@@ -153,6 +155,7 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
             this.isAnimating = true;
 
             this.DOM.details.classList.remove('details--open');
+            this.DOM.details.style.display = 'none';
 
             anime({
                 targets: DOM.hamburger,
@@ -331,6 +334,7 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
             this.DOM.product.addEventListener('click', () => this.open());
         }
         open() {
+            $('.details').show();
             DOM.details.fill(this.info);
             DOM.details.open({
                 productBg: this.DOM.productBg,
