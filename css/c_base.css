@@ -172,6 +172,7 @@ main {
 	right: 0;
 	margin: 0 0 50px 0;
 	text-align: center;
+	text-transform: uppercase;
 	opacity: .8;
 	padding: 0;
 	font-family: 'Raleway', sans-serif;
@@ -249,6 +250,7 @@ main {
 
 .ham-fab{
 	-webkit-filter: invert(80%);
+	position: fixed !important;
 	z-index: 100000000000000 !important;
 	border-radius: 50%;
 	width: 48px;
@@ -276,6 +278,7 @@ main {
 	position: relative;
 	margin: 0.5em 0 0;
 	font-size: 1.75em;
+	text-transform: uppercase;
 	color: var(--color-product-title);
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
@@ -350,9 +353,10 @@ main {
 
 .details__img {
 	position: absolute;
-	top: 10vh;
+	top: 20vh;
 	-webkit-filter: grayscale(100%);
-	right: 10vw;
+	right: 0;
+	opacity: .7 !important;
 	height: 80vh;
 }
 
@@ -364,6 +368,7 @@ main {
 .details__title {
 	margin: -3em 0 0.1em;
 	font-size: 4.5em;
+	text-transform: uppercase;
 	color: var(--color-details-title);
 	font-family: "Raleway", sans-serif;
 
@@ -381,7 +386,7 @@ main {
 
 .details__description {
 	line-height: 1.5;
-	font-weight: bold;
+	font-weight: 400;
 	max-width: 50%;
 	margin: 2em 0 0 0;
 	font-family: "Raleway", sans-serif;
@@ -395,16 +400,28 @@ main {
 	font-weight: bold;
 	font-family: "Raleway", sans-serif;
 	color: white;
+
+
+}
+
+.ham-container{
+	position: fixed !important;
+
+}
+
+.insta-fab, .fb-fab{
+	position: fixed !important;
 }
 
 .details__addtocart {
 	border: 0;
+	opacity: .8!important;
+	border-radius: 3px;
 	margin: auto 0 0 0;
 	background: var(--color-bg-addtocart);
 	color: var(--color-addtocart);
 	padding: 0.75em 2em;
 	font-family: "Raleway", sans-serif;
-	font-weight: bold;
 }
 
 .button__group{
@@ -415,28 +432,31 @@ main {
 	border: 0;
 	margin: auto 0 0 0;
 	background: var(--color-bg-addtocart);
+	opacity: .8!important;
+	border-radius: 3px;
 	color: var(--color-addtocart);
 	padding: 0.75em 2em;
 	font-family: "Raleway", sans-serif;
-	font-weight: bold;
 }
 .details__sidebutton2{
 	border: 0;
 	margin: auto 0 0 0;
+	opacity: .8!important;
+	border-radius: 3px;
 	background: var(--color-bg-addtocart);
 	color: var(--color-addtocart);
 	padding: 0.75em 2em;
 	font-family: "Raleway", sans-serif;
-	font-weight: bold;
 }
-.details__sidebutton3{
+.details__sidebutton3 {
 	border: 0;
 	margin: auto 0 0 0;
+	opacity: .8 !important;
+	border-radius: 3px;
 	background: var(--color-bg-addtocart);
 	color: var(--color-addtocart);
 	padding: 0.75em 2em;
 	font-family: "Raleway", sans-serif;
-	font-weight: bold;
 }
 
 .details__addtocart:hover {
@@ -586,7 +606,8 @@ main {
 		width: 4em;
 	}
 	.details__img {
-		right: -12vh;
+		right: -40vh;
+		opacity: .5 !important;
 	}
 	.details__magnifier {
 		right: 7vh;
