@@ -1,4 +1,3 @@
-
 $(window).on('load', function () {
 
 
@@ -16,7 +15,7 @@ $(window).on('load', function () {
 
     }
 
-
+	var isAnimating = false;
     /*==============================================================
 written by nabeel
 ===============================================================*/
@@ -573,7 +572,8 @@ written by nabeel
 
     function scaleDown() {
 
-
+		if(isAnimating) return false;
+		isAnimating = true;
         if ($count >= 7) {
             $count = 7
 
@@ -581,9 +581,6 @@ written by nabeel
         else {
 
             $count++
-
-
-            console.log('count' + $count)
 
             $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 100, easing: 'linear', begin: function () {
@@ -637,8 +634,6 @@ written by nabeel
             for (key in scale) {
 
 
-
-
                 val = Math.floor(scale[key])
 
 
@@ -647,11 +642,23 @@ written by nabeel
                     // console.log("insie math")
 
                     scale[key] = 0
-                    $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 200})
+                    $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 400,complete: function(){
+						if(key == '.circle19'){
+							console.log('inside patch');
+							isAnimating = false;
+					}
+					}
+					})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
                     scale[key] = scale[key] - $diffOffset
-                    $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 200})
+                    $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 400,complete: function(){
+						if(key == '.circle19'){
+							console.log('inside patch');
+							isAnimating = false;
+					}
+					}
+					})
 
                 }
                 else {
@@ -659,11 +666,16 @@ written by nabeel
                     scale[key] = scale[key] - $diffOffset
 
 
-                    $(key).velocity({'scale': scale[key] }, {'easing': 'linear', duration: 200})
+                    $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400,complete: function(){
+						if(key == '.circle19'){
+							console.log('inside patch');
+							isAnimating = false;
+					}
+					}
+					})
                     // scale[key] = $val
                 }
 
-                console.log(key + " down " + scale[key])
 
             }
 
@@ -672,6 +684,8 @@ written by nabeel
 
     function scaleUp() {
 
+		if(isAnimating) return false;
+		isAnimating = true;
         var $scalValue = 1
 
 
@@ -690,8 +704,6 @@ written by nabeel
         }
         else {
             $count--
-
-            console.log('count'  + 'up ' + $count)
 
             $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 300, easing: 'linear', begin: function () {
@@ -748,24 +760,35 @@ written by nabeel
                     // console.log("insie math")
                     scale[key] = $anotherOffset
 
-                    $(key).velocity({'scale': scale[key], opacity: 1}, {easing: 'linear', duration: 200})
+                    $(key).velocity({'scale': scale[key], opacity: 1}, {easing: 'linear', duration: 400,complete:function(){
+						if(key == '.circle19'){
+							console.log('inside scale up');
+							isAnimating = false;
+					}
+					}
+					})
 
                 }
                 else if (Math.floor(scale[key]) < 0) {
                     scale[key] = scale[key] + $diffOffset
-                    $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
+                    // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
+					if(key == '.circle19') isAnimating = false;
 
                 }
                 else {
 
                     scale[key] = scale[key] + $diffOffset
 
-                    $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 200})
+                    $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 400,complete: function(){
+						if(key == '.circle19'){
+							console.log('inside scale up');
+							isAnimating = false;
+					}
+					}
+					})
 
                 }
 
-
-                console.log(key + " up " + scale[key])
 
             }
 
@@ -869,7 +892,7 @@ written by nabeel
 
     }, 400))
 
-    $('body').on('wheel', _.debounce(function (event) {
+    $('body').on('wheel',function (event) {
 
 
 
@@ -888,7 +911,7 @@ written by nabeel
             scaleDown()
 
         }
-    }, 150))
+    })
 
 
 })
