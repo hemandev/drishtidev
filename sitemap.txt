@@ -1,6 +1,6 @@
 http://drishticet.org/CE.html
 http://drishticet.org/CS.html
-http://http://drishticet.org/EC.html
+http://drishticet.org/EC.html
 http://drishticet.org/ECE.html
 http://drishticet.org/EDC-CET.html
 http://drishticet.org/EEE.html
