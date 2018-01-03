@@ -162,7 +162,7 @@ written by nabeel
         }
 
 
-        console.log("inside click!!!!!")
+
 
         if ($imgFlag === 0) {
 
@@ -566,7 +566,7 @@ written by nabeel
         $offset = 3
         $anotherOffset = 3.8
         $diffOffset = 1.3
-        console.log("inside media query 480px" + $scalValue2)
+
     }
 
 
@@ -629,19 +629,17 @@ written by nabeel
             if ($count === 7)
                 $('#next').fadeOut('slow')
 
-            console.log("down")
+
             for (key in scale) {
 
-                console.log("key: " + key)
-                console.log("scale:" + Math.floor(scale[key]))
 
                 val = Math.floor(scale[key])
 
-                console.log("scale " + val + "offset " + $offset)
+
 
                 if (Math.floor(scale[key]) === $offset) {
                     // console.log("insie math")
-                    console.log("inside ifffffffff")
+
                     scale[key] = 0
                     $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 200})
                 }
@@ -734,8 +732,7 @@ written by nabeel
             // console.log("down")
             for (key in scale) {
 
-                console.log("key: " + key)
-                console.log("scale:" + Math.floor(scale[key]))
+
 
                 val = Math.floor(scale[key])
                 if (Math.floor(scale[key]) === 0) {
@@ -777,7 +774,7 @@ written by nabeel
 
     hammer.on("swipeup swipedown", function (event) {
 
-        console.log("swipe detected")
+
 
         if (event.type === "swipeup") {
             //backward_animation()
@@ -797,7 +794,7 @@ written by nabeel
         //$('.rounded-circle').add()
 
 
-        console.log("inside")
+
         switch (e.which) {
 
 
@@ -863,7 +860,7 @@ written by nabeel
 
     $('body').on('wheel', _.debounce(function (event) {
 
-        console.log("scrolleeeeeed" + event.originalEvent.deltaY)
+
 
         // deltaY obviously records vertical scroll, deltaX and deltaZ exist too
         if (event.originalEvent.deltaY < 0) {

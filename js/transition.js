@@ -15,7 +15,7 @@ function generate_filename(arg_path,arg_prefix,arg_index,arg_type)
 
 function next_frame()
 {
-	console.log('inside next_frame')
+
 	if(index_val == Math.floor(no_of_frames /2)){
 		//to handle the necessary changes
 		//changes occur at the middle of the animation
