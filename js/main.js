@@ -576,6 +576,7 @@ written by nabeel
 		isAnimating = true;
         if ($count >= 7) {
             $count = 7
+			isAnimating = false;
 
         }
         else {
@@ -700,7 +701,7 @@ written by nabeel
 
         if ($count <= 1) {
             $count = 1
-
+			isAnimating = false;
         }
         else {
             $count--
