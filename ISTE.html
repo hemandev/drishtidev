@@ -1,117 +1,187 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ISTE | Drishti</title>
-		<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,800,900" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/c_base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-	</head>
-	<body class="loading">
-	<div class="fab-container" style="width:100%;height: 100%;position: absolute">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ISTE | Drishti</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/c_base.css"/>
+    <script>document.documentElement.className = "js";
+    var supportsCssVars = function () {
+        var e, t = document.createElement("style");
+        return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+<body class="loading">
+<div class="fab-container" style="width:100%;height: 100%;position: absolute">
 
-	</div>
+</div>
 
-	<div id="bg-image"></div>
+<div id="bg-image"></div>
 
-		<svg class="hidden">
-			<symbol id="icon-arrow" viewBox="0 0 24 24">
-				<title>arrow</title>
-				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-			</symbol>
-			<symbol id="icon-drop" viewBox="0 0 24 24">
-				<title>drop</title>
-				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-			</symbol>
-			<symbol id="icon-cross" viewBox="0 0 24 24">
-				<title>cross</title>
-				<path d="M 5.5,2.5 C 5.372,2.5 5.244,2.549 5.146,2.646 L 2.646,5.146 C 2.451,5.341 2.451,5.659 2.646,5.854 L 8.793,12 2.646,18.15 C 2.451,18.34 2.451,18.66 2.646,18.85 L 5.146,21.35 C 5.341,21.55 5.659,21.55 5.854,21.35 L 12,15.21 18.15,21.35 C 18.24,21.45 18.37,21.5 18.5,21.5 18.63,21.5 18.76,21.45 18.85,21.35 L 21.35,18.85 C 21.55,18.66 21.55,18.34 21.35,18.15 L 15.21,12 21.35,5.854 C 21.55,5.658 21.55,5.342 21.35,5.146 L 18.85,2.646 C 18.66,2.451 18.34,2.451 18.15,2.646 L 12,8.793 5.854,2.646 C 5.756,2.549 5.628,2.5 5.5,2.5 Z"/>
-			</symbol>
-			<symbol id="icon-menu" viewBox="0 0 24 24">
-				<title>menu</title>
-				<path d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"/>
-			</symbol>
-			<!-- Magnifier by Gregor Cresnar https://www.flaticon.com/authors/gregor-cresnar -->
-			<symbol id="icon-magnifier" viewBox="0 0 490.8 490.8">
-				<title>magnifier</title>
-				<path d="M364.8,299.55c46.3-75.8,36.9-176.3-28.6-241.9c-76.8-76.8-201.8-76.8-278.6,0s-76.8,201.8,0,278.5c65.5,65.5,166,74.9,241.9,28.6L412,477.25c18,18,47.3,18,65.3,0s18-47.3,0-65.3L364.8,299.55z M295.5,295.55c-54.4,54.4-142.8,54.4-197.1,0c-54.4-54.4-54.4-142.8,0-197.1c54.4-54.4,142.8-54.4,197.1,0C349.8,152.75,349.8,241.15,295.5,295.55z M220,171.95h59.4v45.3H220v59.4h-45.3v-59.4h-59.3v-45.3h59.4v-59.4h45.3v59.4H220z"/>
-			</symbol>
-		<main>
-			<div class="content">
-				<header class="codrops-header">
-					<h1 class="codrops-header__title">ISTE</h1>
-				</header>
-			</div>
-			<button class="dummy-menu"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
-			<div class="content">
-				<div class="grid">
-
-    
-    <div class="grid__item">
-        <div class="product">
-            <div class="product__bg"></div>
-            <img class="product__img" src="images/ISTE/Jack of All Trades.jpg" alt=""/>
-    <h2 class="product__title">Jack of All Trades</h2>
-<h3 class="product__subtitle"></h3>
-<p class="product__description">It is a one day event to unleash the Engineering skills inside you.A team of 2 may enroll in the competition.Participants are valued on the basis of logical thinking,general awareness,creativity, spontaneity and technical skills.The odds of winning depends on score secured in each round which will be the criteria for elimination in successive rounds.</p>
-<p class="product__details">*RULES AND REGULATIONS*<br><br> *1*.Jack of all trades is a one day event.<br>*2*.Interested participants can participate as a team of two.<br>*3*.Participants can be from same or different colleges or branches.<br>*4*.Event consist of three rounds including a prelims.<br>*5*.Participants should report atleast 5 minutes before the event starts.<br>*6*.Participants are not allowed to go out once the competition has begun.<br>*7*.use of mobile phone and any other electronic gadgets are strictly progibited.<br>*8*.The decision of the judges is final.<br>*9*.Only 4 teams would be selected to finals.<br>*10*.Any kind of malpractices will lead to disqualification.<br>*11*.Registration fees is non refundable.</p>
-<p class="product__contacts">Ria Susan Viju-82818 64745<br >Uma U-8547514400</p>
-<div class="product__price">&#x20b9 14000</div>
-
+<svg class="hidden">
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title>arrow</title>
+        <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+    </symbol>
+    <symbol id="icon-drop" viewBox="0 0 24 24">
+        <title>drop</title>
+        <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/>
+        <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+    </symbol>
+    <symbol id="icon-cross" viewBox="0 0 24 24">
+        <title>cross</title>
+        <path d="M 5.5,2.5 C 5.372,2.5 5.244,2.549 5.146,2.646 L 2.646,5.146 C 2.451,5.341 2.451,5.659 2.646,5.854 L 8.793,12 2.646,18.15 C 2.451,18.34 2.451,18.66 2.646,18.85 L 5.146,21.35 C 5.341,21.55 5.659,21.55 5.854,21.35 L 12,15.21 18.15,21.35 C 18.24,21.45 18.37,21.5 18.5,21.5 18.63,21.5 18.76,21.45 18.85,21.35 L 21.35,18.85 C 21.55,18.66 21.55,18.34 21.35,18.15 L 15.21,12 21.35,5.854 C 21.55,5.658 21.55,5.342 21.35,5.146 L 18.85,2.646 C 18.66,2.451 18.34,2.451 18.15,2.646 L 12,8.793 5.854,2.646 C 5.756,2.549 5.628,2.5 5.5,2.5 Z"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+        <title>menu</title>
+        <path d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"/>
+    </symbol>
+    <!-- Magnifier by Gregor Cresnar https://www.flaticon.com/authors/gregor-cresnar -->
+    <symbol id="icon-magnifier" viewBox="0 0 490.8 490.8">
+        <title>magnifier</title>
+        <path d="M364.8,299.55c46.3-75.8,36.9-176.3-28.6-241.9c-76.8-76.8-201.8-76.8-278.6,0s-76.8,201.8,0,278.5c65.5,65.5,166,74.9,241.9,28.6L412,477.25c18,18,47.3,18,65.3,0s18-47.3,0-65.3L364.8,299.55z M295.5,295.55c-54.4,54.4-142.8,54.4-197.1,0c-54.4-54.4-54.4-142.8,0-197.1c54.4-54.4,142.8-54.4,197.1,0C349.8,152.75,349.8,241.15,295.5,295.55z M220,171.95h59.4v45.3H220v59.4h-45.3v-59.4h-59.3v-45.3h59.4v-59.4h45.3v59.4H220z"/>
+    </symbol>
+    <main>
+        <div class="content">
+            <header class="codrops-header">
+                <h1 class="codrops-header__title">ISTE</h1>
+            </header>
         </div>
-    </div>
+        <button class="dummy-menu">
+            <svg class="icon icon--menu">
+                <use xlink:href="#icon-menu"></use>
+            </svg>
+        </button>
+        <div class="content">
+            <div class="grid">
 
-					<div class="grid__item">
-						<div class="product">
-							<div class="product__bg"></div>
-							<img class="product__img" src="images/ISTE/Water%20rocket.jpg" alt=""/>
-							<h2 class="product__title">Water Rocket</h2>
-							<h3 class="product__subtitle">AQUA THUNDER</h3>
-							<p class="product__description">"Aqua thunder is an event where a team has to demonstrate the performance of a water rocket.The mission is to build a water rocket that can survive the two trials that have been put forward.Range and Accuracy is what you fight for.
-								ROUND 1<br>
-								RANGE TEST<br>
-								The missiles will be tested for maximum range.Each team will be asked to launch inside the rectangular ground.The rockets are then graded into 50+,60+,70+,80+,90+ according to the range they cover.
-								Points are awarded as 10,20,30,40,50 respectively.The top teams will be selected for the next round.
-								<br>ROUND 2<br>
-								ACCURACY TEST<br>
-								The team will be asked to launch the missiles onto a specific target.There will be targets at specific ranges.The targets will be at 50 60 70 80 meters(changes might be made by organizer) and points are awarded as said by organizer and a total of 120 points will be produced as a part of the two chances provided.
 
-								</p>
-							<p class="product__details">"General Rules<br>
-								1.A maximum of 3 members are allowed per team.<br>
-								2.The water rocket must be single stage.Multistage is not allowed.<br>
-								3.The rocket should be made with only plastic bottles of maximum capacity 1.5 L and should be free from any dents.
-								<br>4.The rocket must use only compressed air as its energy source.
-								<br>Pressure compressor(foot pump)will be provided.
-								<br>5.Pressure inside the container before launch must not exceed 10 psi(pressure limit may change)
-								<br>6.Launchers will not be provided by organizers.Each team must have their OWN launchers.
-								<br>7.The rocket must be launched from a stationary position using a fixed launcher.Any form of launcher boosts like slingshots,catapults,cannons are strictly forbidden.
-								<br>8.The water provided can be used by the team as per requirement ,water brought from outside will not be allowed .
-								<br>9.Team members have to produce valid id cards and can form groups from different institutions.
-								<br>The team will be disqualified if :
-								<br>1.the rocket blasts before launch
-								<br>2.The rocket is found dangerous to launch by organizers
-								<br>3.Any part breaks off during flight."</p>
-							<p class="product__contacts">Divya S.L	9744981574	<br>Jemima Ann Biju	8714818467</p>
-							<div class="product__price">&#x20b9 </div>
+                <div class="grid__item">
+                    <div class="product">
+                        <div class="product__bg"></div>
+                        <img class="product__img" src="images/ISTE/Jack of All Trades.jpg" alt=""/>
+                        <h2 class="product__title">Jack of All Trades</h2>
+                        <h3 class="product__subtitle"></h3>
+                        <p class="product__description">It is a one day event to unleash the Engineering skills inside
+                            you.A team of 2 may enroll in the competition.Participants are valued on the basis of
+                            logical thinking,general awareness,creativity, spontaneity and technical skills.The odds of
+                            winning depends on score secured in each round which will be the criteria for elimination in
+                            successive rounds.</p>
+                        <p class="product__details">*RULES AND REGULATIONS*<br><br> *1*.Jack of all trades is a one day
+                            event.<br>*2*.Interested participants can participate as a team of two.<br>*3*.Participants
+                            can be from same or different colleges or branches.<br>*4*.Event consist of three rounds
+                            including a prelims.<br>*5*.Participants should report atleast 5 minutes before the event
+                            starts.<br>*6*.Participants are not allowed to go out once the competition has begun.<br>*7*.use
+                            of mobile phone and any other electronic gadgets are strictly progibited.<br>*8*.The
+                            decision of the judges is final.<br>*9*.Only 4 teams would be selected to finals.<br>*10*.Any
+                            kind of malpractices will lead to disqualification.<br>*11*.Registration fees is non
+                            refundable.</p>
+                        <p class="product__contacts">Ria Susan Viju-82818 64745<br>Uma U-8547514400</p>
+                        <div class="product__price">&#x20b9 14000</div>
 
-						</div>
-					</div>
-    
-    </div>
-			</div>
-		</main>
-			<script src="js/jquery.js"></script>
-			<script src="js/particles.min.js"></script>
-			<script src="js/velocity.js"></script>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/anime.min.js"></script>
-		<script src="js/w_main.js"></script>
-			<script>
-                $('.fab-container').load('fab.html')
-			</script>
-	</body>
-    </html>
+                    </div>
+                </div>
+
+                <div class="grid__item">
+                    <div class="product">
+                        <div class="product__bg"></div>
+                        <img class="product__img" src="images/ISTE/" alt=""/>
+                        <h2 class="product__title">#Keep_the_chain</h2>
+                        <h3 class="product__subtitle">"Throw in all the energy conversions you are aware of, as one continuous routine without physically engaging yourself at any stage (Uh!!! yes that's the real challenge).	            May the most complicated Contrapion win."</h3>
+                        <p class="product__description">"1.The participants should produce a valid identity card of their institute.<br>
+
+                            2.A team can consist of a minimum of one member and a maximum of five members. "</p>
+                        <p class="product__details">"1. One hour will be given for each team to arrange the contraption.
+
+                         <br>   2. The contraption must complete the challenge within a total time of 5 minutes.
+
+                           <br> 3. The contraption must be set within a area of 10x10 feet
+
+                            <br>   4. The contraption must have a minimum of 6 steps in total.
+
+                            <br> 5.Negative mark will be awarded for mistake!
+
+                            <br>  6. The completion of objective task marks the end of event (partial marks will be awarded if the ball falls around the basket).
+
+                            <br>  7 .Bonus marks will be awarded for Innovative n during the process or at the ending.
+                            Prizes Worth
+
+                            <br>   1st:₹ 5,000
+
+                            <br>   2nd: ₹3,000
+
+                            <br>   3rd: ₹1,000
+                                                    "</p>
+                        <p class="product__contacts">SHAN SANTHOSH	9633685322 <br>	MOHAMED ROSHAN 	+919495853350</p>
+                        <div class="product__price"></div>
+
+                    </div>
+                </div>
+
+                <div class="grid__item">
+                    <div class="product">
+                        <div class="product__bg"></div>
+                        <img class="product__img" src="images/ISTE/Water%20rocket.jpg" alt=""/>
+                        <h2 class="product__title">Water Rocket</h2>
+                        <h3 class="product__subtitle">AQUA THUNDER</h3>
+                        <p class="product__description">"Aqua thunder is an event where a team has to demonstrate the
+                            performance of a water rocket.The mission is to build a water rocket that can survive the
+                            two trials that have been put forward.Range and Accuracy is what you fight for.
+                            ROUND 1<br>
+                            RANGE TEST<br>
+                            The missiles will be tested for maximum range.Each team will be asked to launch inside the
+                            rectangular ground.The rockets are then graded into 50+,60+,70+,80+,90+ according to the
+                            range they cover.
+                            Points are awarded as 10,20,30,40,50 respectively.The top teams will be selected for the
+                            next round.
+                            <br>ROUND 2<br>
+                            ACCURACY TEST<br>
+                            The team will be asked to launch the missiles onto a specific target.There will be targets
+                            at specific ranges.The targets will be at 50 60 70 80 meters(changes might be made by
+                            organizer) and points are awarded as said by organizer and a total of 120 points will be
+                            produced as a part of the two chances provided.
+
+                        </p>
+                        <p class="product__details">"General Rules<br>
+                            1.A maximum of 3 members are allowed per team.<br>
+                            2.The water rocket must be single stage.Multistage is not allowed.<br>
+                            3.The rocket should be made with only plastic bottles of maximum capacity 1.5 L and should
+                            be free from any dents.
+                            <br>4.The rocket must use only compressed air as its energy source.
+                            <br>Pressure compressor(foot pump)will be provided.
+                            <br>5.Pressure inside the container before launch must not exceed 10 psi(pressure limit may
+                            change)
+                            <br>6.Launchers will not be provided by organizers.Each team must have their OWN launchers.
+                            <br>7.The rocket must be launched from a stationary position using a fixed launcher.Any form
+                            of launcher boosts like slingshots,catapults,cannons are strictly forbidden.
+                            <br>8.The water provided can be used by the team as per requirement ,water brought from
+                            outside will not be allowed .
+                            <br>9.Team members have to produce valid id cards and can form groups from different
+                            institutions.
+                            <br>The team will be disqualified if :
+                            <br>1.the rocket blasts before launch
+                            <br>2.The rocket is found dangerous to launch by organizers
+                            <br>3.Any part breaks off during flight."</p>
+                        <p class="product__contacts">Divya S.L 9744981574 <br>Jemima Ann Biju 8714818467</p>
+                        <div class="product__price">&#x20b9</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/velocity.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/w_main.js"></script>
+    <script>
+        $('.fab-container').load('fab.html')
+    </script>
+</body>
+</html>
     
