@@ -1,17 +1,17 @@
 $(window).on('load', function () {
 
 
-    $('.another-cont').velocity('fadeOut', 300, "swing")
+    $('.another-cont').velocity('fadeOut', 300, "swing");
 
-    $width_image = 150
-    $height_image = 150
+    $width_image = 150;
+    $height_image = 150;
 
     if (window.matchMedia('(max-width: 764px)').matches) {
 
         $('.event-image').attr({height: 100, width: 100})
 
-        $width_image = 100
-        $height_image = 100
+        $width_image = 100;
+        $height_image = 100;
 
     }
 
@@ -87,9 +87,9 @@ written by nabeel
 
     // $('.event-header').css({marginTop: $height})
 
-    $('.event-one-container').hide()
+    $('.event-one-container').hide();
 
-    var elem = $('.event-tag')
+    var elem = $('.event-tag');
 
 
     /*  var granimInstance = new Granim({
@@ -117,10 +117,10 @@ written by nabeel
 
     /*circleType = new CircleType(elem)
     circleType.radius(100)*/
-    $imgFlag = 0
+    $imgFlag = 0;
 
-    $hamFlag = 0
-    $readFlag = 0
+    $hamFlag = 0;
+    $readFlag = 0;
 
     mainText = [{header: "DRISHTI 18'", image: 'images/logoblacktransp.png', sub: 'January 19,20,21', color: 'black'},
         {header: "Competitions", image: 'images/cup.png', sub: '', color: 'white'},
@@ -137,17 +137,17 @@ written by nabeel
 
 
 
-        $mediaFlag = '25px'
+        $mediaFlag = '25px';
 
         if (window.matchMedia('(max-width: 768px)').matches)
-            $mediaFlag = 0
+            $mediaFlag = 0;
 
 
         if ($hamFlag === 0) {
-            $('.insta-fab, .fb-fab').velocity({scale: 0}, 100, "swing")
-            $('.insta-fab2, .fb-fab2').velocity({scale: 1.1})
+            $('.insta-fab, .fb-fab').velocity({scale: 0}, 100, "swing");
+            $('.insta-fab2, .fb-fab2').velocity({scale: 1.1});
 
-            $hamFlag = 1
+            $hamFlag = 1;
         }
 
         /* else if ($hamFlag === 1 && $readFlag === 1) {
@@ -156,9 +156,9 @@ written by nabeel
          }*/
 
         else {
-            $('.insta-fab, .fb-fab').velocity({scale: 1}, 100, "swing")
-            $('.insta-fab2, .fb-fab2').velocity({scale: 0})
-            $hamFlag = 0
+            $('.insta-fab, .fb-fab').velocity({scale: 1}, 100, "swing");
+            $('.insta-fab2, .fb-fab2').velocity({scale: 0});
+            $hamFlag = 0;
         }
 
 
@@ -171,16 +171,16 @@ written by nabeel
             $('.ham-container').velocity('fadeIn', {duration:200, easing:"linear", complete:function () {
 
 
-                $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing")
-                $('.ham-text-container').velocity({translateY: '0%'}, 200, "swing")
+                $('.img').velocity({right: 0, left: 0, '-webkit-filter': 'invert(100%)'}, 200, "swing");
+                $('.ham-text-container').velocity({translateY: '0%'}, 200, "swing");
 
 
-                $('#menu_button').removeClass('fa-bars').addClass('fa-times')
+                $('#menu_button').removeClass('fa-bars').addClass('fa-times');
 
             }})
 
 
-            $imgFlag = 1
+            $imgFlag = 1;
 
         }
         else if ($imgFlag === 1) {
@@ -188,15 +188,15 @@ written by nabeel
             $('.ham-container').velocity('fadeOut', {duration:400, easing:"linear", begin:function () {
 
 
-                $('.ham-text-container').velocity({translateY: '200%'}, 200, "swing")
-                $('.img').css({left: $mediaFlag, right: ''})
+                $('.ham-text-container').velocity({translateY: '200%'}, 200, "swing");
+                $('.img').css({left: $mediaFlag, right: ''});
 
-                $('#menu_button').removeClass('fa-times').addClass('fa-bars')
+                $('#menu_button').removeClass('fa-times').addClass('fa-bars');
 
             }})
 
 
-            $imgFlag = 0
+            $imgFlag = 0;
 
         }
 
@@ -212,18 +212,18 @@ written by nabeel
         if (window.matchMedia('(max-width: 764px)').matches) {
 
 
-            $('.event-one-container').velocity({height: '50%'})
+            $('.event-one-container').velocity({height: '50%'});
 
             $('.drawer-right').velocity({translateY: '100%'}, {
                 duration: 400, easing: 'swing', begin: function () {
 
-                    $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 200, "linear")
+                    $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 200, "linear");
 
 
                 },
                 complete: function () {
 
-                    $('.close-fab-drawer').velocity({scale: 1}, 200, "linear")
+                    $('.close-fab-drawer').velocity({scale: 1}, 200, "linear");
 
                 }
             })
@@ -234,18 +234,18 @@ written by nabeel
 
         else {
 
-            $('.event-one-container').velocity({width: '50%'})
+            $('.event-one-container').velocity({width: '50%'});
 
             $('.drawer-right').velocity({translateX: ['0%', '100%']}, {
                 duration: 400, easing: 'swing', begin: function () {
 
-                    $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 100, "linear")
+                    $('.mail-fab, .ham-fab, .close-fab').velocity({scale: 0}, 100, "linear");
 
 
                 },
                 complete: function () {
 
-                    $('.close-fab-drawer').velocity({scale: 1}, 100, "linear")
+                    $('.close-fab-drawer').velocity({scale: 1}, 100, "linear");
 
                 }
             })
@@ -256,7 +256,7 @@ written by nabeel
 
     $('.mail-btn').click(function () {
 
-        mailBtnClick()
+        mailBtnClick();
 
 
     })
@@ -269,13 +269,13 @@ written by nabeel
             $('.drawer-right').velocity({translateY: '200%'}, {
                 duration: 400, easing: 'swing', begin: function () {
 
-                    $('.event-one-container').velocity({height: '100%'})
+                    $('.event-one-container').velocity({height: '100%'});
 
-                    $('.close-fab-drawer').velocity({scale: 0}, 100, "linear")
+                    $('.close-fab-drawer').velocity({scale: 0}, 100, "linear");
                 },
                 complete: function () {
 
-                    $('.mail-fab, .ham-fab , .close-fab').velocity({scale: 1}, 100, "linear")
+                    $('.mail-fab, .ham-fab , .close-fab').velocity({scale: 1}, 100, "linear");
 
 
                 }
@@ -288,13 +288,13 @@ written by nabeel
             $('.drawer-right').velocity({translateX: ['100%', '0%']}, {
                 duration: 400, easing: 'swing', begin: function () {
 
-                    $('.event-one-container').velocity({width: '100%'})
+                    $('.event-one-container').velocity({width: '100%'});
 
-                    $('.close-fab-drawer').velocity({scale: 0}, 100, "linear")
+                    $('.close-fab-drawer').velocity({scale: 0}, 100, "linear");
                 },
                 complete: function () {
 
-                    $('.mail-fab, .ham-fab , .close-fab').velocity({scale: 1}, 100, "linear")
+                    $('.mail-fab, .ham-fab , .close-fab').velocity({scale: 1}, 100, "linear");
 
 
                 }
@@ -311,26 +311,26 @@ written by nabeel
             easing: 'linear', duration: 500, begin: function () {
 
 
-                $('.circle-content').velocity({opacity: 0, display: 'none'})
+                $('.circle-content').velocity({opacity: 0, display: 'none'});
 
 
             }, complete: function () {
 
 
                 if ($count === 1)
-                    window.location = 'drishti.html'
+                    window.location = 'drishti.html';
                 else if ($count === 2)
-                    window.location = 'events.html'
+                    window.location = 'events.html';
                 else if ($count === 3)
-                    window.location = 'workshops.html'
+                    window.location = 'workshops.html';
                 else if ($count === 4)
-                    window.location = 'informals.html'
+                    window.location = 'informals.html';
                 else if ($count === 5)
-                    window.location = 'projects.html'
+                    window.location = 'projects.html';
                 else if ($count === 6)
-                    window.location = 'sponsors.html'
+                    window.location = 'sponsors.html';
                 else if ($count === 7)
-                    window.location = 'contact.html'
+                    window.location = 'contact.html';
 
 
             }
@@ -383,10 +383,10 @@ written by nabeel
     $('.close-btn').click(function () {
 
 
-        $('.close-fab').velocity({scale: 0})
+        $('.close-fab').velocity({scale: 0});
 
-        $('.event-page-container').fadeOut("slow")
-        $('.front-page-container').fadeIn("slow")
+        $('.event-page-container').fadeOut("slow");
+        $('.front-page-container').fadeIn("slow");
 
         /*  $readFlag = 0
 
@@ -435,12 +435,12 @@ written by nabeel
     })
 
 
-    var eventText = ['DRISHTI  18', 'Drishti  Night', 'Workshops  CET', 'Rise  Again', 'CET  Life', 'Cryptex  CET', 'Amazing  VR  Race']
+    var eventText = ['DRISHTI  18', 'Drishti  Night', 'Workshops  CET', 'Rise  Again', 'CET  Life', 'Cryptex  CET', 'Amazing  VR  Race'];
     //var tagText = ['', 'Computer Science', 'Electronics & Communications', 'Mechanical', 'Electrical', 'Civil']
 
 
     for (i = 8; i <= 19; i++)
-        $('.circle' + i).hide()
+        $('.circle' + i).hide();
 
 
     var scale = {
@@ -465,11 +465,11 @@ written by nabeel
         '.circle19': 42.3
     }
 
-    scaleOffset2 = 4.4
-    scaleOffset3 = 3.8
+    scaleOffset2 = 4.4;
+    scaleOffset3 = 3.8;
 
 
-    scale1 = scale
+    scale1 = scale;
 
     scale2 = {
         '.circle1': 4.4,
@@ -532,40 +532,40 @@ written by nabeel
          }*/
 
 
-    $scalValue1 = 1.4
-    $scalValue2 = 1.6
+    $scalValue1 = 1.4;
+    $scalValue2 = 1.6;
 
-    $scrolloffset = 0
+    $scrolloffset = 0;
     $count = 1;
 
-    $('#prev').hide()
+    $('#prev').hide();
 
-    $scalValue = 1
-    $flag = 1000
-    scale = scale1
-    $offset = 6
-    $anotherOffset = 6.2
-    $diffOffset = 2
+    $scalValue = 1;
+    $flag = 1000;
+    scale = scale1;
+    $offset = 6;
+    $anotherOffset = 6.2;
+    $diffOffset = 2;
 
     if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches) {
 
-        $scaleValue = $scalValue1
-        $flag = 2000
-        scale = scale2
-        $offset = 4
-        $anotherOffset = 4.4
+        $scaleValue = $scalValue1;
+        $flag = 2000;
+        scale = scale2;
+        $offset = 4;
+        $anotherOffset = 4.4;
 
     }
 
     else if (window.matchMedia('(max-width: 480px)').matches) {
 
 
-        $scaleValue = $scalValue2
-        $flag = 3000
-        scale = scale3
-        $offset = 3
-        $anotherOffset = 3.8
-        $diffOffset = 1.3
+        $scaleValue = $scalValue2;
+        $flag = 3000;
+        scale = scale3;
+        $offset = 3;
+        $anotherOffset = 3.8;
+        $diffOffset = 1.3;
 
     }
 
@@ -575,13 +575,13 @@ written by nabeel
 		if(isAnimating) return false;
 		isAnimating = true;
         if ($count >= 7) {
-            $count = 7
+            $count = 7;
 			isAnimating = false;
 
         }
         else {
 
-            $count++
+            $count++;
 
             $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 100, easing: 'linear', begin: function () {
@@ -598,64 +598,62 @@ written by nabeel
 
 
                     if (mainText[$count - 1].color === 'white') {
-                        $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light')
-                        $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light')
+                        $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light');
+                        $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light');
                     }
                     else {
-                        $('.event-sub, .event-header').removeClass('text-light').addClass('text-dark')
-                        $('.event-button').removeClass('btn-outline-light').addClass('btn-outline-dark')
+                        $('.event-sub, .event-header').removeClass('text-light').addClass('text-dark');
+                        $('.event-button').removeClass('btn-outline-light').addClass('btn-outline-dark');
                     }
 
-                    $('.event-header').html(mainText[$count - 1].header)
-                    $('.event-sub').html(mainText[$count - 1].sub)
+                    $('.event-header').html(mainText[$count - 1].header);
+                    $('.event-sub').html(mainText[$count - 1].sub);
 
                     //  $('.event-tag').html(tagText[$count - 1])
 
 
                 }
             })
-                .velocity({opacity: 1, display: 'block'}, {duration: 200, easing: 'linear'})
+                .velocity({opacity: 1, display: 'block'}, {duration: 200, easing: 'linear'});
 
             //  $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 1, display: 'block'}, 400, "linear")
 
-            hideCount = $count + 6
+            hideCount = $count + 6;
             for (i = hideCount; i <= 19; i++)
-                $('.circle' + i).hide()
+                $('.circle' + i).hide();
 
-            foo = hideCount
-            $('.circle' + foo).show()
+            foo = hideCount;
+            $('.circle' + foo).show();
 
 
             if ($count === 2)
-                $('#prev').fadeIn('slow')
+                $('#prev').fadeIn('slow');
             if ($count === 7)
-                $('#next').fadeOut('slow')
+                $('#next').fadeOut('slow');
 
 
             for (key in scale) {
 
 
-                val = Math.floor(scale[key])
+                val = Math.floor(scale[key]);
 
 
 
                 if (Math.floor(scale[key]) === $offset) {
                     // console.log("insie math")
 
-                    scale[key] = 0
+                    scale[key] = 0;
                     $(key).velocity({'scale': scale[key], opacity: 0}, {'easing': 'linear', duration: 400,complete: function(){
 						if(key == '.circle19'){
-							console.log('inside patch');
 							isAnimating = false;
 					}
 					}
 					})
                 }
                 else if (Math.floor(scale[key]) <= 0) {
-                    scale[key] = scale[key] - $diffOffset
+                    scale[key] = scale[key] - $diffOffset;
                     $(key).velocity({'scale': 0}, {'easing': 'linear', duration: 400,complete: function(){
 						if(key == '.circle19'){
-							console.log('inside patch');
 							isAnimating = false;
 					}
 					}
@@ -664,7 +662,7 @@ written by nabeel
                 }
                 else {
 
-                    scale[key] = scale[key] - $diffOffset
+                    scale[key] = scale[key] - $diffOffset;
 
 
                     $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400,complete: function(){
@@ -687,24 +685,24 @@ written by nabeel
 
 		if(isAnimating) return false;
 		isAnimating = true;
-        var $scalValue = 1
+        var $scalValue = 1;
 
 
         if (window.matchMedia('(max-width: 768px) and (min-width: 480px)').matches)
 
-            $scaleValue = $scalValue1
+            $scaleValue = $scalValue1;
 
         else if (window.matchMedia('(max-width: 480px)').matches)
 
-            $scaleValue = $scalValue2
+            $scaleValue = $scalValue2;
 
 
         if ($count <= 1) {
-            $count = 1
+            $count = 1;
 			isAnimating = false;
         }
         else {
-            $count--
+            $count--;
 
             $('.event-image, .event-sub, .event-header, .event-button').velocity({opacity: 0, display: 'none'}, {
                 duration: 300, easing: 'linear', begin: function () {
@@ -720,50 +718,49 @@ written by nabeel
 
 
                     if (mainText[$count - 1].color === 'white') {
-                        $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light')
-                        $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light')
+                        $('.event-sub, .event-header').removeClass('text-dark').addClass('text-light');
+                        $('.event-button').removeClass('btn-outline-dark').addClass('btn-outline-light');
                     }
                     else {
-                        $('.event-sub, .event-header').removeClass('text-light').addClass('text-dark')
-                        $('.event-button').removeClass('btn-outline-light').addClass('btn-outline-dark')
+                        $('.event-sub, .event-header').removeClass('text-light').addClass('text-dark');
+                        $('.event-button').removeClass('btn-outline-light').addClass('btn-outline-dark');
                     }
 
-                    $('.event-header').html(mainText[$count - 1].header)
-                    $('.event-sub').html(mainText[$count - 1].sub)
+                    $('.event-header').html(mainText[$count - 1].header);
+                    $('.event-sub').html(mainText[$count - 1].sub);
 
 
                 }
             })
-                .velocity({opacity: 1, display: 'block'}, {duration: 200, easing: 'linear'})
+                .velocity({opacity: 1, display: 'block'}, {duration: 200, easing: 'linear'});
             //   $('.event-image, .event-sub, .event-header, .event-button').fadeIn("slow")
 
 
             hideCount = $count + 6
             for (i = hideCount; i <= 19; i++)
-                $('.circle' + i).hide()
+                $('.circle' + i).hide();
 
             foo = hideCount
-            $('.circle' + foo).show()
+            $('.circle' + foo).show();
 
 
             if ($count === 1)
-                $('#prev').fadeOut('slow')
+                $('#prev').fadeOut('slow');
             if ($count === 6)
-                $('#next').fadeIn('slow')
+                $('#next').fadeIn('slow');
 
             // console.log("down")
             for (key in scale) {
 
 
 
-                val = Math.floor(scale[key])
+                val = Math.floor(scale[key]);
                 if (Math.floor(scale[key]) === 0) {
                     // console.log("insie math")
-                    scale[key] = $anotherOffset
+                    scale[key] = $anotherOffset;
 
                     $(key).velocity({'scale': scale[key], opacity: 1}, {easing: 'linear', duration: 400,complete:function(){
 						if(key == '.circle19'){
-							console.log('inside scale up');
 							isAnimating = false;
 					}
 					}
@@ -771,18 +768,18 @@ written by nabeel
 
                 }
                 else if (Math.floor(scale[key]) < 0) {
-                    scale[key] = scale[key] + $diffOffset
+                    scale[key] = scale[key] + $diffOffset;
                     // $(key).velocity({'scale': 0,}, {easing: 'linear', duration: 400})
 					if(key == '.circle19') isAnimating = false;
 
                 }
                 else {
 
-                    scale[key] = scale[key] + $diffOffset
+                    scale[key] = scale[key] + $diffOffset;
 
                     $(key).velocity({'scale': scale[key]}, {easing: 'linear', duration: 400,complete: function(){
 						if(key == '.circle19'){
-							console.log('inside scale up');
+							
 							isAnimating = false;
 					}
 					}
@@ -799,8 +796,8 @@ written by nabeel
     }
 
 
-    var elem = document.getElementById("elem")
-    hammer = new Hammer(elem)
+    var elem = document.getElementById("elem");
+    hammer = new Hammer(elem);
     hammer.get('swipe').set({
         direction: Hammer.DIRECTION_ALL,
         threshold: 5,
@@ -813,18 +810,18 @@ written by nabeel
 
         if (event.type === "swipeup") {
             //backward_animation()
-            scaleDown()
+            scaleDown();
         }
         else if (event.type === "swipedown") {
             //forward_animation()
-            scaleUp()
+            scaleUp();
         }
 
 
     })
 
 
-    $(document).keydown(_.debounce(function (e) {
+    $(document).keydown(function (e) {
         // $('.rounded-circle').addClass('anim')
         //$('.rounded-circle').add()
 
@@ -876,22 +873,22 @@ written by nabeel
 
         // e.preventDefault()
 
-    }, 350))
+    })
 
 
-    $('#bt').on('click', _.debounce(function () {
+    $('#bt').on('click', function () {
 
         //backward_animation()
         scaleDown()
 
-    }, 400))
+    })
 
-    $('#bt2').on('click', _.debounce(function () {
+    $('#bt2').on('click', function () {
 
         //forward_animation()
         scaleUp()
 
-    }, 400))
+    })
 
     $('body').on('wheel',function (event) {
 
