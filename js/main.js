@@ -667,7 +667,7 @@ written by nabeel
 
                     $(key).velocity({'scale': scale[key] / $scalValue}, {'easing': 'linear', duration: 400,complete: function(){
 						if(key == '.circle19'){
-							console.log('inside patch');
+							//console.log('inside patch');
 							isAnimating = false;
 					}
 					}
