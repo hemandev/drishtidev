@@ -4,59 +4,6 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
     // console.log('callback - particles.js config loaded');
 });
 
-event_link = {
-    "Amazing Race 2.0":"bit.ly/amazing_race2",
-    "HackSquad":"https://docs.google.com/forms/d/1caXcs_vrRLdr6ukPNbT0rkm8erLN-hIxSIvscN3hgEc/edit?usp=drivesdk",
-    "Cryptex 2.0":"",
-    "Business Case":"https://docs.google.com/forms/d/e/1FAIpQLScEHFwKgbk5VemJhLYpeJPtYkEO2x5yhIfYZCnYfl0hmT6nfw/viewform?usp=sf_link",
-    "Electrogeek 2.0":"https://goo.gl/forms/ZZ7BZPyKfOOlPGp33",
-    "PATW  (Present Around the World)":"https://docs.google.com/forms/d/1qI8tufo8zIeat--CvjqBzVn4h1tEyQMmFvanVHZSez0/edit?usp=sharing",
-    "DCOD 2.0":"https://goo.gl/forms/5kRScfvrAh13RrYa2",
-    "VR Chakravyuh 2.0":"https://goo.gl/forms/dHVKASgQ0kV1rbLM2",
-    "Drishti Cube Open 2.0":"https://www.worldcubeassociation.org/competitions/DrishtiCubeOpen2018",
-    "Jack of All Trades":"https://docs.google.com/forms/d/e/1FAIpQLScHbP4wpy-VCASfWeAfSZNnvJPuFMNH9x0CZZ2B9TAvE1XyaA/viewform?usp=sf_link",
-    "Electronaire":"https://goo.gl/forms/JSfRrG8t6ARDZYuw2",
-    "Drishti open quiz":"https://docs.google.com/forms/d/15Bn_f3qeXeTIHB_yYE6zga9xPiDamtjuxo7E_HdWTy4/edit",
-    "Paper Plane":"https://docs.google.com/forms/d/e/1FAIpQLSd0HBj5vL4kc57W-V0MByhSd5G2hDLb-vSNZircUu1F3sqXiw/viewform?c=0&w=1&usp=mail_form_link",
-    "Bug It Out":"https://docs.google.com/forms/d/e/1FAIpQLSc4ZoSJTEkCYGNSGK3YR4CZ_jIesDNYza37LckPrSyxHyrFYA/viewform?c=0&w=1",
-    "Young Engineer Hunt":"https://docs.google.com/forms/d/e/1FAIpQLSe_2SCjkfEWlvbMdYAOVfGYRnYpx5xVrAfupUSMwlWInJoYHQ/viewform?c=0&w=1",
-    "DigiQuest":"https://docs.google.com/forms/d/e/1FAIpQLScjMrY0FU6NORgopVL8BXij6syvBe_wwjaAR6_3z0wZPSwa6g/viewform?c=0&w=1",
-    "Skeptico":"https://docs.google.com/forms/d/1VFYMosJCqS4-y7gf3nLWavtyLY9JtatTNHc1pwRWmjw/edit?usp=drivesdk",
-    "UI/UX Challenge":"bit.ly/uiuxchallenge",
-    "The Room":"https://docs.google.com/forms/d/1skADHEAbeN0bCKxHTEh-zrn73kSf1kTeOJYDC5y0raw/edit?usp=drivesdk",
-    "Reverse Engineering":"https://docs.google.com/forms/d/e/1FAIpQLSevuqOfffVHhFsz2t8gkLk7wCy58tY7f1rsYwWK7uJUJiDOOQ/viewform?c=0&w=1",
-    "Enigma":"https://docs.google.com/forms/d/1CABmDhRzzWqRXRcFR_QhZTMvqe2HxwwLQNGknXgIyWM/edit?usp=drivesdk",
-    "Senquesta":"https://docs.google.com/forms/d/1yQCuRehdn877_ca0YzPN9iSanFjkQU2OjywZzMmbEKQ/edit?usp=drivesdk",
-    "Brandtastic":"https://docs.google.com/forms/d/e/1FAIpQLScwGnypYQCeGXhh9Jwe0lFn-mq0x-o4sV14p8xHuuJyVhxHvg/viewform?usp=sf_link",
-    "Lumos":"https://docs.google.com/forms/d/1kitN5OYuaeav5i2g_14tJyUUGpf7_YkCpBZG-V3u6Oo/edit",
-    "Game of Codes 2.0":"bit.ly/goc2_0",
-    "The Debugger":"http://bit.ly/debug_drishti",
-    "CodeMaster":"",
-    "Picasso":"https://docs.google.com/forms/d/e/1FAIpQLSfP4sQYH7S8RAR1oN_QjEox7gm_E5cb-BKHZqR8ELD4Of8hdw/viewform?usp=pp_url&entry.168595782&entry.1928536618&entry.1484621245&entry.1698790926&entry.778167815&entry.783405576",
-    "Matlab Challenge":"https://docs.google.com/forms/d/e/1FAIpQLSdUtxF2RhkNdiZUKNQMxNWzIJvyIMTE9pIF0rYSqjrjtOu-HA/viewform?usp=sf_link",
-    "< dev_league />":"http://bit.ly/devleague18",
-    "Blur (Gaming)":"https://goo.gl/forms/U2FAggRXVpPIZa692",
-    "Hydrobos":"https://docs.google.com/forms/d/e/1FAIpQLSduW2zPFaGYEE7H3Bq3CTChxh94C41iC6ytgJIfb51QZMbgkQ/viewform?c=0&w=1",
-    "Auto Quiz":"",
-    "Creatrix":"https://docs.google.com/forms/d/1Y7eWN9ERhoBFMEFxD3EPacV0KJuorGxQiy0ECnX0XB0/edit?usp=drivesdk",
-    "Water Rocket":"https://docs.google.com/forms/d/e/1FAIpQLSeCx-N-b1AkcrmAqaFpQOrBVHDh9sFG2UY2tS69gF4arA7tNA/viewform?usp=sf_link",
-    "Incognito":"https://docs.google.com/forms/d/e/1FAIpQLSeHbXZ4LRNEHno-rlr-3-dI1mi7cn1jVWmndtZ4Sh8K9eTQcA/viewform?usp=sf_link",
-    "Arduino Playground 2.0":"",
-    "ICE Angels":"",
-    "Nirvana - Best Management Team":"",
-    "Mechathlon":"https://goo.gl/forms/epeDfk4h3SxbHS8b2",
-    "#Keep_the_chain":"",
-    "Wolf Street 2.0":"https://docs.google.com/forms/d/e/1FAIpQLSc2DKtKzccA79Xw9kD3xnppDfWibHGhsZJ9yVrOikX2sirZSw/viewform?c=0&w=1",
-    "Rainbow Six Siege (Gaming)":"",
-    "Counter StrikeGO , NFS Most Wanted, FIFA and 8ball Pool(Gaming)":"",
-    "Lathe Machining":"https://goo.gl/forms/gv4MatOgQyoqcvPO2",
-    "Transporter":"goo.gl/tYYNNS",
-    "Drishti Soccer League":"goo.gl/dGx4mW",
-    "Line Tracer":"goo.gl/5BYCi1",
-    "Drishti Combat League":"goo.gl/tx66Mz",
-    "Dirt Racer":"goo.gl/GKNadK"
-}
-
 {
     class Details {
         constructor() {
@@ -113,8 +60,11 @@ event_link = {
             this.DOM.sidebutton3.addEventListener('click',() => this.showButton3Element());
             //this.DOM.magnifier.addEventListener('click', () => this.zoomIn());
             this.DOM.cart.addEventListener('click', (e) => {
-                window.open(event_link[this.DOM.title.innerHTML]);
-            console.log(this.DOM.title.innerHTML);
+                popupWithAutoFill( {
+                                       eventcode: 'drishti-2018-324240',
+                                       ticketname1: this.ticketCode,
+                ticketvalue1: 1
+        });
         });
         }
         fill(info) {
