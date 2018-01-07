@@ -5,11 +5,11 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
 });
 
 event_link = {
-    "Amazing Race 2.0":"bit.ly/amazing_race2",
+    "Amazing Race 2.0":"http://bit.ly/amazing_race2",
     "HackSquad":"https://docs.google.com/forms/d/1caXcs_vrRLdr6ukPNbT0rkm8erLN-hIxSIvscN3hgEc/edit?usp=drivesdk",
     "Cryptex 2.0":"",
     "Business Case":"https://docs.google.com/forms/d/e/1FAIpQLScEHFwKgbk5VemJhLYpeJPtYkEO2x5yhIfYZCnYfl0hmT6nfw/viewform?usp=sf_link",
-    "Electrogeek 2.0":"https://goo.gl/forms/ZZ7BZPyKfOOlPGp33",
+    "Electrogeek":"https://goo.gl/forms/ZZ7BZPyKfOOlPGp33",
     "PATW  (Present Around the World)":"https://docs.google.com/forms/d/1qI8tufo8zIeat--CvjqBzVn4h1tEyQMmFvanVHZSez0/edit?usp=sharing",
     "DCOD 2.0":"https://goo.gl/forms/5kRScfvrAh13RrYa2",
     "VR Chakravyuh 2.0":"https://goo.gl/forms/dHVKASgQ0kV1rbLM2",
@@ -22,14 +22,14 @@ event_link = {
     "Young Engineer Hunt":"https://docs.google.com/forms/d/e/1FAIpQLSe_2SCjkfEWlvbMdYAOVfGYRnYpx5xVrAfupUSMwlWInJoYHQ/viewform?c=0&w=1",
     "DigiQuest":"https://docs.google.com/forms/d/e/1FAIpQLScjMrY0FU6NORgopVL8BXij6syvBe_wwjaAR6_3z0wZPSwa6g/viewform?c=0&w=1",
     "Skeptico":"https://docs.google.com/forms/d/1VFYMosJCqS4-y7gf3nLWavtyLY9JtatTNHc1pwRWmjw/edit?usp=drivesdk",
-    "UI/UX Challenge":"bit.ly/uiuxchallenge",
+    "UI/UX Challenge":"http://bit.ly/uiuxchallenge",
     "The Room":"https://docs.google.com/forms/d/1skADHEAbeN0bCKxHTEh-zrn73kSf1kTeOJYDC5y0raw/edit?usp=drivesdk",
     "Reverse Engineering":"https://docs.google.com/forms/d/e/1FAIpQLSevuqOfffVHhFsz2t8gkLk7wCy58tY7f1rsYwWK7uJUJiDOOQ/viewform?c=0&w=1",
     "Enigma":"https://docs.google.com/forms/d/1CABmDhRzzWqRXRcFR_QhZTMvqe2HxwwLQNGknXgIyWM/edit?usp=drivesdk",
     "Senquesta":"https://docs.google.com/forms/d/1yQCuRehdn877_ca0YzPN9iSanFjkQU2OjywZzMmbEKQ/edit?usp=drivesdk",
     "Brandtastic":"https://docs.google.com/forms/d/e/1FAIpQLScwGnypYQCeGXhh9Jwe0lFn-mq0x-o4sV14p8xHuuJyVhxHvg/viewform?usp=sf_link",
     "Lumos":"https://docs.google.com/forms/d/1kitN5OYuaeav5i2g_14tJyUUGpf7_YkCpBZG-V3u6Oo/edit",
-    "Game of Codes 2.0":"bit.ly/goc2_0",
+    "Game of Codes 2.0":"http://bit.ly/goc2_0",
     "The Debugger":"http://bit.ly/debug_drishti",
     "CodeMaster":"",
     "Picasso":"https://docs.google.com/forms/d/e/1FAIpQLSfP4sQYH7S8RAR1oN_QjEox7gm_E5cb-BKHZqR8ELD4Of8hdw/viewform?usp=pp_url&entry.168595782&entry.1928536618&entry.1484621245&entry.1698790926&entry.778167815&entry.783405576",
@@ -48,13 +48,13 @@ event_link = {
     "#Keep_the_chain":"",
     "Wolf Street 2.0":"https://docs.google.com/forms/d/e/1FAIpQLSc2DKtKzccA79Xw9kD3xnppDfWibHGhsZJ9yVrOikX2sirZSw/viewform?c=0&w=1",
     "Rainbow Six Siege (Gaming)":"",
-    "Counter StrikeGO , NFS Most Wanted, FIFA and 8ball Pool(Gaming)":"",
+    "Gaming":"",
     "Lathe Machining":"https://goo.gl/forms/gv4MatOgQyoqcvPO2",
-    "Transporter":"goo.gl/tYYNNS",
-    "Drishti Soccer League":"goo.gl/dGx4mW",
-    "Line Tracer":"goo.gl/5BYCi1",
-    "Drishti Combat League":"goo.gl/tx66Mz",
-    "Dirt Racer":"goo.gl/GKNadK"
+    "Transporter":"http://goo.gl/tYYNNS",
+    "Drishti Soccer League":"http://goo.gl/dGx4mW",
+    "Line Tracer":"http://goo.gl/5BYCi1",
+    "Drishti Combat League":"http://goo.gl/tx66Mz",
+    "Dirt Racer":"http://goo.gl/GKNadK"
 }
 
 {
