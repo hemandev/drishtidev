@@ -1228,7 +1228,7 @@ body {
     transform: scale(0);
     transition: linear, 500ms;
     right: 20px; }
-  .fb-fab, .insta-fab {
+  .fb-fab, .insta-fab, .home-fab{
     display: none; }
   .event-header {
     font-size: 50px;
