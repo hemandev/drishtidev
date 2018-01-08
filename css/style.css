@@ -751,6 +751,21 @@ body {
   transform: scale(1);
   transition: linear, 500ms; }
 
+.home-fab {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 45px;
+  z-index: 100000000000000;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  background-color: white;
+  cursor: pointer;
+  transform: scale(1);
+  transition: linear, 500ms; }
+
 .fb-fab {
   position: absolute;
   top: 150px;
