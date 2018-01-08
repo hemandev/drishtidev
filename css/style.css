@@ -239,7 +239,7 @@
 
 .ham-text-container {
   position: absolute;
-  width: 250px;
+  width: 366px;
   text-align: center;
   height: 350px;
   top: 0;
@@ -1252,7 +1252,7 @@ body {
     height: 80px;
     top: -30%; }
   .ham-text-container {
-    width: 300px;
+    width: 366px;
     height: 400px; }
   .loading-text {
     bottom: 80px;
