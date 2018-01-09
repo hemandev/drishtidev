@@ -445,7 +445,7 @@ a.demo--current {
   border-color: darkred;
   background: none;
   text-transform: uppercase;
-  color: var(--color-nav); }
+  color: #7d6969; }
 
 .slidenav__item:focus {
   outline: none; }
