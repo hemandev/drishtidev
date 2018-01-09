@@ -45,7 +45,7 @@ event_link = {
 "ICE Angels":"",
 "Nirvana - Best Management Team":"",
 "Mechathlon":"https://goo.gl/forms/epeDfk4h3SxbHS8b2",
-"#Keep_the_chain":"",
+"#Keep_the_chain":"https://goo.gl/aEvKpT",
 "Wolf Street 2.0":"https://docs.google.com/forms/d/e/1FAIpQLSc2DKtKzccA79Xw9kD3xnppDfWibHGhsZJ9yVrOikX2sirZSw/viewform?c=0&w=1",
 "Rainbow Six Siege (Gaming)":"",
 "Counter StrikeGO , NFS Most Wanted, FIFA and 8ball Pool(Gaming)":"",
