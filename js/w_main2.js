@@ -351,6 +351,7 @@ particlesJS.load('bg-image', 'particlesjs-config.json', function() {
         }
     };
 
+    window.alert('For availing the accommodation facilites register in the Homepage ps:look out for the accomodation button on the left side');
     const DOM = {};
     DOM.grid = document.querySelector('.grid');
     DOM.content = DOM.grid.parentNode;
