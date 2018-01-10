@@ -103,7 +103,7 @@ event_date_fee = {
 "#Keep_the_chain" : ["19th","500"],
 "Wolf Street 2.0" : ["21st","100"],
 "Rainbow Six Siege (Gaming)" : ["21st","400"],
-"Counter StrikeGO , NFS Most Wanted, FIFA and 8ball Pool(Gaming)" : ["20th","CS Go,NFS,FIFA: 100 8Ball Pool:50"],
+"Gaming" : ["20th","CS Go,NFS,FIFA: 100 8Ball Pool:50"],
 "Lathe Machining" : ["19th","200"],
 "Transporter" : ["19th","250"],
 "Drishti Soccer League" : ["20th","350"],
