@@ -58,6 +58,60 @@ event_link = {
     "Dirt Racer":"http://goo.gl/GKNadK"
 }
 
+
+event_date = {
+"Amazing Race 2.0":"20th and 21st",
+"HackSquad":"20th & 21st",
+"Cryptex 2.0":"",
+"Business Case":"19th",
+"Electrogeek 2.0":"21st",
+"PATW  (Present Around the World)":"21st",
+"DCOD 2.0":"19th & 20th",
+"VR Chakravyuh 2.0":"20th & 21st",
+"Drishti Cube Open 2.0":"20th",
+"Jack of All Trades":"20th",
+"Electronaire":"20th",
+"Drishti open quiz":"21st",
+"Paper Plane":"20th",
+"Bug It Out":"20th",
+"Young Engineer Hunt":"19th",
+"DigiQuest":"19th",
+"Skeptico":"21st",
+"UI/UX Challenge":"20th",
+"The Room":"20th",
+"Reverse Engineering":"20th",
+"Enigma":"19th",
+"Senquesta":"20th",
+"Brandtastic":"20th",
+"Lumos":"21st",
+"Game of Codes 2.0":"",
+"The Debugger":"19th",
+"CodeMaster":"19th",
+"Picasso":"21st",
+"Matlab Challenge":"20th",
+"< dev_league />":"20th",
+"Blur (Gaming)":"21st",
+"Hydrobos":"21st",
+"Auto Quiz":"21st",
+"Creatrix":"20th",
+"Water Rocket":"21st",
+"Incognito":"21st",
+"Arduino Playground 2.0":"21st",
+"ICE Angels":"20th",
+"Nirvana - Best Management Team":"20th and 21st",
+"Mechathlon":"20th",
+"#Keep_the_chain":"19th",
+"Wolf Street 2.0":"21st",
+"Rainbow Six Siege (Gaming)":"21st",
+"Gaming":"20th",
+"Lathe Machining":"19th",
+"Transporter":"19th",
+"Drishti Soccer League":"20th",
+"Line Tracer":"20th",
+"Drishti Combat League":"21st",
+"Dirt Racer":"21st"
+}
+
 {
     class Details {
         constructor() {
@@ -322,7 +376,7 @@ event_link = {
             this.DOM.description.innerHTML = this.DOM.description_original;
         }
         showButton2Element() {
-            this.DOM.description.innerHTML = this.DOM.product_details;
+            this.DOM.description.innerHTML = 'DATE: ' + event_date[this.DOM.title.innerHTML]+' JAN 2018<br />' + this.DOM.product_details;
         }
 
         showButton3Element() {
