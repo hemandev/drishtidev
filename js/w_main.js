@@ -20,7 +20,7 @@ event_link = {
     "Paper Plane":"https://docs.google.com/forms/d/e/1FAIpQLSd0HBj5vL4kc57W-V0MByhSd5G2hDLb-vSNZircUu1F3sqXiw/viewform?c=0&w=1&usp=mail_form_link",
     "Bug It Out":"https://docs.google.com/forms/d/e/1FAIpQLSc4ZoSJTEkCYGNSGK3YR4CZ_jIesDNYza37LckPrSyxHyrFYA/viewform?c=0&w=1",
     "Young Engineer Hunt":"https://docs.google.com/forms/d/e/1FAIpQLSe_2SCjkfEWlvbMdYAOVfGYRnYpx5xVrAfupUSMwlWInJoYHQ/viewform?c=0&w=1",
-    "DigiQuest":"https://docs.google.com/forms/d/e/1FAIpQLScjMrY0FU6NORgopVL8BXij6syvBe_wwjaAR6_3z0wZPSwa6g/viewform?c=0&w=1",
+    "DigiQuest":"https://goo.gl/forms/O6KQQJ1QQrNw14NB3",
     "Skeptico":"https://docs.google.com/forms/d/1VFYMosJCqS4-y7gf3nLWavtyLY9JtatTNHc1pwRWmjw/edit?usp=drivesdk",
     "UI/UX Challenge":"http://bit.ly/uiuxchallenge",
     "The Room":"https://docs.google.com/forms/d/1skADHEAbeN0bCKxHTEh-zrn73kSf1kTeOJYDC5y0raw/edit?usp=drivesdk",
