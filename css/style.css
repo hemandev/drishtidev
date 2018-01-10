@@ -333,6 +333,17 @@
 .ham-btn:focus {
   outline: 0; }
 
+.acco-btn {
+  background: none;
+  z-index: 1000000000;
+  border: none;
+  margin: auto;
+  text-decoration: none;
+  cursor: pointer; }
+
+.acco-btn:focus {
+  outline: 0; }
+
 .ham-container {
   position: absolute;
   height: 100%;
