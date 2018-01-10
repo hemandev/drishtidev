@@ -34,7 +34,7 @@ event_link = {
     "CodeMaster":"https://docs.google.com/forms/d/e/1FAIpQLScXjG4ZFOfvbZ7VUhmXSHYkvKFMGXIOUeThw9EUu9QiMLPBsw/viewform",
     "Picasso":"https://docs.google.com/forms/d/e/1FAIpQLSfP4sQYH7S8RAR1oN_QjEox7gm_E5cb-BKHZqR8ELD4Of8hdw/viewform?usp=pp_url&entry.168595782&entry.1928536618&entry.1484621245&entry.1698790926&entry.778167815&entry.783405576",
     "Matlab Challenge":"https://docs.google.com/forms/d/e/1FAIpQLSdUtxF2RhkNdiZUKNQMxNWzIJvyIMTE9pIF0rYSqjrjtOu-HA/viewform?usp=sf_link",
-    "< dev_league />":"http://bit.ly/devleague18",
+    "&lt; dev_league /&gt;":"http://bit.ly/devleague18",
     "Blur Gaming":"https://goo.gl/forms/U2FAggRXVpPIZa692",
     "Hydrobos":"https://docs.google.com/forms/d/e/1FAIpQLSduW2zPFaGYEE7H3Bq3CTChxh94C41iC6ytgJIfb51QZMbgkQ/viewform?c=0&w=1",
     "Auto Quiz":"https://goo.gl/forms/ed3Sq52h9mPPilFn1",
@@ -56,6 +56,61 @@ event_link = {
     "Line Tracer":"http://goo.gl/5BYCi1",
     "Drishti Combat League":"http://goo.gl/tx66Mz",
     "Dirt Racer":"http://goo.gl/GKNadK"
+}
+
+
+event_date_fee = {
+"Amazing Race 2.0" : ["20th and 21st","300"],
+"HackSquad" : ["20th & 21st","500"],
+"Cryptex 2.0" : ["","0"],
+"Business Case" : ["19th","150"],
+"Electrogeek 2.0" : ["21st","200"],
+"PATW  (Present Around the World)" : ["21st","0"],
+"DCOD 2.0" : ["19th & 20th","200"],
+"VR Chakravyuh 2.0" : ["20th & 21st","400"],
+"Drishti Cube Open 2.0" : ["20th","50"],
+"Jack of All Trades" : ["20th","200"],
+"Electronaire" : ["20th","75"],
+"Drishti open quiz" : ["21st","200"],
+"Paper Plane" : ["20th","20"],
+"Bug It Out" : ["20th","100"],
+"Young Engineer Hunt" : ["19th","50"],
+"DigiQuest" : ["19th","200"],
+"Skeptico" : ["21st","150"],
+"UI/UX Challenge" : ["20th","150"],
+"The Room" : ["20th","150"],
+"Reverse Engineering" : ["20th","200"],
+"Enigma" : ["19th","150"],
+"Senquesta" : ["20th","150"],
+"Brandtastic" : ["20th","0"],
+"Lumos" : ["21st","150"],
+"Game of Codes 2.0" : ["","0"],
+"The Debugger" : ["19th","100"],
+"CodeMaster" : ["19th","100"],
+"Picasso" : ["21st","Without kit: 200 With kit: 800"],
+"Matlab Challenge" : ["20th","100"],
+"&lt; dev_league /&gt;" : ["20th","300"],
+"Blur (Gaming)" : ["21st","200"],
+"Hydrobos" : ["21st","600"],
+"Auto Quiz" : ["21st","200"],
+"Creatrix" : ["20th","150"],
+"Water Rocket" : ["21st","200"],
+"Incognito" : ["21st","100"],
+"Arduino Playground 2.0" : ["21st","300"],
+"ICE Angels" : ["20th","100"],
+"Nirvana - Best Management Team" : ["20th and 21st","200"],
+"Mechathlon" : ["20th","400"],
+"#Keep_the_chain" : ["19th","500"],
+"Wolf Street 2.0" : ["21st","100"],
+"Rainbow Six Siege (Gaming)" : ["21st","400"],
+"Gaming" : ["20th","NFS,FIFA: 100 8Ball Pool:50"],
+"Gaming CS GO" :["20th","CS Go : 100"],
+"Lathe Machining" : ["19th","200"],
+"Transporter" : ["19th","250"],
+"Drishti Soccer League" : ["20th","350"],
+"Line Tracer" : ["20th","250"],
+"Drishti Combat League" : ["21st","500"],
+"Dirt Racer" : ["21st","250"]
 }
 
 {
@@ -322,7 +377,7 @@ event_link = {
             this.DOM.description.innerHTML = this.DOM.description_original;
         }
         showButton2Element() {
-            this.DOM.description.innerHTML = this.DOM.product_details;
+            this.DOM.description.innerHTML = 'DATE: ' + event_date_fee[this.DOM.title.innerHTML][0]+' JAN 2018<br />' +'REGISTRATION FEE: ' + event_date_fee[this.DOM.title.innerHTML][1]+'<br />' + this.DOM.product_details;
         }
 
         showButton3Element() {

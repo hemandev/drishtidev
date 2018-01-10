@@ -194,6 +194,20 @@
         }
     };
 
-    new Slideshow(document.querySelector('.slideshow'));
+    sl = new Slideshow(document.querySelector('.slideshow'));
+	var elem = document.getElementsByClassName("demo-5")[0];
+			var hammer = new Hammer(elem);
+			hammer.get('swipe').set({
+			direction: Hammer.DIRECTION_ALL,
+			threshold: 5,
+			velocity: 0.1
+			});
+			hammer.on("swipeleft swiperight", function(event) {
+			if (event.type === "swipeleft") {
+				sl.navigate('next');
+			} else if (event.type === "swiperight") {
+				sl.navigate('prev');
+			}
+		})
     imagesLoaded('.slide__img', { background: true }, () => document.body.classList.remove('loading'));
 };
