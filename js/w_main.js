@@ -89,7 +89,7 @@ event_date_fee = {
 "CodeMaster" : ["19th","100"],
 "Picasso" : ["21st","Without kit: 200 With kit: 800"],
 "Matlab Challenge" : ["20th","100"],
-"&lt; dev_league /&gt;" : ["20th","300"],
+"&lt; dev_league /&gt;" : ["20th","500"],
 "Blur (Gaming)" : ["21st","200"],
 "Hydrobos" : ["21st","600"],
 "Auto Quiz" : ["21st","200"],
