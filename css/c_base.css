@@ -660,7 +660,7 @@ main {
 		width: 4em;
 	}
 	.details__img {
-		right: -40vh;
+		right: -100vh;
 		opacity: .5 !important;
 	}
 	.details__magnifier {
@@ -689,7 +689,6 @@ main {
 	}
 	.button__group{
 		white-space:nowrap;
-		overflow:auto
 	}
 	/*
 	.details__sidebutton1{
