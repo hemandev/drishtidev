@@ -426,7 +426,7 @@ main {
 	max-width: 50%;
 	margin: 2em 0 0 0;
 	font-family: "Raleway", sans-serif;
-	color: var(--color-details-desc);
+	color: white;
 	overflow:auto;
 }
 
