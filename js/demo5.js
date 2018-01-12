@@ -195,10 +195,10 @@
     };
 
     sl = new Slideshow(document.querySelector('.slideshow'));
-	/*var elem = document.getElementsByClassName("demo-5")[0];
+	var elem = document.getElementsByClassName("demo-5")[0];
 			var hammer = new Hammer(elem);
 			hammer.get('swipe').set({
-			direction: Hammer.DIRECTION_ALL,
+			direction: Hammer.DIRECTION_HORIZONTAL,
 			threshold: 5,
 			velocity: 0.1
 			});
@@ -208,6 +208,6 @@
 			} else if (event.type === "swiperight") {
 				sl.navigate('prev');
 			}
-		})*/
+		})
     imagesLoaded('.slide__img', { background: true }, () => document.body.classList.remove('loading'));
 };
