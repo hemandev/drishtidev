@@ -92,7 +92,7 @@ event_date_fee = {
 "&lt; dev_league /&gt;" : ["20th","500"],
 "Blur (Gaming)" : ["21st","200"],
 "Hydrobos" : ["21st","600"],
-"Auto Quiz" : ["21st","200"],
+"Auto Quiz" : ["21st","250"],
 "Creatrix" : ["20th","200"],
 "Water Rocket" : ["21st","200"],
 "Incognito" : ["21st","100"],
