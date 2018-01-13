@@ -60,7 +60,7 @@ event_link = {
 
 
 event_date_fee = {
-"Amazing Race 2.0" : ["20th and 21st","300"],
+"Amazing Race 2.0" : ["20th and 21st","150"],
 "HackSquad" : ["20th & 21st","500"],
 "Cryptex 2.0" : ["","0"],
 "Business Case" : ["19th","400"],
@@ -88,7 +88,7 @@ event_date_fee = {
 "The Debugger" : ["19th","100"],
 "CodeMaster" : ["19th","100"],
 "Picasso" : ["21st","Without kit: 200 With kit: 800"],
-"Matlab Challenge" : ["20th","100"],
+"Matlab Challenge" : ["20th","300"],
 "&lt; dev_league /&gt;" : ["20th","540"],
 "Blur (Gaming)" : ["21st","200"],
 "Hydrobos" : ["21st","600"],
