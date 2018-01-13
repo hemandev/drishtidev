@@ -68,7 +68,7 @@ event_date_fee = {
 "PATW  (Present Around the World)" : ["21st","0"],
 "DCOD 2.0" : ["19th & 20th","200"],
 "VR Chakravyuh 2.0" : ["20th & 21st","400"],
-"Drishti Cube Open 2.0" : ["20th","50"],
+"Drishti Cube Open 2.0" : ["20th","250"],
 "Jack of All Trades" : ["20th","200"],
 "Electronaire" : ["20th","75"],
 "Drishti open quiz" : ["21st","200"],
