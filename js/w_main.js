@@ -64,7 +64,7 @@ event_date_fee = {
 "HackSquad" : ["20th & 21st","500"],
 "Cryptex 2.0" : ["","0"],
 "Business Case" : ["19th","400"],
-"Electrogeek 2.0" : ["21st","200"],
+"Electrogeek" : ["21st","200"],
 "PATW  (Present Around the World)" : ["21st","0"],
 "DCOD 2.0" : ["19th & 20th","200"],
 "VR Chakravyuh 2.0" : ["20th & 21st","400"],
