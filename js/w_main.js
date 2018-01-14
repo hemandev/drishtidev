@@ -74,7 +74,7 @@ event_date_fee = {
 "Drishti open quiz" : ["21st","200"],
 "Paper Plane" : ["20th","20"],
 "Bug It Out" : ["20th","100"],
-"Young Engineer Hunt" : ["19th","50"],
+"Young Engineer Hunt" : ["19th","100 per team"],
 "DigiQuest" : ["19th","200"],
 "Skeptico" : ["21st","200"],
 "UI/UX Challenge" : ["20th","150"],
