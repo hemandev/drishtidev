@@ -100,7 +100,7 @@ event_date_fee = {
 "ICE Angels" : ["20th","100"],
 "Nirvana - Best Management Team" : ["20th and 21st","200"],
 "Mechathlon" : ["20th","400"],
-"#Keep_the_chain" : ["19th","500"],
+"#Keep_the_chain" : ["19th","75 per head"],
 "Wolf Street 2.0" : ["21st","100"],
 "Rainbow Six Siege (Gaming)" : ["21st","400"],
 "Gaming" : ["FIFA: 20th, NFS:21st ","NFS,FIFA: 100 8Ball Pool:50"],
