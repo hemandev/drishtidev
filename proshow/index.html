@@ -2,166 +2,100 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>PROSHOW | DRISHTI</title>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PROSHOW | Drishti</title>
+		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo-entry.css" />
-		<script>document.documentElement.className = 'js';</script>
+		<link rel="stylesheet" type="text/css" href="css/component2.css" />
+		<script src="js/modernizr.custom.js"></script>
 	</head>
-	<body class="demo-grid loading">
-		<svg class="hidden">
-			<symbol id="icon-arrow" viewBox="0 0 24 24">
-				<title>arrow</title>
-				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
-			</symbol>
-			<symbol id="icon-drop" viewBox="0 0 24 24">
-				<title>drop</title>
-				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
-			</symbol>
-		</svg>
-		<main>
+	<body>
+		<div class="container">
+			<div id="splitlayout" class="splitlayout">
+				<div class="intro">
+					<div class="side side-left">
+						<div class="intro-content">
 
-			<div class="content">
-				<!--<nav class="page-nav">
-					<a class="page-nav__item" href="#">The Story</a>
-					<a class="page-nav__item" href="#">Locations</a>
-					<a class="page-nav__item" href="#">Press</a>
-					<a class="page-nav__item" href="#">Tickets</a>
-					<a class="page-nav__item" href="#">Contact</a>
-					<a class="page-nav__item page-nav__item--close" href="#">Back</a>
-				</nav>-->
-				<div class="page-nav">
-					<!--<a class="page-nav__item artist-name">HRIDAY GATTANI</a>
-					<a class="page-nav__item artist-description">SOME DATA</a>
-					<a class="page-nav__item register button">GET TICKETS</a>-->
-					<img class="page-nav__item artist-image" src="img/artist-image.jpg" />
-					<div class="page-nav__item artist-name">HRIDAY GATTANI</div>
-					<div class="page-nav__item artist-description">“One of India’s fresh few promising singers.”
-– A.R.Rahman</div>
-					<a class="page-nav__item register-button">GET TICKETS!</a>
-					<a class="page-nav__item page-nav__item--close" href="#">Back</a>
-				</div>
-				<div class="pieces" style="background-image: url(img/e.jpg)"></div>
-				<h2 class="content__title">HRIDAY GATTANI</h2>
-			</div>
-		</main>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/anime.min.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-		{
-			imagesLoaded(document.body, { background: true }, () => document.body.classList.remove('loading'));
+							<h1><span>HRIDAY GATTANY </span></h1>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<div class="side side-right">
+						<div class="intro-content">
 
-			const piecesEl = document.querySelector('.content .pieces');
-			const piecesObj = new Pieces(piecesEl, {
-				 pieces: {rows: 14, columns: 12}
-			});
-			const menuEl = document.querySelector('.page-nav');
-			const optionsCtrl = document.querySelector('.content__title');
-			const closeOptionsCtrl = menuEl.querySelector('a.page-nav__item--close');
-
-			const showOptions = () => {
-				menuEl.classList.add('page-nav--open');
-
-				piecesObj.animate({
-					duration: 3000,
-					delay: (t,i) => {
-						const elBounds = piecesEl.getBoundingClientRect();
-						const x1 = elBounds.left + elBounds.width/2;
-						const y1 = elBounds.top + elBounds.height/2;
-						const tBounds = t.getBoundingClientRect();
-						const x2 = tBounds.left + tBounds.width/2;
-						const y2 = tBounds.top + tBounds.height/2;
-						const dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
-						const maxDist = Math.sqrt(Math.pow(elBounds.left-x1,2) + Math.pow(elBounds.top-y1,2));
-						const maxDelay = 300;
-
-						t.dataset.centerx = x2;
-						t.dataset.centery = y2;
-
-						return -1*maxDelay/maxDist*dist + maxDelay;
-					},
-					easing: [0.1,1,0,1],
-					translateX: (t,i) => {
-						return t.dataset.column < piecesObj.getTotalColumns()/2 ? anime.random(-400,0) : anime.random(0,400);
-					},
-					translateY: (t,i) => {
-						return t.dataset.row < piecesObj.getTotalRows()/2 ? anime.random(-400,0) : anime.random(0,400);
-					},
-					opacity: 0.2
-				});
-
-				anime.remove(optionsCtrl);
-				anime({
-					targets: optionsCtrl,
-					duration: 700,
-					easing: 'easeOutExpo',
-					scale: 1.2,
-					opacity: 0
-				});
-
-				anime.remove(menuEl);
-				anime({
-					targets: menuEl,
-					duration: 700,
-					delay: 150,
-					easing: 'easeOutExpo',
-					scale: [0,1],
-					opacity: 1
-				});
-			};
-
-			const hideOptions = (ev) => {
-				ev.preventDefault();
-				menuEl.classList.remove('page-nav--open');
-
-				piecesObj.animate({
-					duration: 600,
-					delay: (t,i) => {
-						const elBounds = piecesEl.getBoundingClientRect();
-						const x1 = elBounds.left + elBounds.width/2;
-						const y1 = elBounds.top + elBounds.height/2;
-						const x2 = t.dataset.centerx;
-						const y2 = t.dataset.centery;
-						const dist = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
-						const maxDist = Math.sqrt(Math.pow(elBounds.left-x1,2) + Math.pow(elBounds.top-y1,2));
-						const maxDelay = 800;
-
-						return maxDelay/maxDist*dist;
-					},
-					easing: [0.1,1,0,1],
-					translateX: 0,
-					translateY: 0,
-					opacity: 1
-				});
-
-				anime.remove(optionsCtrl);
-				anime({
-					targets: optionsCtrl,
-					duration: 700,
-					delay: 200,
-					easing: 'easeOutQuint',
-					scale: [1.1,1],
-					opacity: 1
-				});
-
-				anime.remove(menuEl);
-				anime({
-					targets: menuEl,
-					duration: 700,
-					easing: 'easeOutQuint',
-					scale: 0.8,
-					opacity: 0
-				});
-			};
-
-			optionsCtrl.addEventListener('click', showOptions);
-			closeOptionsCtrl.addEventListener('click', hideOptions);
-		}
-		</script>
-
+							<h1><span>INDIGENOUS FAKIRS</span></h1>
+						</div>
+						<div class="overlay"></div>
+					</div>
+				</div><!-- /intro -->
+				<div class="page page-right">
+					<div class="page-inner">
+						<section>
+							<h2>INDIGENOUS FAKIRS</h2>
+							<p>Indigeneous Fakirs are a group of nomads who teamed up to make music beyond genres. Concentrating on traditional Indian musical genres and fusing it with various western genres like Blues, Jazz, Country, etc. They have worked on the songs of some amazing musicians like Oasis, Clinton Cerejo, Vishal Dadlani, Anirudh Ravichander, Ayushman Khurana. </p>
+							<p>This Drishti, get ready to rise to musical nirvana! Prepare yourself for a night to remember. Brace yourself for cultural extravaganza on January 19,20 and 21!
+Let's RISE!</p>
+						</section>
+						<!--<section>
+							<h2>Constraints</h2>
+							<p>Card-sorting dropdown constraints alan cooper prägnanz iconography. Stakeholder balsamiq italic vector composition ethnography CSS monospace hierarchy. Eye tracking serif persona focus group.</p>
+							<p>Typesetting artifact rounded corners eye tracking braindump drawer menu mockup dropdown measure. Jony ive eye tracking script monospace heuristic tabs sketches. Affordance eye tracking scenario usable ligature typesetting clarity responsive. Information architecture golden ratio drawer menu header affordance aspect ratio. Balsamiq slab serif IDEO cognitive dissonance kerning pixel pixel-perfect. Pixel rounded corners header workflow portfolio.</p>
+							<p>Scenario navigation complementary jony ive helvetica archetype interstitial serif front-end. Constraints pencil usability gestalt design language mockup usability testing affordance jakob nielsen.</p>
+						</section>
+						<section>
+							<h2>Ligature</h2>
+							<p>Delightful ascenders contrast prototype. Ligature jakob nielsen user measure.  Ligature contrast glyph rule of thirds composition interstitial dribbble.  Mental model typography urbanized balance.  Resolution rounded corners IDEO constraints dribbble persona.  Portfolio sketch baseline 66-character line.  Usability testing mental model simplicity aspect ratio pencil type.  Usable sans-serif visualization leading prägnanz baseline pencil fireworks clarity omnigraffle.</p>
+							<p>Paper prototype urbanized headroom typography splash screen pencil modal branding. Retina omnigraffle objectified descender navigation adobe ethnography. Innovate design by committee modern hero message. Contrast user-centered color theory keep it simple visuals bevel adobe descender splash screen. From focus group accessibility sans-serif archetype pixel-perfect complementary skeuomorphism. Focus group iconography figure-ground navigation user-centered omnigraffle from.</p>
+						</section>
+						<section>
+							<h2>Ligature</h2>
+							<p>Delightful ascenders contrast prototype. Ligature jakob nielsen user measure.  Ligature contrast glyph rule of thirds composition interstitial dribbble.  Mental model typography urbanized balance.  Resolution rounded corners IDEO constraints dribbble persona.  Portfolio sketch baseline 66-character line.  Usability testing mental model simplicity aspect ratio pencil type.  Usable sans-serif visualization leading prägnanz baseline pencil fireworks clarity omnigraffle.</p>
+							<p>Paper prototype urbanized headroom typography splash screen pencil modal branding. Retina omnigraffle objectified descender navigation adobe ethnography. Innovate design by committee modern hero message. Contrast user-centered color theory keep it simple visuals bevel adobe descender splash screen. From focus group accessibility sans-serif archetype pixel-perfect complementary skeuomorphism. Focus group iconography figure-ground navigation user-centered omnigraffle from.</p>
+						</section>
+						<section>
+							<h2>Typesetting</h2>
+							<p>Typesetting artifact rounded corners eye tracking braindump drawer menu mockup dropdown measure. Jony ive eye tracking script monospace heuristic tabs sketches. Affordance eye tracking scenario usable ligature typesetting clarity responsive. Information architecture golden ratio drawer menu header affordance aspect ratio. Balsamiq slab serif IDEO cognitive dissonance kerning pixel pixel-perfect. Pixel rounded corners header workflow portfolio.</p>
+							<p>Fireworks mobile skeuomorphism sitemap. Workflow iconography interaction design pixel-perfect serif. Mental model monospace typeface behavior change bauhaus from usability testing. Color theory user experience paper prototype narrative palette serif gradient header. Oblique modal 66-character line sketch responsive portfolio. Comic sans fireworks prägnanz monospace gradient design language jakob nielsen. Figure-ground pixel aspect ratio sketches rounded corners jony ive constraints mental model splash screen.</p>
+							<p>Placeholder text by <a href="http://www.designeripsum.com/">Designer Ipsum</a>.</p>
+							<p>Profile images are licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">Creative Commons BY-NC-SA 2.0</a> license. The images are from Greg Peverill-Conti's <a href="http://www.flickr.com/photos/gregpc/">1,000 faces project</a>.</p>
+						</section>-->
+						<a href="https://goo.gl/forms/pWUfBCSDxV4a7YC23">GET TICKETS!</a>
+					</div><!-- /page-inner -->
+				</div><!-- /page-right -->
+				<div class="page page-left">
+					<div class="page-inner">
+						<section>
+							<h2>HRIDAY GATTANY</h2>
+							<p>Rise from the ashes and face the fire! Embrace it.</p>
+							<p>Adamant on bringing about advancement, Drishti '18  gluts the glass with a technical symposium .Drishti '18 brings forth an  extravagant ambience to the stage with Hriday Gattani in the spotlight. One of the emerging singers ,graced by A R Rahman's essence, lights the stage with fiery songs. Know the place and time, for the stage is lit with exciting experience.</p>
+						</section>
+						<!--<section>
+							<h2>Responsive</h2>
+							<p>Card-sorting dropdown constraints alan cooper prägnanz iconography. Stakeholder balsamiq italic vector composition ethnography CSS monospace hierarchy. Eye tracking serif persona focus group.</p>
+							<p>Typesetting artifact rounded corners eye tracking braindump drawer menu mockup dropdown measure. Jony ive eye tracking script monospace heuristic tabs sketches. Affordance eye tracking scenario usable ligature typesetting clarity responsive. Information architecture golden ratio drawer menu header affordance aspect ratio. Balsamiq slab serif IDEO cognitive dissonance kerning pixel pixel-perfect. Pixel rounded corners header workflow portfolio.</p>
+							<p>Scenario navigation complementary jony ive helvetica archetype interstitial serif front-end. Constraints pencil usability gestalt design language mockup usability testing affordance jakob nielsen.</p>
+						</section>
+						<section>
+							<h2>Prototype</h2>
+							<p>Delightful ascenders contrast prototype. Ligature jakob nielsen user measure.  Ligature contrast glyph rule of thirds composition interstitial dribbble.  Mental model typography urbanized balance.  Resolution rounded corners IDEO constraints dribbble persona.  Portfolio sketch baseline 66-character line.  Usability testing mental model simplicity aspect ratio pencil type.  Usable sans-serif visualization leading prägnanz baseline pencil fireworks clarity omnigraffle.</p>
+							<p>Paper prototype urbanized headroom typography splash screen pencil modal branding. Retina omnigraffle objectified descender navigation adobe ethnography. Innovate design by committee modern hero message. Contrast user-centered color theory keep it simple visuals bevel adobe descender splash screen. From focus group accessibility sans-serif archetype pixel-perfect complementary skeuomorphism. Focus group iconography figure-ground navigation user-centered omnigraffle from.</p>
+						</section>
+						<section>
+							<h2>Typography</h2>
+							<p>Typesetting artifact rounded corners eye tracking braindump drawer menu mockup dropdown measure. Jony ive eye tracking script monospace heuristic tabs sketches. Affordance eye tracking scenario usable ligature typesetting clarity responsive. Information architecture golden ratio drawer menu header affordance aspect ratio. Balsamiq slab serif IDEO cognitive dissonance kerning pixel pixel-perfect. Pixel rounded corners header workflow portfolio.</p>
+							<p>Fireworks mobile skeuomorphism sitemap. Workflow iconography interaction design pixel-perfect serif. Mental model monospace typeface behavior change bauhaus from usability testing. Color theory user experience paper prototype narrative palette serif gradient header. Oblique modal 66-character line sketch responsive portfolio. Comic sans fireworks prägnanz monospace gradient design language jakob nielsen. Figure-ground pixel aspect ratio sketches rounded corners jony ive constraints mental model splash screen.</p>
+							<p>Placeholder text by <a href="http://www.designeripsum.com/">Designer Ipsum</a>.</p>
+							<p>Profile images are licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">Creative Commons BY-NC-SA 2.0</a> license. The images are from Greg Peverill-Conti's <a href="http://www.flickr.com/photos/gregpc/">1,000 faces project</a>.</p>
+						</section>-->
+						<a href="https://goo.gl/forms/FTWf8LDQCTy09q4n2">GET TICKETS!</a>
+					</div><!-- /page-inner -->
+				</div><!-- /page-left -->
+				<a href="#" class="back back-right" title="back to intro">&rarr;</a>
+				<a href="#" class="back back-left" title="back to intro">&larr;</a>
+			</div><!-- /splitlayout -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/cbpSplitLayout.js"></script>
 	</body>
 </html>
