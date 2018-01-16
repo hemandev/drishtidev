@@ -109,7 +109,7 @@ event_date_fee = {
 "Transporter" : ["19th","250"],
 "Drishti Soccer League" : ["20th","350"],
 "Line Tracer" : ["20th","250"],
-"Drishti Combat League" : ["21st","500"],
+"Drishti Combat League" : ["19th","500"],
 "Dirt Racer" : ["21st","250"]
 }
 
