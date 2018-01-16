@@ -67,7 +67,7 @@ event_date_fee = {
 "Electrogeek" : ["21st","200"],
 "PATW  (Present Around the World)" : ["21st","0"],
 "DCOD 2.0" : ["19th & 20th","200"],
-"VR Chakravyuh 2.0" : ["20th & 21st","400"],
+"VR Chakravyuh 2.0" : ["20th & 21st","200"],
 "Drishti Cube Open 2.0" : ["20th","250"],
 "Jack of All Trades" : ["20th","200"],
 "Electronaire" : ["20th","75"],
@@ -100,7 +100,7 @@ event_date_fee = {
 "ICE Angels" : ["20th","100"],
 "Nirvana - Best Management Team" : ["20th and 21st","200"],
 "Mechathlon" : ["20th","400"],
-"#Keep_the_chain" : ["19th","500"],
+"#Keep_the_chain" : ["19th","75 per head"],
 "Wolf Street 2.0" : ["21st","100"],
 "Rainbow Six Siege (Gaming)" : ["21st","400"],
 "Gaming" : ["FIFA: 20th, NFS:21st ","NFS,FIFA: 100 8Ball Pool:50"],
@@ -109,7 +109,7 @@ event_date_fee = {
 "Transporter" : ["19th","250"],
 "Drishti Soccer League" : ["20th","350"],
 "Line Tracer" : ["20th","250"],
-"Drishti Combat League" : ["21st","500"],
+"Drishti Combat League" : ["19th","500"],
 "Dirt Racer" : ["21st","250"]
 }
 
