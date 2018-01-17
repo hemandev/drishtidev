@@ -107,7 +107,7 @@ event_date_fee = {
 "Gaming CS GO" :["19th","CS Go : 100"],
 "Lathe Machining" : ["19th","200"],
 "Transporter" : ["19th","250"],
-"Drishti Soccer League" : ["20th","350"],
+"Drishti Soccer League" : ["20th and 21st","350"],
 "Line Tracer" : ["20th","250"],
 "Drishti Combat League" : ["19th","500"],
 "Dirt Racer" : ["21st","250"]
