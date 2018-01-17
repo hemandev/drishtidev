@@ -54,12 +54,12 @@ body {
 
 .side-left {
 	left: 0;
-	background: url('../img/artist-image.jpg'); /* avoid gap */
+	background: url('../images/artist-image.jpg'); /* avoid gap */
 }
 
 .side-right {
 	right: 0;
-	background: url('../img/idf.jpg'); /* avoid gap */
+	background: url('../images/idf.jpg'); /* avoid gap */
 }
 
 /* Intro content, profile image and name, back button */
@@ -94,8 +94,11 @@ body {
 }
 
 .intro-content h1 > span:first-child {
-	font-weight: 300;
-	font-size: 2em;
+	font-weight: 800;
+	font-size: 4em;
+	font-family: 'Raleway', sans-serif;
+	opacity: .8;
+	margin-top: 300px;
 }
 
 .intro-content h1 > span:nth-child(2) {
