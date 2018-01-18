@@ -11,12 +11,21 @@ h1 {
   padding-top: 150px !important; }
 
 #bg-image {
-  background-color: #0a0000 !important;
+  background-color: transparent !important;
   position: relative;
   height: 100% !important;
   width: 100% !important;
   font-family: veneer, serif; }
-
+canvas {
+  display: inline-block;
+  position: absolute;
+  background-color: #0a0000;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 @media screen and (max-width: 480px) {
   img {
     transform: scale(1) !important; }
