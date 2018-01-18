@@ -71,7 +71,7 @@ event_date_fee = {
 "Drishti Cube Open 2.0" : ["20th","250"],
 "Jack of All Trades" : ["20th","200"],
 "Electronaire" : ["20th","75"],
-"Drishti open quiz" : ["21st","200"],
+"Drishti open quiz" : ["21st 1pm","200"],
 "Paper Plane" : ["20th","20"],
 "Bug It Out" : ["20th","100"],
 "Young Engineer Hunt" : ["19th","100 per team"],
